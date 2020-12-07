@@ -1,0 +1,22 @@
+@import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
+
+.Navbar {
+    background-color:white;
+    color : black;
+    justify-content: center;
+    text-decoration: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.nav-link {
+    color : black;
+    font-family: "Open Sans", Arial, sans-serif;
+    padding-left: 30px;
+}
+
+.first-link {
+    color : black;
+    font-family: "Open Sans", Arial, sans-serif;
+    padding-left: 200px;
+}

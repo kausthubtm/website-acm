@@ -1,0 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
+
+.row {
+    justify-content: center;
+}
+
+.card_title {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.Header{
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+ 
