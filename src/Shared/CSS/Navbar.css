@@ -3,20 +3,38 @@
 .Navbar {
     background-color:white;
     color : black;
-    justify-content: center;
-    text-decoration: none;
     padding-top: 12px;
     padding-bottom: 12px;
+    justify-content: center;
 }
 
 .nav-link {
     color : black;
+    text-align: center;
     font-family: "Open Sans", Arial, sans-serif;
+    text-decoration: none;
     padding-left: 30px;
 }
 
-.first-link {
+.nav-link:hover {
+    color: rgba(144, 191, 255);
+    transition-duration: 0.5s;
+}
+
+.link1 {
     color : black;
+    text-align: center;
     font-family: "Open Sans", Arial, sans-serif;
     padding-left: 200px;
+    text-decoration: none;
+}
+
+.toggle {
+    margin-right: 68%;
+}
+
+.toggle_btn {
+    color: rgba(144, 191, 255);
+    box-shadow: rgba(144, 191, 255) 0px 1px 6px;
+    border: white;
 }

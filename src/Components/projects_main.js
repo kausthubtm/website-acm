@@ -58,7 +58,7 @@ function Projects (props) {
 
     return(
         <div>
-            <div className="Header">
+            <div className="heading">
               <h1><b>PROJECTS</b></h1>
               <hr />
               <h3>Here is a list of projects that we completed in the year 2019-2020</h3>

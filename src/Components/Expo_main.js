@@ -17,7 +17,7 @@ const useStyles = makeStyles({
       boxShadow: 'rgba(144, 191, 255) 0px 1px 6px',
     },
     space: {
-      paddingTop: '10.25%',
+      paddingBottom : '5.25%',
     },
   }); 
 
@@ -51,24 +51,30 @@ class Expo_main extends Component{
 
       const sigs = this.props.sigs.map((sig) => {
         return (
-            <div key={sig.id} className="col-12 col-md-4 m-1">
+            <div key={sig.id} className="col-md-4 m-1">
                 <MediaCard sig={sig} />
             </div>
         );
         });
   
     return(
-        <div>
-            <div className="Header">
-              <h3>PROJECT EXPO</h3>
-              <hr />
+        <div className="wrapper">
+          <h1 className="Header">PROJECT EXPO</h1>  
+            <div className="box">
+              <div></div><div></div>
+              <div></div><div></div>
+              <div></div><div></div>
+              <div></div><div></div>
+              <div></div><div></div>
+              <div></div><div></div>
+              <div></div><div></div>
+              <div></div><div></div>
             </div>
             <div className="container">
                 <div className="row">
                     {sigs}
                 </div>
             </div>
-            <br></br><br></br>
         </div>
     )
   }
