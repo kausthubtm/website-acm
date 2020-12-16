@@ -13,7 +13,6 @@ import Hidden from '@material-ui/core/Hidden';
 
 /* import for toggle button */
 import IconButton from '@material-ui/core/IconButton';
-import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
@@ -76,7 +75,7 @@ function HideAppBar (props) {
         <AppBar>
           <Toolbar className="Navbar">
             <Hidden smDown>
-              <img src="/assets/images/logo.png" height="60" width="60" alt="ACM logo"/>
+              <img src="/uploads/sigs/logo.png" height="60" width="60" alt="ACM logo"/>
               <Link to="" className="link1"></Link>
               <Link to="" className="nav-link">HOME</Link>
               <Link to="/yantra" className="nav-link">YANTRAS</Link>
@@ -88,7 +87,7 @@ function HideAppBar (props) {
               <Link to="/contact" className="nav-link">CONTACT</Link>
             </Hidden>
             <Hidden mdUp>
-              <img src="/assets/images/logo.png" height="60" width="60" alt="ACM logo" className="toggle" />
+              <img src="/uploads/sigs/logo.png" height="60" width="60" alt="ACM logo" className="toggle" />
               <IconButton aria-label="menu" ref={anchorRef} aria-controls={open ? 'menu-list-grow' : undefined} aria-haspopup="true" onClick={handleToggle} >
                 <MenuIcon className="toggle_btn" style={{ fontSize: 40 }}/>
               </IconButton>

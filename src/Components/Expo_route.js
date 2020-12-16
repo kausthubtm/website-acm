@@ -1,48 +1,46 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Expo_main from './Expo_main';
-import Projects from './projects_main';
-import Project_details from './project_details';
-import {SIGS} from '../Shared/Data/json/expo_sigs';
-import Header from './Navbar';
-import {PROJECTS} from '../Shared/Data/json/projects';
+import Expo_main from './Expo_main.js';
+import Projects from './projects_main.js';
+import Details from './project_details.js';
+import Header from './Navbar.js';
+
+/*import Test from './test';
+import Test2 from './test2';
+import Test3 from './test3';*/
 
 class Main extends Component {
 
-    constructor(props) {
-        super(props);
-    
-        this.state = {
-          sigs: SIGS,
-          projects: PROJECTS,
-        };
-      }
-
-    render() {
+    render() {  
 
         const SelectedSig = ({match}) => {
             return(
-              <Projects projects = {this.state.projects.filter((project) => project.sig_id === parseInt(match.params.sigId,10))} />
+              <Projects sigId = {match.params.sigId} />
             );
           }
         
           const SelectedProject = ({match}) => {
             return(
-              <Project_details project = {this.state.projects.filter((project) => project.id === parseInt(match.params.projectId,10))[0]} />
+              <Details projectId = {match.params.projectId} />
             );
-          }   
+          } 
 
         return(
             <>
-                <BrowserRouter>
-                    <Header/>
-                    <Switch>
-                        <Route exact path='/expo' component={() => <Expo_main sigs={this.state.sigs}/>}/>
-                        <Route path="/expo/:sigId" component={SelectedSig} />
-                        <Route path="/project/:projectId" component={SelectedProject} />
-                    </Switch>
-                </BrowserRouter>  
-        </>
+              <BrowserRouter>
+                  <Header/>
+                  <Switch>
+                      <Route exact path='/expo' component={Expo_main}/>
+                      <Route exact path="/expo/:sigId" component={SelectedSig} />
+                      <Route exact path="/project/:projectId" component={SelectedProject} />
+
+                      {/*<Route path="/test" component={Test}/>
+                      <Route path="/test2" component={Test2}/>
+                      <Route path="/test3" component={Test3}/>*/}
+                      
+                  </Switch>
+              </BrowserRouter>  
+          </>
         )
     }
 }
