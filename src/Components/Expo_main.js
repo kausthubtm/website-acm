@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import '../Shared/CSS/Expo_main.css';
+import axios from 'axios'; 
+
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import axios from 'axios'; 
+
+
 
 const useStyles = makeStyles({
   root: {
@@ -22,6 +25,7 @@ const useStyles = makeStyles({
 }); 
 
 
+
   function MediaCard({sig}) {
     const classes = useStyles();   
 
@@ -30,7 +34,7 @@ const useStyles = makeStyles({
       <Card className={classes.root}>
         <Link to={`/expo/${sig.id}`} style={{ textDecoration: 'none' }}>
           <CardActionArea>
-            <img src={sig.image} alt={sig.name} height="340" width="100%" crop="fill" />
+            <img src={sig.image} alt={sig.name} height="250" width="100%" crop="fill" />
           </CardActionArea>
         </Link>
       </Card>
@@ -58,21 +62,17 @@ class Expo_main extends Component{
       const sigs = this.state.sigs.map((sig) => {
         if(sig.image) {
           return (
-              <div key={sig.id} className="col-md-4 m-1">
+              <div key={sig.id} className="col-md-3">
                   <MediaCard sig={sig} />
               </div>
           );
         }
-        else {
-          return(
-            <div></div>
-          )
-        }
-        });
+        else return(<div></div>)
+      });
   
     return(
       <div>
-        <div className="body">
+        <div>
           <section className="banner">
             <div className="banner-text">Project Expo</div>
           </section>

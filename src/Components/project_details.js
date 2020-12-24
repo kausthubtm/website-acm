@@ -5,6 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import { Table } from 'reactstrap';
+import Box from '@material-ui/core/Box';
+
 
 const useStyles = makeStyles({
   root: {
@@ -86,58 +88,78 @@ class Details extends Component {
                 <MediaCard pic={pic} />
             </div>
         );
-      });
+      }); 
   
     return(
       <div>
-        <div className="body">
+
           <section className="banner">
-            <div className="banner-text1">{this.state.details.name}</div>
+            <div className="banner-text">{this.state.details.name}</div>
           </section>
-        </div>
-        <div className="container">
+
+        <Box boxShadow={3} className="box">
+
+          <div className="container">
+
 
           <div className="row">
-            <div className="col-12 col-md-8">
-              <h2 className="space">Description</h2><hr></hr>
-              {this.state.details.introduction}
-              <br></br><br></br>
+              <div className="col-12 col-md-7">
+                <h2>Team</h2><hr></hr>
+                <Table striped>
+                  <tbody>
+
+                    <Check2 info={this.state.details.mentors} name='Mentors' />
+
+                    <Check2 info={this.state.details.members} name='Members' />
+                    
+                    <tr>
+                      <th scope="row">Duration</th>
+                      <td>{this.state.details.duration_in_months} months</td>
+                    </tr>
+                    
+                  </tbody>
+                </Table>
+              </div>
+
+              <div className="col-12 col-md-1"></div>
+              <div className="col-12 col-md-4">
+              <Card>
+                <CardActionArea>
+                  <img src={'/' + this.state.details.display_picture} alt='ex' height="250" width="100%" crop="fill" />
+                </CardActionArea>
+              </Card>
+
+              </div>
+
+            </div> 
+
+
+            <div className="row">
+              <div className="col-12 col-md-12">
+                <h2 className="space">Description</h2><hr></hr>
+                {this.state.details.introduction}
+                <br></br><br></br>
+              </div>
+            </div> 
+
+            <h2 className="space">Method</h2><hr></hr>
+            {this.state.details.method}
+
+            <Check1 info={this.state.details.results} name='Results' />
+
+            <Check1 info={this.state.details.obstacles} name='Obstacles' />
+            
+            <Check1 info={this.state.details.conclusion} name='Conclusion' />
+
+            <Check1 info={this.state.details.references} name='References' />
+
+            <h2 className="space">Pictures</h2><hr></hr>
+            <div className="row">
+                {pictures}
             </div>
-            <div className="col-12 col-md-4">
-              <h2 className="space">Team</h2><hr></hr>
-              <Table striped>
-                <tbody>
-
-                  <Check2 info={this.state.details.mentors} name='Mentors' />
-
-                  <Check2 info={this.state.details.members} name='Members' />
-                  
-                  <tr>
-                    <th scope="row">Duration</th>
-                    <td>{this.state.details.duration_in_months} months</td>
-                  </tr>
-                </tbody>
-              </Table>
-            </div>
-          </div>  
-
-          <h2 className="space">Method</h2><hr></hr>
-          {this.state.details.method}
-
-          <Check1 info={this.state.details.results} name='Results' />
-
-          <Check1 info={this.state.details.obstacles} name='Obstacles' />
-          
-          <Check1 info={this.state.details.conclusion} name='Conclusion' />
-
-          <Check1 info={this.state.details.references} name='References' />
-
-          <h2 className="space">Pictures</h2><hr></hr>
-          <div className="row">
-              {pictures}
           </div>
 
-        </div>
+        </Box>
         <div className="wave"></div>
       </div>
     )

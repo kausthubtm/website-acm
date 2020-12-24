@@ -38,3 +38,43 @@
     box-shadow: rgba(144, 191, 255) 0px 1px 6px;
     border: white;
 }
+
+.announcements{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 17px;
+}
+
+.announce_heading{
+    padding-left: 300px;
+    color: white;
+    padding-right: 30px;
+    background: rgb(0, 0, 0);
+}
+
+.announce_heading_small {
+    color: white;
+    background: rgb(100, 20, 10);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.announce_content{
+    padding-left: 30px;
+    width: 70%;
+    padding-top: 10px;
+}
+
+.announce_item{
+    border-left: 3px solid rgb(100, 20, 10);
+    padding-left: 40px;
+    padding-right: 40px;
+    color: rgb(58, 52, 52);
+    font-weight: bold;
+}
+
+.announce_item:hover {
+    color: rgb(255, 0, 0);
+    transition-duration: 0.5s;
+    text-decoration: none;
+}

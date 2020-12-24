@@ -4,6 +4,7 @@ import Expo_main from './Expo_main.js';
 import Projects from './projects_main.js';
 import Details from './project_details.js';
 import Header from './Navbar.js';
+import Home from './home.js';
 
 /*import Test from './test';
 import Test2 from './test2';
@@ -30,6 +31,7 @@ class Main extends Component {
               <BrowserRouter>
                   <Header/>
                   <Switch>
+                      <Route exact path='/' component={Home} />
                       <Route exact path='/expo' component={Expo_main}/>
                       <Route exact path="/expo/:sigId" component={SelectedSig} />
                       <Route exact path="/project/:projectId" component={SelectedProject} />

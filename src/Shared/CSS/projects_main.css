@@ -12,7 +12,7 @@
 	-o-background-size: cover;
 	-webkit-background-size: cover;
 	background-size: cover;
-    min-height: 725px;
+    min-height: 700px;
     justify-content: center;
 }
 
@@ -24,12 +24,6 @@
     font-weight: 700;
     text-align: center;
     padding-top: 275px;
-}
-
-.container{
-    padding-top: 3%;
-    padding-bottom: 5%;
-    position: relative;
 }
 
 .header{
@@ -51,7 +45,7 @@
     position: relative;
     justify-content: center;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     height: 100px;
     font-family: "Open Sans", Arial, sans-serif;

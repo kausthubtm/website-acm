@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme)=>({
     <div className={classes.space}>    
       <Card className={classes.root}>
         <Link to={`/project/${project.id}`} style={{ textDecoration: 'none' }}>
-          <img src={'/' + project.display_picture} alt="project.name" height="300" width="100%" crop="fill" />
+          <img src={'/' + project.display_picture} alt="project.name" height="200" width="100%" crop="fill" />
         </Link>
         <CardContent className="projectHeading">
         <div>
@@ -89,7 +89,6 @@ const useStyles = makeStyles((theme)=>({
   }
 
 
-
 class Projects extends Component {
 
     state = { 
@@ -111,7 +110,7 @@ class Projects extends Component {
       
       const projects = this.state.project_list.map((project) => {
         return (
-            <div key={project.id} className="col-12 col-md-4">
+            <div key={project.id} className="col-12 col-md-3">
                 <MediaCard project={project} />
             </div>
         );

@@ -22,9 +22,12 @@
     padding-top: 275px;
 }
 
-.container1{
-    padding-top: 3%;
-    padding-bottom: 5%;
+.box{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    border-radius: 26px;
 }
 
 .wave{
@@ -40,3 +43,4 @@
 .space{
     padding-top: 60px;
 }
+

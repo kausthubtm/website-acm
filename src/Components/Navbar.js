@@ -3,12 +3,9 @@ import '../Shared/CSS/Navbar.css'
 import { Link } from 'react-router-dom';
 
 /* imports for main nav-bar */
-import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Slide from '@material-ui/core/Slide';
 import Hidden from '@material-ui/core/Hidden';
 
 /* import for toggle button */
@@ -22,27 +19,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 
 
-/* helper function for hiding the navbar on scrolling */
-function HideOnScroll(props) {
-  const { children, window } = props;
-  const trigger = useScrollTrigger({ target: window ? window() : undefined });
-
-  return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
-  );
-}
-
-HideOnScroll.propTypes = {
-  children: PropTypes.element.isRequired,
-  window: PropTypes.func,
-};
-
-
 
 function HideAppBar (props) {
-
 
   /* stuff for handelling the toggle */ 
   const [open, setOpen] = React.useState(false);
@@ -71,8 +49,7 @@ function HideAppBar (props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      <HideOnScroll {...props}>
-        <AppBar>
+        <AppBar position="static">
           <Toolbar className="Navbar">
             <Hidden smDown>
               <img src="/uploads/sigs/logo.png" height="60" width="60" alt="ACM logo"/>
@@ -113,12 +90,34 @@ function HideAppBar (props) {
                   </Paper>
                 </Grow>
               )}
-            </Popper>
+              </Popper>
             </Hidden>
           </Toolbar>
         </AppBar>
-        </HideOnScroll>
-      <Toolbar />
+
+        <div>
+          <tbody>                    
+            <tr className="announcements">
+              <Hidden smDown>
+                <th className="announce_heading">Announcements</th>
+              </Hidden>
+              <Hidden mdUp>
+                <th className="announce_heading_small"> Announcements</th>
+              </Hidden>
+              <td className="announce_content">
+                <marquee scrollamount="12">
+                  <div> 
+                    <Link to={'/expo'} className="announce_item">Project Expo 2020</Link> 
+                    <Link to={'/proposal'}className="announce_item">Project Proposals 2021</Link> 
+                    <Link to={'/recruitment_forms.html'}className="announce_item">Register Now !</Link>
+                    <Link to={'https://nitk.acm.org/blog/2020/12/20/is-your-data-really-safe/'}className="announce_item">New article : 'Data is the King'</Link>
+                    <Link className="announce_item"></Link>
+                  </div>
+                </marquee>
+              </td>
+            </tr>
+          </tbody>
+        </div>
     </React.Fragment>
   );
 }
