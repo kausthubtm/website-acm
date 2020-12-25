@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import '../Shared/CSS/project_details.css';
+import '../Shared/CSS/main.css'
 import axios from 'axios'; 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import { Table } from 'reactstrap';
-import Box from '@material-ui/core/Box';
+import { Hidden } from '@material-ui/core';
 
 
 const useStyles = makeStyles({
@@ -43,7 +44,14 @@ function Check1({info, name}) {
   if(info) {
     return(
       <div>
-        <h2 className="space">{name}</h2>
+        <h2 className="space">
+          <Hidden xsDown>
+            <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> {name} <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
+          </Hidden>
+          <Hidden smUp>
+            <h2 className="heading ">{name}</h2>
+          </Hidden>
+        </h2>
         <hr></hr>
         {info}
       </div>
@@ -94,17 +102,21 @@ class Details extends Component {
       <div>
 
           <section className="banner">
-            <div className="banner-text">{this.state.details.name}</div>
+            <div className="banner-text1">{this.state.details.name}</div>
           </section>
-
-        <Box boxShadow={3} className="box">
 
           <div className="container">
 
-
+          <div className="space"></div>
           <div className="row">
               <div className="col-12 col-md-7">
-                <h2>Team</h2><hr></hr>
+                <Hidden xsDown>
+                  <h2><img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Team <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/></h2>
+                </Hidden>
+                <Hidden smUp>
+                  <h2 className="heading ">Team</h2>
+                </Hidden>
+                <hr></hr>
                 <Table striped>
                   <tbody>
 
@@ -136,13 +148,28 @@ class Details extends Component {
 
             <div className="row">
               <div className="col-12 col-md-12">
-                <h2 className="space">Description</h2><hr></hr>
+                <h2 className="space">
+                  <Hidden xsDown>
+                  <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Description <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
+                  </Hidden>
+                  <Hidden smUp>
+                    <h2 className="heading "> Description </h2>
+                  </Hidden>
+                  </h2><hr></hr>
                 {this.state.details.introduction}
                 <br></br><br></br>
               </div>
             </div> 
 
-            <h2 className="space">Method</h2><hr></hr>
+            <h2 className="space">
+              <Hidden xsDown>
+                <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Method <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
+              </Hidden>
+              <Hidden smUp>
+                  <h2 className="heading ">Method</h2>
+                </Hidden>
+            </h2>
+            <hr></hr>
             {this.state.details.method}
 
             <Check1 info={this.state.details.results} name='Results' />
@@ -153,13 +180,19 @@ class Details extends Component {
 
             <Check1 info={this.state.details.references} name='References' />
 
-            <h2 className="space">Pictures</h2><hr></hr>
+            <h2 className="space">
+              <Hidden xsDown>
+                <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Pictures <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
+              </Hidden>
+              <Hidden smUp>
+                  <h2 className="heading "> Pictures </h2>
+                </Hidden>
+            </h2><hr></hr>
             <div className="row">
                 {pictures}
             </div>
           </div>
-
-        </Box>
+          <div className="space"></div>
         <div className="wave"></div>
       </div>
     )

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import '../Shared/CSS/Expo_main.css';
+import '../Shared/CSS/main.css'
 import axios from 'axios'; 
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -74,7 +75,7 @@ class Expo_main extends Component{
       <div>
         <div>
           <section className="banner">
-            <div className="banner-text">Project Expo</div>
+            <div className="banner-text1">Project Expo</div>
           </section>
         </div>
         <div className="container">

@@ -1,61 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
 
-.row {
-    justify-content: center;
-}
-
-.home_banner {
-    background-image: url(../images/main.png);
-	background-position: center top;
-	background-repeat: no-repeat;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
-	background-size: cover;
-    min-height: 700px;
-    justify-content: center;
-}
-
-.home_banner-text1{
-    justify-content: center;
-	color:  white;
-    font-family: "Open Sans", Arial, sans-serif;
-    font-weight: 700;
-	font-size: 65px;
-    text-align: center;
-    padding-top: 250px;
-    letter-spacing: normal;
-    margin-bottom: 40px;
-    overflow: hidden;
-    position: relative;
-    animation: text 3s 1;
-}
-
-.home_banner-text2{
-    justify-content: center;
-	color:  white;
-    font-family: "Open Sans", Arial, sans-serif;
-    font-weight: 700;
-	font-size: 35px;
-    text-align: center;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(0, 0, 0);
-}
-
-@keyframes text {
-    0%{
-        margin-bottom: -10px;
-    }
-    30%{
-        letter-spacing: 10px;
-        margin-bottom: -10px;
-    }
-    85%{
-        letter-spacing: normal;
-        margin-bottom: -10px;
-    }
-}
-
 .home_buttons {
     justify-content: center;
     position: relative;
@@ -67,70 +11,15 @@
     width:fit-content;
 }
 
-.home_heading {
-    border-left: 6px solid rgb(10, 10, 100);
-    font-size: 30px;
-    padding-left: 20px;
-    color: black;
-    font-weight: bold;
-}
-
-.home_heading2 {
+.home_acm_text{
     text-align: center;
-    font-size: 30px;
-    color: black;
-    font-weight: bold;
-}
-
-.home_yantra_content{
-    text-align: center;
-    background-color: black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: auto;
-}
-
-.home_yantra_text{
-    border-left: 3px solid rgb(4, 36, 219);
-    padding-right: 40px;
-    padding-left: 40px;
-    color: white;
-    font-weight: bold;
-}
-
-.home_yantra_text:hover {
-    text-decoration: none;
-}
-
-.hr{
-    border-top: 1px solid rgb(20, 20, 20);
-}
-
-
-.home_event_card {
-    margin-top: 10px;
-    overflow: hidden;
-    border-radius: 16px;
-    border: 2px solid black;
-    color: white;
-    background-image: url(../images/background.jpg);
+    font-size: 17px;
 }
 
 .home_card_deck{
     overflow: hidden;
 }
 
-@keyframes animate{
-    0%,31%{
-        transform: translateY(0px);
-    }
-    33%, 66%{
-        transform: translateY(-370px);
-    }
-    68% ,100%{
-        transform: translateY(-740px);
-    }
-}
 
 .home_card_title{
     text-align: center;
@@ -152,21 +41,24 @@
 .home_sig_card1 {
     background-color: rgb(50, 162, 190);
     color: white;
+    padding-bottom: 20px;
 }
 
 .home_sig_heading {
-    padding-left: 20px;
+    text-align: center;
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-top: 30px;
 }
 
 .home_sig_text {
+    text-align: center;
     font-size: 15.5px;
-    font-weight: 200;
     font-family: "Open Sans", Arial, sans-serif;
     line-height: 1.6;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 .home_sig_img {
@@ -187,49 +79,31 @@
     background-color: transparent;
     border-radius: 16px;
     border: 2px solid white;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.home_wave{
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url(../images/wave.png);
-    background-size: 100% 100px;
 }
 
 .home_space1{
-    padding-top: 200px;
-    padding-bottom: 150px;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    
 }
 
 .home_space2{
-    padding-top: 100px;
+    margin-top: 20px;
 }
 
 .home_space{
-    padding-top: 150px;
-    padding-bottom: 150px;
-    background-color: rgb(216, 228, 240);
-}
-
-.home_heading1{
-    border-left: 6px solid rgb(10, 10, 100);
-    font-size: 30px;
-    padding-left: 20px;
-    color: black;
-    font-weight: bold;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    
 }
 
 .home_accordion_main{
     margin: 10px;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .home_accordion_head{
-    background-color: rgb(0, 0, 0) !important;
+    background-color: rgb(0, 3, 37) !important;
 }
 
 .home_accordion_heading {   
@@ -240,15 +114,61 @@
 
 .home_accordion_body{
     background-color: white;
+    
 }
 
 .home_expand_button{
     color: white;
-    box-shadow: rgb(0, 0, 0) 0px 1px 6px;
+    box-shadow: rgb(255, 255, 255) 0px 1px 2px;
+}
+
+.home_accordion_text_head{
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .home_accordion_text{
+    padding-top: 10px;
+    margin: 5px;
+    font-size: 14px;
     color: black;
 }
+
+.people{
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.img{
+    height: 250;
+    width: 250;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.img_name{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.img_position{
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.img_links{
+    margin-top: 5px;
+}
+
+.img_icon{
+    margin-left: 10px;
+}
+
+
 
 
