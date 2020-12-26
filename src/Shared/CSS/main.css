@@ -42,6 +42,16 @@
     -webkit-text-stroke-color: rgb(0, 0, 0);
 }
 
+.banner-text3{
+    padding-top: 300px;
+    justify-content: center;
+	color:  white;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 700;
+	font-size: 35px;
+    text-align: center;
+}
+
 @keyframes text {
     0%{
         margin-bottom: -10px;

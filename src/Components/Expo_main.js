@@ -1,15 +1,24 @@
+/****************************************************************************
+*  Expo main component : Displays all the sigs under project expo           *
+*****************************************************************************/
+
+
+
+
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import '../Shared/CSS/Expo_main.css';
 import '../Shared/CSS/main.css'
 import axios from 'axios'; 
 
+/* imports for cards */
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 
+import Hidden from '@material-ui/core/Hidden';
 
-
+/* styles for cards */
 const useStyles = makeStyles({
   root: {
     maxWidth: 500,
@@ -27,6 +36,7 @@ const useStyles = makeStyles({
 
 
 
+  /* function for cards */
   function MediaCard({sig}) {
     const classes = useStyles();   
 
@@ -73,16 +83,39 @@ class Expo_main extends Component{
   
     return(
       <div>
+
+        {/* banner area */}
         <div>
           <section className="banner">
             <div className="banner-text1">Project Expo</div>
           </section>
         </div>
-        <div className="container">
-          <div className="row">
-              {sigs}
-          </div>
-        </div>
+
+        {/* sigs display area */}
+            <div className="project_space">
+              <div className="container">
+                <div className="row"> 
+                  <div className="col-12 col-md-12">
+                    <Hidden xsDown>
+                    <h3 className="heading"><b>
+                    <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> PROJECT EXPO 2020 <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
+                      </b></h3>
+                      </Hidden>
+                      <Hidden smUp>
+                        <h3 className="heading">
+                          <b>PROJECT EXPO 2020</b>
+                        </h3>
+                      </Hidden>  
+                    <hr className="hr"></hr>
+                  </div>
+                </div>
+                <div className="row">
+                  {sigs}
+                </div>
+              </div>
+            </div>
+
+
         <div className="wave"></div>
     </div>
     )

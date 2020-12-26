@@ -1,7 +1,13 @@
+/****************************************************************************
+*  PROJECT DETAILS : Displays all the details of a project                  *
+*****************************************************************************/
+
 import React, {Component} from 'react';
 import '../Shared/CSS/project_details.css';
 import '../Shared/CSS/main.css'
 import axios from 'axios'; 
+
+/* imports for Card and Table */
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -9,6 +15,7 @@ import { Table } from 'reactstrap';
 import { Hidden } from '@material-ui/core';
 
 
+/* Styles for pictures */
 const useStyles = makeStyles({
   root: {
     maxWidth: 500,
@@ -24,7 +31,7 @@ const useStyles = makeStyles({
 }); 
 
 
-
+/* function to display pictures */
 function MediaCard({pic}) {
   const classes = useStyles();   
 
@@ -40,6 +47,7 @@ function MediaCard({pic}) {
 }
 
 
+/* function to check if the section is null or not */
 function Check1({info, name}) {
   if(info) {
     return(
@@ -53,13 +61,14 @@ function Check1({info, name}) {
           </Hidden>
         </h2>
         <hr></hr>
-        {info}
+        <h6 className="project_text" >{info}</h6>
       </div>
     );
   }
   else return (<div></div>)
 }
 
+/* function to check if the section is there or not in the team section */
 function Check2({info, name}) {
   if(info) {
     return(
@@ -72,6 +81,10 @@ function Check2({info, name}) {
   else return (<div></div>)
 }
 
+
+
+
+/* main class */
 class Details extends Component {
 
   state = { 
@@ -101,14 +114,17 @@ class Details extends Component {
     return(
       <div>
 
+          {/* banner area */}
           <section className="banner">
-            <div className="banner-text1">{this.state.details.name}</div>
+            <div className="banner-text3">{this.state.details.name}</div>
           </section>
+
 
           <div className="container">
 
-          <div className="space"></div>
-          <div className="row">
+            {/* Team section */}
+            <div className="space"></div>
+            <div className="row">
               <div className="col-12 col-md-7">
                 <Hidden xsDown>
                   <h2><img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Team <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/></h2>
@@ -119,48 +135,45 @@ class Details extends Component {
                 <hr></hr>
                 <Table striped>
                   <tbody>
-
                     <Check2 info={this.state.details.mentors} name='Mentors' />
-
-                    <Check2 info={this.state.details.members} name='Members' />
-                    
+                    <Check2 info={this.state.details.members} name='Members' />  
                     <tr>
                       <th scope="row">Duration</th>
                       <td>{this.state.details.duration_in_months} months</td>
                     </tr>
-                    
                   </tbody>
-                </Table>
+                  </Table>
               </div>
-
               <div className="col-12 col-md-1"></div>
               <div className="col-12 col-md-4">
-              <Card>
-                <CardActionArea>
-                  <img src={'/' + this.state.details.display_picture} alt='ex' height="250" width="100%" crop="fill" />
-                </CardActionArea>
-              </Card>
-
+                <Card>
+                  <CardActionArea>
+                    <img src={'/' + this.state.details.display_picture} alt='ex' height="250" width="100%" crop="fill" />
+                  </CardActionArea>
+                </Card>
               </div>
-
             </div> 
 
 
+            {/* Description section */}
             <div className="row">
               <div className="col-12 col-md-12">
                 <h2 className="space">
                   <Hidden xsDown>
-                  <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Description <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
+                    <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Description <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
                   </Hidden>
                   <Hidden smUp>
                     <h2 className="heading "> Description </h2>
                   </Hidden>
-                  </h2><hr></hr>
-                {this.state.details.introduction}
+                </h2>
+                <hr></hr>
+                <h6 className="project_text" >{this.state.details.introduction}</h6>
                 <br></br><br></br>
               </div>
             </div> 
 
+
+            {/* Method section */}
             <h2 className="space">
               <Hidden xsDown>
                 <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Method <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
@@ -170,16 +183,22 @@ class Details extends Component {
                 </Hidden>
             </h2>
             <hr></hr>
-            {this.state.details.method}
+            <h6 className="project_text">{this.state.details.method}</h6>
 
+
+            {/* Results section */}
             <Check1 info={this.state.details.results} name='Results' />
 
+            {/* Obstacles section */}
             <Check1 info={this.state.details.obstacles} name='Obstacles' />
-            
+
+            {/* Conclusion section */}
             <Check1 info={this.state.details.conclusion} name='Conclusion' />
 
+            {/* References section */}
             <Check1 info={this.state.details.references} name='References' />
 
+            {/* Pictures section */}
             <h2 className="space">
               <Hidden xsDown>
                 <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Pictures <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
@@ -193,7 +212,7 @@ class Details extends Component {
             </div>
           </div>
           <div className="space"></div>
-        <div className="wave"></div>
+          <div className="wave"></div>
       </div>
     )
   }

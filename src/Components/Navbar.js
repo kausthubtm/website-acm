@@ -1,3 +1,9 @@
+/****************************************************************************
+*  NAVBAR : Displays NavBar and Announcement sections                       *
+*****************************************************************************/
+
+
+
 import React from 'react';
 import '../Shared/CSS/Navbar.css'
 import { Link } from 'react-router-dom';
@@ -20,9 +26,9 @@ import MenuList from '@material-ui/core/MenuList';
 
 
 
+/* stuff for handelling the toggle */ 
 function HideAppBar (props) {
 
-  /* stuff for handelling the toggle */ 
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
 
@@ -48,6 +54,8 @@ function HideAppBar (props) {
 
   return (
     <React.Fragment>
+
+      {/* Navbar section */}
       <CssBaseline />
         <AppBar position="static">
           <Toolbar className="Navbar">
@@ -95,6 +103,8 @@ function HideAppBar (props) {
           </Toolbar>
         </AppBar>
 
+
+        {/* Announcements section */}
         <div>
           <tbody>                    
             <tr className="announcements">
@@ -107,10 +117,10 @@ function HideAppBar (props) {
               <td className="announce_content">
                 <marquee scrollamount="12">
                   <div> 
-                    <Link to={'/expo'} className="announce_item">Project Expo 2020</Link> 
-                    <Link to={'/proposal'}className="announce_item">Project Proposals 2021</Link> 
-                    <Link to={'/recruitment_forms.html'}className="announce_item">Register Now !</Link>
-                    <Link to={'https://nitk.acm.org/blog/2020/12/20/is-your-data-really-safe/'}className="announce_item">New article : 'Data is the King'</Link>
+                    <Link to={'/expo'} className="announce_item"><i>Project Expo 2020</i></Link> 
+                    <Link to={'/proposal'}className="announce_item"><i>Project Proposals 2021</i></Link> 
+                    <Link to={'/recruitment_forms.html'}className="announce_item"><i>Register Now !</i></Link>
+                    <Link to={'https://nitk.acm.org/blog/2020/12/20/is-your-data-really-safe/'}className="announce_item"><i>New article : 'Data is the King'</i></Link>
                     <Link className="announce_item"></Link>
                   </div>
                 </marquee>

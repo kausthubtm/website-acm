@@ -5,3 +5,8 @@
     padding-top: 150px;
 }
 
+.project_text{
+    font-family: 'Formata', sans-serif;
+    font-size: 16px;
+    opacity: 0.8;
+}

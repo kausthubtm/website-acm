@@ -71,6 +71,7 @@
     padding-right: 40px;
     color: rgb(58, 52, 52);
     font-weight: bold;
+    font-size: 15px;
 }
 
 .announce_item:hover {

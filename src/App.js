@@ -1,5 +1,5 @@
 import './App.css';
-import Main from './Components/Expo_route'
+import Main from './Components/route'
 
 function App() {
   return (

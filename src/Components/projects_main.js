@@ -1,8 +1,14 @@
+/****************************************************************************
+*  PROJECT MAIN : Displays all the projects done under a SIG                *
+*****************************************************************************/
+
+
 import React, { Component } from 'react';
 import axios from 'axios'; 
 import '../Shared/CSS/projects_main.css';
 import '../Shared/CSS/main.css'
 
+/* imports for card and accordion for the project display */
 import {CardDeck, Button} from 'reactstrap';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -12,6 +18,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import Hidden from '@material-ui/core/Hidden';
 
+
+  /* function to display the list of projects */
   function SimpleAccordion({project}) {
 
     return (
@@ -68,12 +76,15 @@ class Projects extends Component {
 
     return(
         <div>
+
+            {/* banner area */}
             <div className="body">
               <section className="banner">
                 <div className="banner-text1">{this.state.sig.name} Project Expo</div>
               </section>
             </div>
 
+            {/* list of projects area */}
             <div className="project_space">
               <div className="container">
                 <div className="row"> 
@@ -89,6 +100,7 @@ class Projects extends Component {
                         </h3>
                       </Hidden>  
                     <hr className="hr"></hr>
+                    <h6 className="project_heading">List of projects done under {this.state.sig.name} during the year 2019 - 2020.</h6>
                     <div className="row"> 
                       <div className="home_card_deck">
                         <CardDeck>
