@@ -1,0 +1,18 @@
+.event_container {
+    background-color: black;
+}
+  
+.event_card_front {
+    margin-top: 30px !important;
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+
+.event_card_back {
+    margin-top: 30px !important;
+    background-color: white;
+}
+
+.event_card_front:hover{
+    opacity: 1;
+}

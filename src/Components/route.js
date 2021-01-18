@@ -5,11 +5,13 @@
 
 import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Expo_main from './Expo_main.js';
-import Projects from './projects_main.js';
-import Details from './project_details.js';
+import Expo_main from './project_expo/Expo_main';
+import Projects from './project_expo/projects_main';
+import Details from './project_expo/project_details';
 import Header from './Navbar.js';
-import Home from './home.js';
+import Home from './home/home'
+import Events from './events/events'
+
 
 
 class Main extends Component {
@@ -37,6 +39,7 @@ class Main extends Component {
                       <Route exact path='/expo' component={Expo_main}/>
                       <Route exact path="/expo/:sigId" component={SelectedSig} />
                       <Route exact path="/project/:projectId" component={SelectedProject} />
+                      <Route exact path="/events" component={Events} />
                   </Switch>
               </BrowserRouter>  
           </>

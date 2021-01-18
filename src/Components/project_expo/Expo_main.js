@@ -7,8 +7,9 @@
 
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import '../Shared/CSS/Expo_main.css';
-import '../Shared/CSS/main.css'
+import '../../Shared/CSS/Expo_main.css';
+import '../../Shared/CSS/main.css'
+import Footer from '../footer';
 import axios from 'axios'; 
 
 /* imports for cards */
@@ -16,7 +17,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 
-import Hidden from '@material-ui/core/Hidden';
+import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
 /* styles for cards */
 const useStyles = makeStyles({
@@ -82,7 +83,8 @@ class Expo_main extends Component{
       });
   
     return(
-      <div>
+      <div className="hello">
+        <div className="blah">
 
         {/* banner area */}
         <div>
@@ -96,16 +98,7 @@ class Expo_main extends Component{
               <div className="container">
                 <div className="row"> 
                   <div className="col-12 col-md-12">
-                    <Hidden xsDown>
-                    <h3 className="heading"><b>
-                    <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> PROJECT EXPO 2020 <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
-                      </b></h3>
-                      </Hidden>
-                      <Hidden smUp>
-                        <h3 className="heading">
-                          <b>PROJECT EXPO 2020</b>
-                        </h3>
-                      </Hidden>  
+                    <h3 className="heading">PROJECT EXPO 2020 <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
                     <hr className="hr"></hr>
                   </div>
                 </div>
@@ -115,8 +108,9 @@ class Expo_main extends Component{
               </div>
             </div>
 
-
-        <div className="wave"></div>
+        <Footer />
+        
+        </div>
     </div>
     )
   }

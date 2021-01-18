@@ -1,0 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
+
+.footer{
+    padding-top: 50px;
+    padding-bottom: 70px;
+    background-color: black;
+    color: white;
+}
+
+.footer_heading{
+    padding-top: 50px;
+    font-size: 30px;
+    font-weight: lighter;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.footer_logo {
+    margin-right: 20px;
+}
+
+.footer_text{
+    padding-top: 40px;
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.footer_text2{
+    padding-top: 25px;
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: 'Rajdhani', sans-serif;
+    
+}
+
+.footer_link_space{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(182, 181, 181);
+}
+
+.footer_link{
+    font-size: 17px;
+    color: lightgray;
+    text-decoration: none;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.footer_link:hover{
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+}
+
+.footer_first_icon{
+    color: white;
+}
+
+.footer_icon{
+    color: white;
+    margin-left: 30px;
+}
+
+.footer_footer {
+    background-color: rgb(97, 96, 96);
+    padding-top: 40px;
+}

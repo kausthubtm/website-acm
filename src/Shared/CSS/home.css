@@ -97,45 +97,6 @@
     
 }
 
-.home_accordion_main{
-    margin: 10px;
-    border: 1px solid rgb(0, 0, 0);
-}
-
-.home_accordion_head{
-    background-color: rgb(0, 3, 37) !important;
-}
-
-.home_accordion_heading {   
-    color: white;
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.home_accordion_body{
-    background-color: white;
-    
-}
-
-.home_expand_button{
-    color: white;
-    box-shadow: rgb(255, 255, 255) 0px 1px 2px;
-}
-
-.home_accordion_text_head{
-    padding-top: 10px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.home_accordion_text{
-    padding-top: 10px;
-    margin: 5px;
-    font-size: 14px;
-    color: black;
-}
-
 .people{
     justify-content: center;
     text-align: center;
@@ -168,6 +129,7 @@
 .img_icon{
     margin-left: 10px;
 }
+
 
 
 

@@ -1,12 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
 
 .space{
-    text-align: center;
-    padding-top: 150px;
+    padding-top: 50px;
+}
+
+.details_heading {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 35px;
 }
 
 .project_text{
-    font-family: 'Formata', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     font-size: 16px;
     opacity: 0.8;
 }

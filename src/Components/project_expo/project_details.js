@@ -3,8 +3,9 @@
 *****************************************************************************/
 
 import React, {Component} from 'react';
-import '../Shared/CSS/project_details.css';
-import '../Shared/CSS/main.css'
+import '../../Shared/CSS/project_details.css';
+import '../../Shared/CSS/main.css'
+import Footer from '../footer'
 import axios from 'axios'; 
 
 /* imports for Card and Table */
@@ -21,7 +22,7 @@ const useStyles = makeStyles({
     maxWidth: 500,
     transition: '0.2s',
     '&:hover': {
-        transform: 'scale(1.02)',
+        transform: 'scale(1.05)',
     },
     border: '1px solid black'
   },
@@ -53,12 +54,7 @@ function Check1({info, name}) {
     return(
       <div>
         <h2 className="space">
-          <Hidden xsDown>
-            <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> {name} <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
-          </Hidden>
-          <Hidden smUp>
-            <h2 className="heading ">{name}</h2>
-          </Hidden>
+          <div className="details_heading">{name}</div>
         </h2>
         <hr></hr>
         <h6 className="project_text" >{info}</h6>
@@ -112,7 +108,8 @@ class Details extends Component {
       }); 
   
     return(
-      <div>
+      <div className="hello">
+        <div className="blah">
 
           {/* banner area */}
           <section className="banner">
@@ -159,12 +156,7 @@ class Details extends Component {
             <div className="row">
               <div className="col-12 col-md-12">
                 <h2 className="space">
-                  <Hidden xsDown>
-                    <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Description <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
-                  </Hidden>
-                  <Hidden smUp>
-                    <h2 className="heading "> Description </h2>
-                  </Hidden>
+                <div className="details_heading">Description</div>
                 </h2>
                 <hr></hr>
                 <h6 className="project_text" >{this.state.details.introduction}</h6>
@@ -175,12 +167,7 @@ class Details extends Component {
 
             {/* Method section */}
             <h2 className="space">
-              <Hidden xsDown>
-                <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Method <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
-              </Hidden>
-              <Hidden smUp>
-                  <h2 className="heading ">Method</h2>
-                </Hidden>
+            <div className="details_heading">Method</div>
             </h2>
             <hr></hr>
             <h6 className="project_text">{this.state.details.method}</h6>
@@ -200,19 +187,15 @@ class Details extends Component {
 
             {/* Pictures section */}
             <h2 className="space">
-              <Hidden xsDown>
-                <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Pictures <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/>
-              </Hidden>
-              <Hidden smUp>
-                  <h2 className="heading "> Pictures </h2>
-                </Hidden>
+            <div className="details_heading">Pictures</div>
             </h2><hr></hr>
             <div className="row">
                 {pictures}
             </div>
           </div>
           <div className="space"></div>
-          <div className="wave"></div>
+          <Footer />
+      </div>
       </div>
     )
   }
