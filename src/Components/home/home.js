@@ -3,13 +3,12 @@ import '../../Shared/CSS/home2.css';
 import '../../Shared/CSS/main.css'
 import axios from 'axios'; 
 
-import Announcements from './Announcements'
+import Announcements from '../shared/Announcements'
 import About from './about_acm'
 import TabPanel from './yantras2';
 import Numbers from './numbers'
 import Latest from './latest'
 import Team from './team'
-import Footer from '../footer';
 
 import Hidden from '@material-ui/core/Hidden';
 
@@ -25,16 +24,14 @@ class Home extends Component{
     componentDidMount() { 
         axios.get('http://127.0.0.1:8000/') 
         .then(res => {  
-            this.setState({ sigs : res.data.sigo, events : res.data.events, people : res.data.special_people }); 
+            this.setState({ sigs : res.data.sigo, events : res.data.events, people : res.data.special_people });  
         }) 
     }
   
     render () {
 
         return(
-           <div className="hello">
-               <div className="blah">
-
+           <div>
                 <Hidden smDown>
                     <section className="banner_home"></section>
                 </Hidden>
@@ -47,16 +44,16 @@ class Home extends Component{
                 
 
                   
-                  <Announcements />
+                  <Announcements items={[{name:'Project Expo', description:'View the project expo !', link:'/expo'},
+                    {name:'Project Proposals', description:'View the project proposals !', link:'/proposal'},
+                    ]}/>
                   <About /> 
                   <Latest />
                   <TabPanel />
                   <Numbers />
                   <Team people={this.state.people} />
-                  <Footer />
 
             </div>
-        </div>
         )
     }
 }

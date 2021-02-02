@@ -11,7 +11,8 @@ import Details from './project_expo/project_details';
 import Header from './Navbar.js';
 import Home from './home/home'
 import Events from './events/events'
-
+import Footer from './footer'
+import Yantra from './yantras/yantras';
 
 
 class Main extends Component {
@@ -30,17 +31,30 @@ class Main extends Component {
             );
           } 
 
+          const SelectedYantra = ({match}) => {
+            return(
+              <Yantra sigId = {match.params.sigId} />
+            );
+          } 
+          
         return(
             <>
               <BrowserRouter>
                   <Header/>
-                  <Switch>
-                      <Route exact path='/' component={Home} />
-                      <Route exact path='/expo' component={Expo_main}/>
-                      <Route exact path="/expo/:sigId" component={SelectedSig} />
-                      <Route exact path="/project/:projectId" component={SelectedProject} />
-                      <Route exact path="/events" component={Events} />
-                  </Switch>
+                  <div className="hello">
+                    <div className="blah">
+                      <Switch>
+                          <Route exact path='/' component={Home} />
+                          <Route exact path="/sigs/:sigId" component={SelectedYantra} />
+                          <Route exact path='/expo' component={Expo_main}/>
+                          <Route exact path="/expo/:sigId" component={SelectedSig} />
+                          <Route exact path="/project/:projectId" component={SelectedProject} />
+                          <Route exact path="/events" component={Events} />
+                      </Switch>
+                      <Footer />
+                    </div>
+                  </div>
+                  
               </BrowserRouter>  
           </>
         )

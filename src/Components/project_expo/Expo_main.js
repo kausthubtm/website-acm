@@ -9,7 +9,6 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import '../../Shared/CSS/Expo_main.css';
 import '../../Shared/CSS/main.css'
-import Footer from '../footer';
 import axios from 'axios'; 
 
 /* imports for cards */
@@ -83,8 +82,7 @@ class Expo_main extends Component{
       });
   
     return(
-      <div className="hello">
-        <div className="blah">
+      <div>
 
         {/* banner area */}
         <div>
@@ -94,24 +92,20 @@ class Expo_main extends Component{
         </div>
 
         {/* sigs display area */}
-            <div className="project_space">
-              <div className="container">
-                <div className="row"> 
-                  <div className="col-12 col-md-12">
-                    <h3 className="heading">PROJECT EXPO 2020 <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
-                    <hr className="hr"></hr>
-                  </div>
-                </div>
-                <div className="row">
-                  {sigs}
+          <div className="project_space">
+            <div className="container">
+              <div className="row"> 
+                <div className="col-12 col-md-12">
+                  <h3 className="heading">PROJECT EXPO 2020 <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
+                  <hr className="hr"></hr>
                 </div>
               </div>
+              <div className="row">
+                {sigs}
+              </div>
             </div>
-
-        <Footer />
-        
-        </div>
-    </div>
+          </div>
+      </div>
     )
   }
 }
