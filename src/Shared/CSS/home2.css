@@ -7,20 +7,9 @@
 
 
 /* Announcements */
-.announcement_main {
-}
 
-.announce_card_1{
+.announce_card{
     margin-right: 10px;
-    background-color:rgb(5, 60, 119);
-}
-
-.announce_card_2{
-    margin-right: 10px;
-    background-color:rgb(5, 60, 119);
-}
-
-.announce_card_3{
     background-color:rgb(5, 60, 119);
 }
 

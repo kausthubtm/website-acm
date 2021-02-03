@@ -7,10 +7,8 @@ import React, { Component } from 'react';
 import axios from 'axios'; 
 import '../../Shared/CSS/projects_main.css';
 import '../../Shared/CSS/main.css'
-import Footer from '../footer'
 
 /* imports for card for the project display */
-import Hidden from '@material-ui/core/Hidden';
 import Fade from 'react-reveal/Fade';
 import Box from '@material-ui/core/Box';
 import CallMadeIcon from '@material-ui/icons/CallMade';
@@ -69,35 +67,29 @@ class Projects extends Component {
         });
 
     return(
-        <div className="hello">
-          <div className="blah">
+        <div>
+          {/* banner area */}
+          <div className="body">
+            <section className="banner">
+              <div className="banner-text1">{this.state.sig.name} Project Expo</div>
+            </section>
+          </div>
 
-            {/* banner area */}
-            <div className="body">
-              <section className="banner">
-                <div className="banner-text1">{this.state.sig.name} Project Expo</div>
-              </section>
-            </div>
-
-            {/* list of projects area */}
-            <div className="project_space">
-              <div className="container">
-                <div className="row"> 
-                  <div className="col-12 col-md-12">
-                    <h3 className="heading"> PROJECTS <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3>
-                    <hr className="hr"></hr>
-                    <h6 className="project_heading">List of projects done under {this.state.sig.name} during the year 2019 - 2020.</h6>
-                    </div>
-                    <div className="project_cards_group">
-                        {projects}  
+          {/* list of projects area */}
+          <div className="project_space">
+            <div className="container">
+              <div className="row"> 
+                <div className="col-12 col-md-12">
+                  <h3 className="heading"> PROJECTS <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3>
+                  <hr className="hr"></hr>
+                  <h6 className="project_heading">List of projects done under {this.state.sig.name} during the year 2019 - 2020.</h6>
                   </div>
-                  </div>
-                  </div>
+                  <div className="project_cards_group">
+                      {projects}  
                 </div>
-
-                <Footer />
+              </div>
             </div>
-
+          </div>
         </div>
     )
   }
