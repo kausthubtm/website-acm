@@ -29,7 +29,7 @@ function Numbers () {
                             nibh id convallis. Curabitur vehicula porttitor commodo. Nulla vel congue nulla.</h6> 
                         </div>
                         </div>
-                        <Container className="number_container">
+                        <div className="cta">
                             <Row>
                                 <div className="number_main">
                                     <div className="col-12 col-md-3">
@@ -68,7 +68,7 @@ function Numbers () {
                                     </div>
                                 </div>
                             </Row>
-                        </Container>
+                        </div>
                     </div>
                 </div>
     );

@@ -373,6 +373,19 @@
     opacity: 0.8;
 }
 
+.cta {
+    min-height: 300px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #645862;
+    background-image: url("../images/download3.jpg");
+    background-size: cover;
+    color: #fff;
+    padding: 5em;
+    text-align: center;
+}
+
 
 /* Contact */
 
