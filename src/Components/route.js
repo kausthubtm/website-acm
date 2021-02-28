@@ -9,6 +9,7 @@ import Expo_main from './project_expo/Expo_main';
 import Projects from './project_expo/projects_main';
 import Details from './project_expo/project_details';
 import Header from './Navbar.js';
+import Contact from './contact/contact.js';
 import Home from './home/home'
 import Events from './events/events'
 import Footer from './footer'
@@ -50,6 +51,7 @@ class Main extends Component {
                           <Route exact path="/expo/:sigId" component={SelectedSig} />
                           <Route exact path="/project/:projectId" component={SelectedProject} />
                           <Route exact path="/events" component={Events} />
+                          <Route exact path="/contact" component={Contact} />
                       </Switch>
                       <Footer />
                     </div>

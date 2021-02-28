@@ -1,0 +1,20 @@
+.donate_area{
+    background: -webkit-gradient(linear, left top, right top, from(rgba(4, 9, 30, 0.8)), to(rgba(4, 9, 30, 0.8))), url(https://nitk.acm.org/images/contact.jpg);
+    background: -webkit-linear-gradient(left, rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.8)), url(https://nitk.acm.org/images/contact.jpg);
+    background: -o-linear-gradient(left, rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.8)), url(https://nitk.acm.org/images/contact.jpg);
+    background: linear-gradient(to right, rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.8)), url(https://nitk.acm.org/images/contact.jpg);
+    padding: 110px 0px;
+    background-size: cover;
+    color:white;
+}
+
+.text-field-root{
+    background-color: white;
+    color:white;
+    border-radius: 2%;
+    font-size: 1vw;
+    margin:10px 0px !important;
+}
+.button-root{
+    margin:0px 10px 0px 0px!important;
+}
