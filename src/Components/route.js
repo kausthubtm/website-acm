@@ -12,7 +12,7 @@ import Header from './Navbar.js';
 import Home from './home/home'
 import Events from './events/events'
 import Footer from './footer'
-import Yantra from './yantras/yantras';
+import Yantra from './yantras/yantras.js';
 
 
 class Main extends Component {
