@@ -1,0 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
+
+.proposal_card{
+    text-align: center;
+}
+
+.proposal_name {
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 22px;
+    font-family: 'Rajdhani', sans-serif;
+    color: black;
+    text-align: center;
+}
+
+.proposal_button {
+    text-align: center;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
