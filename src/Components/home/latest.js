@@ -17,7 +17,7 @@ function Latest () {
                                         <CardDeck className="card_deck">
                                         <div className="col-12 col-md-4">
                                             <Card className="blog_card">
-                                                <CardImg top width="100%" src="/uploads/sigs/blog.jpg" alt="Card image cap" />
+                                                {/*<CardImg top width="100%" src="/uploads/sigs/blog.jpg" alt="Card image cap" />*/}
                                                 <CardBody className="card_body">
                                                 <CardTitle className="card_title">Electric Vehicles in India</CardTitle>
                                                 <CardSubtitle tag="h6" className="card_title2">POSTED ON JANUARY 10, 2021</CardSubtitle>
@@ -31,7 +31,7 @@ function Latest () {
                                         </div>
                                         <div className="col-12 col-md-4">
                                             <Card className="blog_card">
-                                                <CardImg top width="100%" src="/uploads/sigs/blog.jpg" alt="Card image cap" />
+                                                {/*<CardImg top width="100%" src="/uploads/sigs/blog.jpg" alt="Card image cap" />*/}
                                                 <CardBody className="card_body">
                                                 <CardTitle className="card_title">China’s BRI – Belt and Road Initiative</CardTitle>
                                                 <CardSubtitle tag="h6" className="card_title2">POSTED ON JANUARY 6, 2021</CardSubtitle>
@@ -44,7 +44,7 @@ function Latest () {
                                         </div>
                                         <div className="col-12 col-md-4">
                                             <Card className="blog_card">
-                                                <CardImg top width="100%" src="/uploads/sigs/blog.jpg" alt="Card image cap" />
+                                                {/*<CardImg top width="100%" src="/uploads/sigs/blog.jpg" alt="Card image cap" />*/}
                                                 <CardBody className="card_body">
                                                 <CardTitle className="card_title">Aircraft Carriers</CardTitle>
                                                 <CardSubtitle tag="h6" className="card_title2">POSTED ON DECEMBER 28, 2020</CardSubtitle>

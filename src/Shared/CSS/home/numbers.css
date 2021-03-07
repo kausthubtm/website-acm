@@ -1,0 +1,50 @@
+.home_space6{
+    margin-top: 10px;
+}
+
+#safety {
+  text-align: center;
+  margin: 10% 0 ;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+#safety h2
+{
+    padding-left: 20px;
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(0, 0, 43);
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+#safety h3
+{
+  font-size: 1.2rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 800;
+  line-height: 1.6;
+  color: rgb(0, 0, 43);
+}
+
+#safety p
+{
+  font-size: 16px;
+  line-height: 1.2;
+  color: rgb(0, 0, 43);
+}
+
+
+
+.safety-icon
+{
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 3%;
+  color: rgb(0, 0, 43);
+}
+
+.safety-icon:hover
+{
+  color: rgb(0, 0, 43);
+}

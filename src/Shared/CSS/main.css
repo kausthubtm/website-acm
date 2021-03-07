@@ -54,14 +54,16 @@
     overflow: hidden;
     position: relative;
     animation: text 3s 1;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.home_banner-text2{
+.banner-text2{
     justify-content: center;
 	color:  white;
     font-family: "Open Sans", Arial, sans-serif;
     font-weight: 700;
-	font-size: 30px;
+	font-size: 28px;
     text-align: center;
 }
 

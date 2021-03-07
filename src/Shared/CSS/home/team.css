@@ -1,0 +1,76 @@
+/* team CSS */
+
+.home_space2{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.team_heading{
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(0, 0, 43);
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+}
+
+.people{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.img_overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.img_container {
+    background-color: transparent;
+}
+
+.img_container:hover .img{
+    opacity: 0.4;
+    border: 1px solid black;
+}
+  
+.img_container:hover .img_overlay {
+    opacity: 1;
+}
+
+
+.img{
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.img_name{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.img_position{
+    font-size: 15px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+}
+
+.img_icon{
+    color: rgb(0, 0, 0);
+}
+
+.img_icon:hover{
+    color: rgb(0, 0, 40);
+}

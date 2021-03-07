@@ -1,0 +1,96 @@
+.home_space1{
+    padding-top: 70px;
+    padding-bottom: 50px;
+    margin: 30px;
+}
+
+.about_heading {
+    border-left: 5px solid rgb(10, 10, 204);
+    padding-left: 20px;
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(0, 0, 43);
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+    margin-top: 50px;
+}
+
+.about_box {
+    height: 100%;
+}
+
+.home_acm_text{
+    padding: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+
+.latest {
+    margin-top: 100px;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.card_deck {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.blog_card{
+    margin: 30px;
+    margin-left: 20px;
+    background-color: transparent !important;
+    border-bottom: 3px solid gray;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    min-height: 400px;
+}
+
+.card_title {
+    font-size: 27px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.card_title2 {
+    font-size: 19px;
+    font-family: 'Rajdhani', sans-serif;
+    opacity: 0.7;
+}
+
+.card_text{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: normal;
+    font-size: 15px;
+    font-family: 'Rajdhani', sans-serif;
+    line-height: 1.2;
+}
+
+.card_button{
+    background-color: rgb(59, 107, 197);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.initiatives_heading{
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(0, 0, 43);
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.initiatives {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    line-height: 1.2;
+    max-width: 800px;
+    margin: 0 auto;
+}

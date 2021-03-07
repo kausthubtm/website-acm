@@ -16,6 +16,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import '../../Shared/CSS/home2.css';
+import '../../Shared/CSS/home/yantras.css';
 
 import Fade from 'react-reveal/Fade';
 import { Button, Container } from 'reactstrap';
@@ -62,6 +63,7 @@ export default function ScrollableTabsButtonForce() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const link = 'https://nitk.acm.org/media/'
 
   return (
     
@@ -102,7 +104,7 @@ export default function ScrollableTabsButtonForce() {
                     <div className="row">
                       <Fade left>
                         <div className="col-12 col-md-3">
-                          <img src="/uploads/sigs/sanga.jpg" alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={link + "uploads/sigs/sanga.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                       <div className="col-md-1"></div>
@@ -140,7 +142,7 @@ export default function ScrollableTabsButtonForce() {
                       <div className="col-md-1"></div>
                       <Fade right>
                         <div className="col-12 col-md-3">
-                          <img src="/uploads/sigs/yantrika.jpeg" alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={link +"uploads/sigs/yantrika.jpeg"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                     </div>
@@ -151,7 +153,7 @@ export default function ScrollableTabsButtonForce() {
                     <div className="row">
                       <Fade left>
                         <div className="col-12 col-md-3">
-                          <img src="/uploads/sigs/vidyut.png" alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={link + "uploads/sigs/vidyut.png"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                       <div className="col-md-1"></div>
@@ -187,7 +189,7 @@ export default function ScrollableTabsButtonForce() {
                       <div className="col-md-1"></div>
                       <Fade right>
                         <div className="col-12 col-md-3">
-                          <img src="/uploads/sigs/karya.jpg" alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={link + "uploads/sigs/karya.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                     </div>
@@ -198,7 +200,7 @@ export default function ScrollableTabsButtonForce() {
                     <div className="row">
                       <Fade left>
                         <div className="col-12 col-md-3">
-                          <img src="/uploads/sigs/sanga.jpg" alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={link + "uploads/sigs/sanga.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                       <div className="col-md-1"></div>
@@ -234,7 +236,7 @@ export default function ScrollableTabsButtonForce() {
                       <div className="col-md-1"></div>
                       <Fade right>
                         <div className="col-12 col-md-3">
-                          <img src="/uploads/sigs/sanga.jpg" alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={link + "uploads/sigs/sanga.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                     </div>

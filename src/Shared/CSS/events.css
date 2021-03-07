@@ -1,18 +1,53 @@
-.event_container {
-    background-color: black;
-}
-  
-.event_card_front {
-    margin-top: 30px !important;
-    opacity: 0.5;
-    transition: 0.3s ease-in-out;
+.events_space{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: lightgray;
 }
 
-.event_card_back {
-    margin-top: 30px !important;
+.events_heading{
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(0, 0, 43);
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.home_accordion_main{
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.home_accordion_head{
+    background-color: rgb(0, 3, 37) !important;
+}
+
+.home_accordion_heading {   
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.home_accordion_body{
     background-color: white;
 }
 
-.event_card_front:hover{
-    opacity: 1;
+.home_accordion_text_head{
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.home_expand_button{
+    color: white;
+    box-shadow: rgb(255, 255, 255) 0px 1px 2px;
+}
+
+.home_accordion_text{
+    padding-top: 10px;
+    margin: 5px;
+    font-size: 14px;
+    color: black;
 }

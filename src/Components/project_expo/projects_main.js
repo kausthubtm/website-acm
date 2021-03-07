@@ -19,12 +19,14 @@ import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
   /* function to display the list of projects */
   function SimpleAccordion({project}) {
 
+    const link = 'https://nitk.acm.org/media/'
+
     return (
       <Fade bottom>
         <Box boxShadow={5} bgcolor="background.paper" m={1} p={1} className="project_box">
           <a href={`/project/${project.id}`} >
             <div className="img_box">
-              <img src={'/' + project.display_picture} alt='ex' height="250" width="100%" crop="fill" className="project_card_img"/>
+              <img src={link + project.display_picture} alt='ex' height="250" width="100%" crop="fill" className="project_card_img"/>
             </div>
           </a>
           <div className="projects_card_content">

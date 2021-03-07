@@ -1,0 +1,85 @@
+.yantras {
+    padding-top: 100px;
+    margin-top: 10px;
+    background-image: url(../../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.home_space3{
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+
+.yantra_container{
+    max-width: 97%; 
+    margin: 0 auto;
+}
+
+.yantras2{
+    color: white;
+    background-color: rgb(0, 0, 30);
+}
+
+.yantra_link {
+    margin-left: 5px !important;
+    border: 2px solid white !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    font-weight: bold !important;
+    width: 100px !important;
+}
+
+.yantra_card2-1{
+    padding-top: 40px;
+    padding-bottom: 70px;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+
+
+.yantra_card2-2{
+    padding-top: 40px;
+    padding-bottom: 70px;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+
+
+.yantra_img2 {
+    margin-top: 10px;
+    border-radius: 25px;
+    border : 2px solid black;
+    height: 250px;
+    width: 250px;
+    background-color: white;
+}
+
+.yantra_heading2{
+    font-size: 28px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+}
+
+.yantra_button{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);  
+    font-weight: bold; 
+    border: 2px solid black;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.yantra_button:hover {
+    background-color: rgb(211, 211, 211);
+    color: black;
+}
+
+.yantra_content {
+    padding-top: 10px;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+}

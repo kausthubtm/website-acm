@@ -1,17 +1,19 @@
 import React from 'react';
 import '../../Shared/CSS/home2.css';
+import '../../Shared/CSS/home/team.css'
 
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
-import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
 function People ({person}) {
+
+  const link = 'https://nitk.acm.org/staticfiles/';
 
     return(
       <div className="col-12 col-md-3">
         <div className="img_container">
-          <img alt="..."  src= {'/uploads/' + person.image_path } className="img" width="200" height="200" ></img>
+          <img alt="..."  src= {link + person.image_path } className="img" width="200" height="200" ></img>
           <div className="img_overlay">
             <div className="img_links">
               <a href={person.fb_link} className="img_icon"><FacebookIcon style={{ fontSize: 40 }} /></a>
@@ -45,10 +47,10 @@ function Team (props) {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-md-12">
-                            <h3 className="heading">Our team <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3>
+                            <h3 className="team_heading">Our team<br></br>
+                            <img src={"/uploads/sigs/underline.png"} alt='acm logo' height='25' width='350'/></h3>
                         </div>
                     </div>
-                    <hr className="hr"></hr>
                 </div>
                 <div className="people">
                     <div className="row">

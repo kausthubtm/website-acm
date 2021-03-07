@@ -6,11 +6,11 @@ import axios from 'axios';
 import Announcements from '../shared/Announcements'
 import About from './about_acm'
 import TabPanel from './yantras2';
+//import Yantras from './yantras'
 import Numbers from './numbers'
+import Initiatives from './initiatives'
 import Latest from './latest'
 import Team from './team'
-
-import Hidden from '@material-ui/core/Hidden';
 
 class Home extends Component{
 
@@ -32,25 +32,21 @@ class Home extends Component{
 
         return(
            <div>
-                <Hidden smDown>
-                    <section className="banner_home"></section>
-                </Hidden>
-                <Hidden mdUp>
-                    <section className="banner">
-                        <div className="banner-text1">Association for Computing Machinery</div>
-                        <div className="home_banner-text2">Advancing Computing as a Science & Profession</div>
-                    </section>
-                </Hidden>
                 
-
+                <section className="banner">
+                    <div className="banner-text1">Association for Computing Machinery</div>
+                    <div className="banner-text2">Advancing Computing as a Science & Profession</div>
+                </section>
                   
                   <Announcements items={[{name:'Project Expo', description:'View the project expo !', link:'/expo'},
                     {name:'Project Proposals', description:'View the project proposals !', link:'/proposal'},
                     ]}/>
                   <About /> 
-                  <Latest />
-                  <TabPanel />
                   <Numbers />
+                  <Initiatives /> 
+                  {/*<Yantras />*/}
+                  <TabPanel />
+                  <Latest />
                   <Team people={this.state.people} />
 
             </div>

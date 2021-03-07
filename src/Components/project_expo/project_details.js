@@ -34,12 +34,13 @@ const useStyles = makeStyles({
 /* function to display pictures */
 function MediaCard({pic}) {
   const classes = useStyles();   
+  const link = 'https://nitk.acm.org/media/'
 
   return (
   <div className={classes.space}>    
     <Card className={classes.root}>
       <CardActionArea>
-        <img src={'/' + pic.picture} alt={pic.title} height="340" width="100%" crop="fill" />
+        <img src={link + pic.picture} alt={pic.title} height="340" width="100%" crop="fill" />
       </CardActionArea>
     </Card>
   </div>
@@ -105,6 +106,8 @@ class Details extends Component {
             </div>
         );
       }); 
+
+      const link = 'https://nitk.acm.org/media/'
   
     return(
       <div>
@@ -143,7 +146,7 @@ class Details extends Component {
             <div className="col-12 col-md-4">
               <Card>
                 <CardActionArea>
-                  <img src={'/' + this.state.details.display_picture} alt='ex' height="250" width="100%" crop="fill" />
+                  <img src={link + this.state.details.display_picture} alt='ex' height="250" width="100%" crop="fill" />
                 </CardActionArea>
               </Card>
             </div>

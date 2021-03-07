@@ -38,14 +38,15 @@ const useStyles = makeStyles({
 
   /* function for cards */
   function MediaCard({sig}) {
-    const classes = useStyles();   
+    const classes = useStyles(); 
+    const link = 'https://nitk.acm.org/media/'  
 
     return (
     <div className={classes.space}>    
       <Card className={classes.root}>
         <Link to={`/all_proposals/${sig.id}`} style={{ textDecoration: 'none' }}>
           <CardActionArea>
-            <img src={sig.image} alt={sig.name} height="250" width="100%" crop="fill" />
+            <img src={link + sig.image} alt={sig.name} height="250" width="100%" crop="fill" />
           </CardActionArea>
         </Link>
       </Card>
