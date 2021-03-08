@@ -9,6 +9,8 @@ import GroupIcon from '@material-ui/icons/Group';
 
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
+import Fade from 'react-reveal/Fade';
+
 
 function Numbers () {
     return(

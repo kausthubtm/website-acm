@@ -2,10 +2,13 @@ import React from 'react';
 import '../../Shared/CSS/home2.css';
 import '../../Shared/CSS/home/about.css'
 
+import Fade from 'react-reveal/Fade';
+
 
 function Initiatives () {
     return(
-                <div className="home_space1">
+                <Fade up>
+                    <div className="home_space1">
                         <div className="row">
                             <div className="col-12 col-md-12">
                                 <h3 className="initiatives_heading">Initiatives<br></br>
@@ -18,6 +21,7 @@ function Initiatives () {
                             </div>   
                         </div>
                     </div>
+                </Fade>
     );
 }
 

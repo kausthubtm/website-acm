@@ -2,6 +2,23 @@
     justify-content: flex-end;
 }
 
+.navbar{
+    background-color: white !important;
+}
+
 .navbar-nav{
     margin-right:0px!important;
+}
+
+.nav_link{
+    font-family: 'Rajdhani', sans-serif;
+    text-decoration: none;
+    padding-left: 25px !important;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav_link:hover {
+    color: rgb(0, 0, 43) !important;
+    transition-duration: 0.8s;
 }

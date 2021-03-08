@@ -1,5 +1,7 @@
 .home_space6{
-    margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(238, 238, 238);
 }
 
 #safety {
@@ -31,20 +33,5 @@
 {
   font-size: 16px;
   line-height: 1.2;
-  color: rgb(0, 0, 43);
-}
-
-
-
-.safety-icon
-{
-  color: white;
-  font-size: 3rem;
-  margin-bottom: 3%;
-  color: rgb(0, 0, 43);
-}
-
-.safety-icon:hover
-{
-  color: rgb(0, 0, 43);
+  color: black;
 }

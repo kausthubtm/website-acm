@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open%20Sans:300,400,500,600,700);
 
 .hello{
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(245,245,245);
 }
 
 .blah{
@@ -39,6 +39,7 @@
 	background-size: cover;
     min-height: 700px;
     justify-content: center;
+    position: relative;
 }
 
 .banner-text1{
@@ -134,3 +135,4 @@
     background: url(../images/wave.png);
     background-size: 100% 100px;
 }
+

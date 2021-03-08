@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios'; 
 import '../../Shared/CSS/home2.css'
 import '../../Shared/CSS/events.css'
+import Announcements from '../shared/Announcements'
 
 import {CardDeck} from 'reactstrap';
 
@@ -69,6 +70,10 @@ class Events extends Component{
           <div className="banner-text1">Events</div>
           </section>
         </div>
+
+        <Announcements items={[{name:'Project Expo', description:'View the project expo !', link:'/expo'},
+                    {name:'Project Proposals', description:'View the project proposals !', link:'/proposal'},
+                    ]}/>
 
           <div className="events_space">
             <div className="events">
