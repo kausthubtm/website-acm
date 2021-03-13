@@ -71,10 +71,13 @@ class Projects extends Component {
     return(
         <div>
           {/* banner area */}
-          <div className="body">
-            <section className="banner">
-              <div className="banner-text1">{this.state.sig.name} Project Expo</div>
-            </section>
+
+          <div className="banner_background">
+            <div className="banner">
+              <header className="banner_text_area">
+                <h1 className="banner_text1">{this.state.sig.name} Project Expo</h1>
+              </header>
+            </div>
           </div>
 
           {/* list of projects area */}

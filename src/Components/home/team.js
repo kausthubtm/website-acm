@@ -48,7 +48,7 @@ function Team (props) {
                     <div className="row">
                         <div className="col-12 col-md-12">
                             <h3 className="team_heading">Our team<br></br>
-                            <img src={"/uploads/sigs/underline.png"} alt='acm logo' height='25' width='350'/></h3>
+                            <img src={"/uploads/sigs/underline.png"} alt='acm logo' height='25' width='250'/></h3>
                         </div>
                     </div>
                 </div>

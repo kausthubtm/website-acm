@@ -12,7 +12,7 @@ function Initiatives () {
                         <div className="row">
                             <div className="col-12 col-md-12">
                                 <h3 className="initiatives_heading">Initiatives<br></br>
-                                <img src={"/uploads/sigs/underline.png"} alt='acm logo' height='25' width='350'/></h3>
+                                <img src={"/uploads/sigs/underline.png"} alt='acm logo' height='25' width='250'/></h3>
                                 <h6 className="initiatives">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor tristique nibh 
                                 faucibus porta. Cras dignissim enim eu orci pharetra, nec aliquam nisl tincidunt. Nullam commodo risus in varius 
                                 scelerisque. Nulla facilisi. Ut at euismod magna. Morbi a dui vitae arcu dapibus imperdiet. Etiam laoreet ut odio 

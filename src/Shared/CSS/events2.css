@@ -1,0 +1,47 @@
+.events_space{
+    padding-top: 150px;
+    padding-bottom: 200px;
+    background-color: rgb(230, 230, 230);
+}
+
+.events_heading{
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(0, 0, 43);
+    font-weight: bold;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.root {
+    min-height: 300px;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+.event_name{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.event_desc {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 17px;
+    text-align: center;
+}
+
+.event_pic{
+    height: 300px;
+    width: 100%;
+}
+
+.chip{
+    background-color: blue !important;
+    color: white !important;
+    margin-left: 20px;
+}

@@ -86,11 +86,14 @@ class Proposal_main extends Component{
       <div>
 
         {/* banner area */}
-        <div>
-          <section className="banner">
-            <div className="banner-text1">Project proposal</div>
-          </section>
-        </div>
+
+        <div className="banner_background">
+            <div className="banner">
+              <header className="banner_text_area">
+                <h1 className="banner_text1">Project Proposal</h1>
+              </header>
+            </div>
+          </div>
 
         {/* sigs display area */}
           <div className="project_space">

@@ -24,11 +24,13 @@ class Yantra extends Component {
       return (
         <div>
           {/* banner area */}
-          <div>
-            <section className="banner">
-              <div className="banner-text1">{this.state.sig.name}</div>
-              <div className="banner-text2">{this.state.data.sub_head}</div>
-            </section>
+          <div className="banner_background">
+            <div className="banner">
+              <header className="banner_text_area">
+                <h1 className="banner_text1">{this.state.sig.name}</h1>
+                <p className="banner_text2">{this.state.data.sub_head}</p>
+              </header>
+            </div>
           </div>
 
           <Announcements items={[{name:'Project Expo', description:'View the project expo !', link:'/expo/'+this.state.sig.id},

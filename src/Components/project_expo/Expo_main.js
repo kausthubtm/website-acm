@@ -9,6 +9,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import '../../Shared/CSS/Expo_main.css';
 import '../../Shared/CSS/main.css'
+import Announcements from '../shared/Announcements'
 import axios from 'axios'; 
 
 /* imports for cards */
@@ -87,11 +88,16 @@ class Expo_main extends Component{
       <div>
 
         {/* banner area */}
-        <div>
-          <section className="banner">
-            <div className="banner-text1">Project Expo</div>
-          </section>
-        </div>
+                <div className="banner_background">
+                    <div className="banner">
+                        <header className="banner_text_area">
+                            <h1 className="banner_text1">Project Expo</h1>
+                        </header>
+                    </div>
+                </div>
+                <Announcements items={[{name:'Project Expo', description:'View the project expo !', link:'/expo'},
+                    {name:'Project Proposals', description:'View the project proposals !', link:'/proposal'},
+                    ]}/>
 
         {/* sigs display area */}
           <div className="project_space">

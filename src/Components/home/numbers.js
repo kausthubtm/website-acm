@@ -9,8 +9,6 @@ import GroupIcon from '@material-ui/icons/Group';
 
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
-import Fade from 'react-reveal/Fade';
-
 
 function Numbers () {
     return(
@@ -36,25 +34,25 @@ function Numbers () {
                             <div class="row">
 
                                 <div class="col-lg-3 p-5">
-                                <FaceIcon style={{ fontSize: 80 }}/>
+                                <FaceIcon style={{ fontSize: 80 }} className="icon"/>
                                 <h3>Strength</h3>
                                 <p class="pl-4 pr-4">Antivirus software scans every file which comes through the Internet to your computer.</p>
                                 </div>
 
                                 <div class="col-lg-3 p-5 ">
-                                <EventIcon style={{ fontSize: 80 }}/>
+                                <EventIcon style={{ fontSize: 80 }} className="icon"/>
                                 <h3>Events</h3>
                                 <p class="pl-4 pr-4">High-quality firewalls act as buffers between you, your computer and outside intruders.</p>
                                 </div>
 
                                 <div class="col-lg-3 p-5">
-                                <ExtensionIcon style={{ fontSize: 80 }}/>
+                                <ExtensionIcon style={{ fontSize: 80 }} className="icon"/>
                                 <h3>Projects</h3>
                                 <p class="pl-4 pr-4">You should never share personal or financially sensitive information over the Internet.</p>
                                 </div>
 
                                 <div class="col-lg-3 p-5">
-                                <GroupIcon style={{ fontSize: 80 }}/>
+                                <GroupIcon style={{ fontSize: 80 }} className="icon"/>
                                 <h3>SIG's</h3>
                                 <p class="pl-4 pr-4">You should never share personal or financially sensitive information over the Internet.</p>
                                 </div>

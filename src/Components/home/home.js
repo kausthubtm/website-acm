@@ -32,11 +32,14 @@ class Home extends Component{
 
         return(
            <div>
-                
-                <section className="banner">
-                    <div className="banner-text1">Association for Computing Machinery</div>
-                    <div className="banner-text2">Advancing Computing as a Science & Profession</div>
-                </section>
+                <div className="banner_background">
+                    <div className="banner">
+                        <header className="banner_text_area">
+                            <h1 className="banner_text1">Association for Computing Machinery</h1>
+                            <p className="banner_text2">Advancing Computing as a Science & Profession</p>
+                        </header>
+                    </div>
+                </div>
                   
                   <Announcements items={[{name:'Project Expo', description:'View the project expo !', link:'/expo'},
                     {name:'Project Proposals', description:'View the project proposals !', link:'/proposal'},

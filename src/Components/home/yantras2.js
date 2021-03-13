@@ -116,7 +116,7 @@ export default function ScrollableTabsButtonForce() {
                             of work at NITK ACM with projects in widespread fields including but 
                             not limited to Computer Vision, Software Development, Machine Learning 
                             and Big Data. </p>
-                            <Button href={`/1/`} className="yantra_button">
+                            <Button href={`/sigs/1/`} className="yantra_button">
                               Read More
                             </Button>
                       </div>
@@ -134,7 +134,7 @@ export default function ScrollableTabsButtonForce() {
                           the field of Mechanical, Civil, Chemical and Material Science. The SIG serves as a platform for those interested
                           in shaping their ideas to reality be it in the area of aerospace engineering, robotics, automobile engineering,
                           bio-chemical engineering, structures and materials </p>
-                          <Button href={`/1/`} className="yantra_button">
+                          <Button href={`/sigs/2/`} className="yantra_button">
                             Read More
                           </Button>
                         </div>
@@ -163,7 +163,7 @@ export default function ScrollableTabsButtonForce() {
                           <p className="yantra_content">Vidyut is a special interest group of ACM-NITK Student Chapter interested in the broad area of Electronics
                         Engineering.Dealing with Electrical and Electronics Engineering, the purview of Vidyut ranges from Robotics to
                         Power Electronics to Signal Processing to Machine Learning.</p>
-                        <Button href={`/1/`} className="yantra_button">
+                        <Button href={`/sigs/3/`} className="yantra_button">
                           Read More
                         </Button>
                       </div>
@@ -181,7 +181,7 @@ export default function ScrollableTabsButtonForce() {
                           passionate about business, finance, and marketing. It has a collaboration with a few startups and regularly holds
                           Knnew_owledge Exchange Programs (KEPs) for sharing of information between members. It also serves as a platform for taking 
                           forth new business ideas and out of the box marketing strategies.</p>
-                          <Button href={`/1/`} className="yantra_button">
+                          <Button href={`/sigs/4/`} className="yantra_button">
                             Read More
                           </Button>
                         </div>
@@ -211,7 +211,7 @@ export default function ScrollableTabsButtonForce() {
                           for the literary-oriented and creative minds within the ACM student community and beyond, with the NITK institute. To this end,
                           Saahithya also aims to acquaint students with the in’s and out’s of college life through Cache, and aims to grow on several 
                           fronts through the subsequent years. </p>
-                          <Button href={`/1/`} className="yantra_button">
+                          <Button href={`/sigs/5/`} className="yantra_button">
                             Read More
                           </Button>
                       </div>
@@ -228,7 +228,7 @@ export default function ScrollableTabsButtonForce() {
                             <p className="yantra_content">True to the name, we're a group of media and publicity experts who work towards generating content relevant to the 
                             objectives of the club, represent and reflect the club's activities through its various social media handles, and making
                             sure we stay on top of publicity so as to reach out to the crowd for our various and varied events.</p>
-                            <Button href={`/1/`} className="yantra_button">
+                            <Button href={`/sigs/6/`} className="yantra_button">
                               Read More
                             </Button>
                         </div>

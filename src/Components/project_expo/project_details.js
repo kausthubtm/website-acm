@@ -2,7 +2,7 @@
 *  PROJECT DETAILS : Displays all the details of a project                  *
 *****************************************************************************/
 
-import React, {Component} from 'react';
+import React, {Component, Fragment } from 'react';
 import '../../Shared/CSS/project_details.css';
 import '../../Shared/CSS/main.css'
 import axios from 'axios'; 
@@ -57,7 +57,12 @@ function Check1({info, name}) {
           <div className="details_heading">{name}</div>
         </h2>
         <hr></hr>
-        <h6 className="project_text" >{info}</h6>
+        <h6 className="project_text" >{`${info}`
+        .split('\n')
+        .map((paragraph, idx) =>
+          <Fragment key={idx}>
+            {paragraph}<br />
+          </Fragment>)}</h6>
       </div>
     );
   }
@@ -113,9 +118,13 @@ class Details extends Component {
       <div>
 
         {/* banner area */}
-        <section className="banner">
-          <div className="banner-text3">{this.state.details.name}</div>
-        </section>
+        <div className="banner_background">
+          <div className="banner">
+            <header className="banner_text_area">
+              <h1 className="banner_text1">{this.state.details.name}</h1>
+            </header>
+          </div>
+        </div>
 
 
         <div className="container">

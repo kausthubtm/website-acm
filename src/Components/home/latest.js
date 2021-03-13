@@ -4,10 +4,13 @@ import '../../Shared/CSS/main.css';
 
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button, CardDeck, Row} from 'reactstrap';
+import Fade from 'react-reveal/Fade';
+
+import { Card, CardText, CardBody, CardTitle, CardSubtitle, Button, CardDeck, Row} from 'reactstrap';
 
 function Latest () {
     return (
+        <Fade up>
         <div className="latest">   
             <div className="col-12 col-md-12">                            
                 <div className="heading">The latest <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></div>  
@@ -83,6 +86,7 @@ function Latest () {
                                         </CardDeck>
                                     </Row>                              
                             </div>
+                            </Fade>
     );
 }
 

@@ -12,7 +12,8 @@ let sigs = [
   {id:2, name:'Yantrika'},
   {id: 3, name:'Vidyut'},
   {id:4, name:'Kaaryavarta'},
-  {id: 5, name:'Saahitya'}
+  {id: 5, name:'Saahitya'},
+  {id: 6, name:'Media & Publicity'}
 ];
 
 function HideAppBar () {

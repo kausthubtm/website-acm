@@ -67,9 +67,13 @@ class ProposalDetails extends Component {
       <div>
 
         {/* banner area */}
-        <section className="banner">
-          <div className="banner-text3">{this.state.details.name}</div>
-        </section>
+        <div className="banner_background">
+            <div className="banner">
+              <header className="banner_text_area">
+                <h1 className="banner_text1">{this.state.details.name}</h1>
+              </header>
+            </div>
+          </div>
 
 
         <div className="container">
