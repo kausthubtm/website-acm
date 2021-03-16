@@ -26,6 +26,7 @@ class Home extends Component{
         .then(res => {  
             this.setState({ sigs : res.data.sigo, events : res.data.events, people : res.data.special_people });  
         }) 
+        window.scrollTo(0, 0);
     }
   
     render () {

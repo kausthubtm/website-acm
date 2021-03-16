@@ -50,7 +50,7 @@ function Getchip ({id}) {
 function Cards ({event}) {
   if(event.name) {
     return (
-      <div className="col-md-7">
+      <div className="col-md-6">
         <CardContent className="content">
           <div className="event_name">
             {event.name} <Getchip id={event.sig_id} />
@@ -68,7 +68,7 @@ function Cards ({event}) {
 
 function Image ({index, images}) {
   return(
-    <div className="col-md-5">
+    <div className="col-md-4">
       <img src={images[index]} alt="ACM logo" className="event_pic"/>
     </div>
   )
@@ -86,25 +86,46 @@ class Events extends Component{
         .then(res => {  
             this.setState({events : res.data.events}); 
         }) 
+        window.scrollTo(0, 0);
     }
   
     render () {
 
         var i = -1;
         const events = this.state.events.map((event) => {
-          i = i + 1;        
+          i = i + 1; 
+          if(i%2 === 0) {       
           return(
             <Fade up>
               <div className="row">
                 <Card className="root">
                   <div className="row">
+                    <div className="col-md-1"></div>
                     <Cards event={event} />
+                    <div className="col-md-1"></div>
                     <Image index={i} images={this.state.images} />
                   </div>
                 </Card>
               </div>
             </Fade>
             )
+          }
+          else {
+            return(
+              <Fade up>
+                <div className="row">
+                  <Card className="root">
+                    <div className="row">
+                      <Image index={i} images={this.state.images} />
+                      <div className="col-md-1"></div>
+                      <Cards event={event} />
+                      <div className="col-md-1"></div>
+                    </div>
+                  </Card>
+                </div>
+              </Fade>
+              )
+          }
         });
   
       return(

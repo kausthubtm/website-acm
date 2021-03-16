@@ -14,6 +14,30 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import { Table } from 'reactstrap';
 import { Hidden } from '@material-ui/core';
 
+import { SRLWrapper } from "simple-react-lightbox";
+
+import SimpleReactLightbox from 'simple-react-lightbox'
+
+const options = {
+  buttons: {
+    backgroundColor: 'rgba(30,30,36,0.8)',
+    iconColor: 'rgba(255, 255, 255, 0.8)',
+    iconPadding: '10px',
+    showAutoplayButton: false,
+    showCloseButton: true,
+    showDownloadButton: false,
+    showFullscreenButton: false,
+    showNextButton: false,
+    showPrevButton: false,
+    showThumbnailsButton: false,
+    size: '40px'
+  },
+  thumbnails: {
+    showThumbnails: false,
+  }
+}
+
+
 
 /* Styles for pictures */
 const useStyles = makeStyles({
@@ -40,7 +64,9 @@ function MediaCard({pic}) {
   <div className={classes.space}>    
     <Card className={classes.root}>
       <CardActionArea>
-        <img src={link + pic.picture} alt={pic.title} height="340" width="100%" crop="fill" />
+        <SRLWrapper options={options}>
+          <img src={link + pic.picture} alt={pic.title} height="340" width="100%" crop="fill" />
+        </SRLWrapper>
       </CardActionArea>
     </Card>
   </div>
@@ -100,6 +126,7 @@ class Details extends Component {
       this.setState({ details : res.data.project }); 
       this.setState({ pics : res.data.pictures }); 
     }) 
+    window.scrollTo(0, 0);
   }
 
   render () {
@@ -200,7 +227,9 @@ class Details extends Component {
           <div className="details_heading">Pictures</div>
           </h2><hr></hr>
           <div className="row">
-              {pictures}
+            <SimpleReactLightbox>
+                {pictures}
+            </SimpleReactLightbox>
           </div>
         </div>
         <div className="space"></div>

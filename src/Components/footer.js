@@ -38,7 +38,7 @@ class Footer extends Component {
                 <div className="row">
 
                     <div className="col-12 col-md-4">
-                        <div className="footer_heading"> <img src="/uploads/sigs/logo.png" height="55" width="55" alt="ACM logo" className="footer_logo" /> ACM @ NITK</div>
+                        <div className="footer_heading"> <img src="/uploads/sigs/acm-logo-wide.png" height="70" width="300" alt="ACM logo" className="footer_logo" /></div>
                         <div className="footer_text">
                         We are a bunch of enthusiatic students who aim at uniting the computing fraternity at NITK
                         under one tag and allows the students to learn together and share their knowledge to cater the interests

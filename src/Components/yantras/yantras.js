@@ -18,6 +18,7 @@ class Yantra extends Component {
         this.setState(res.data);
         console.log(res.data);
       }) 
+      window.scrollTo(0, 0);
     }
 
     render(){

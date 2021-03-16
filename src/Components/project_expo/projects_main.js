@@ -55,6 +55,7 @@ class Projects extends Component {
         this.setState({ project_list : res.data.projects }); 
         this.setState({ sig : res.data.sig }); 
       }) 
+      window.scrollTo(0, 0);
   }
 
 

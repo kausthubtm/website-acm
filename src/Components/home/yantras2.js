@@ -7,10 +7,10 @@ import grey from '@material-ui/core/colors/grey';
 
 import ComputerIcon from '@material-ui/icons/Computer';
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
-import BuildIcon from '@material-ui/icons/Build';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
+import SettingsIcon from '@material-ui/icons/Settings';
 
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
@@ -90,8 +90,8 @@ export default function ScrollableTabsButtonForce() {
                     className="yantras2"
                 >
                 <Tab label="Sanganitra" icon={<ComputerIcon />} {...a11yProps(0)} className="yantra_link"/> 
-                <Tab label="Yantrika" icon={<EmojiObjectsIcon />} {...a11yProps(1)} className="yantra_link"/>
-                <Tab label="Vidyut" icon={<BuildIcon/>} {...a11yProps(2)} className="yantra_link"/>
+                <Tab label="Yantrika" icon={<SettingsIcon/>} {...a11yProps(1)} className="yantra_link"/>
+                <Tab label="Vidyut" icon={<EmojiObjectsIcon/>} {...a11yProps(2)} className="yantra_link"/>
                 <Tab label="Kaaryavarta" icon={<MonetizationOnIcon />} {...a11yProps(3)} className="yantra_link"/>
                 <Tab label="Saahithya" icon={<MenuBookIcon />} {...a11yProps(4)} className="yantra_link"/>
                 <Tab label="Media and Publicity" icon={<CameraAltIcon />} {...a11yProps(5)} className="yantra_link"/>
@@ -200,7 +200,7 @@ export default function ScrollableTabsButtonForce() {
                     <div className="row">
                       <Fade left>
                         <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/sanga.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={"/uploads/sigs/saahitya.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                       <div className="col-md-1"></div>
@@ -236,7 +236,7 @@ export default function ScrollableTabsButtonForce() {
                       <div className="col-md-1"></div>
                       <Fade right>
                         <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/sanga.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={"/uploads/sigs/saahitya.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                     </div>

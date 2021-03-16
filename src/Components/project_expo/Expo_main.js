@@ -69,6 +69,7 @@ class Expo_main extends Component{
       .then(res => {  
           this.setState({ sigs : res.data.sigo }); 
       }) 
+      window.scrollTo(0, 0);
   }
 
   render () {

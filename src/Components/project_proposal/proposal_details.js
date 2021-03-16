@@ -59,6 +59,7 @@ class ProposalDetails extends Component {
     .then(res => {  
       this.setState({ details : res.data.project }); 
     }) 
+    window.scrollTo(0, 0);
   }
 
   render () { 
