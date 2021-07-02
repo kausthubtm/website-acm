@@ -1,5 +1,5 @@
 /****************************************************************************
-*  Expo main component : Displays all the sigs under project expo           *
+*  Expo main component : Displays all the sigs for SMP                      *
 *****************************************************************************/
 
 
@@ -44,7 +44,7 @@ const useStyles = makeStyles({
     return (
     <div className={classes.space}>    
       <Card className={classes.root}>
-        <Link to={`/all_proposals/${sig.id}`} style={{ textDecoration: 'none' }}>
+        <Link to={`/smp/${sig.id}`} style={{ textDecoration: 'none' }}>
           <CardActionArea>
             <img src={link + sig.image} alt={sig.name} height="250" width="100%" crop="fill" />
           </CardActionArea>
@@ -56,7 +56,7 @@ const useStyles = makeStyles({
 
 
 
-class Proposal_main extends Component{
+class Smp_main extends Component{
 
   state = { 
     sigs : [], 
@@ -64,8 +64,8 @@ class Proposal_main extends Component{
 
   async componentDidMount() { 
     try {
-      const response = await axios.get('http://127.0.0.1:8000/proposal') 
-      this.setState({ sigs : response.data.sigo });
+      const res = await axios.get('http://127.0.0.1:8000/proposal') 
+      this.setState({ sigs : res.data.sigo }); 
       window.scrollTo(0, 0);
     }
     catch(error) {
@@ -76,7 +76,7 @@ class Proposal_main extends Component{
   render () {
 
       const sigs = this.state.sigs.map((sig) => {
-        if(sig.id < 5) {
+        if(sig.image) {
           return (
               <div key={sig.id} className="col-md-3">
                   <MediaCard sig={sig} />
@@ -94,7 +94,7 @@ class Proposal_main extends Component{
         <div className="banner_background">
             <div className="banner">
               <header className="banner_text_area">
-                <h1 className="banner_text1">Project Proposal</h1>
+                <h1 className="banner_text1">Summer Mentorship Program</h1>
               </header>
             </div>
           </div>
@@ -104,7 +104,7 @@ class Proposal_main extends Component{
             <div className="container">
               <div className="row"> 
                 <div className="col-12 col-md-12">
-                  <h3 className="heading">PROJECT PROPOSAL 2020 <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
+                  <h3 className="heading">SMP 2021 <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
                   <hr className="hr"></hr>
                 </div>
               </div>
@@ -118,4 +118,4 @@ class Proposal_main extends Component{
   }
 }
 
-export default Proposal_main;
+export default Smp_main;

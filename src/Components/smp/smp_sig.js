@@ -27,13 +27,6 @@ const useStyles = makeStyles({
     boxShadow: 'rgb(0, 113, 161) 0px 1px 6px',
     height : 250,
   },
-  root2: {
-    maxWidth: 500,
-    borderRadius: 16,
-    transition: '0.2s',
-    boxShadow: 'rgb(0, 113, 161) 0px 1px 6px',
-    height : 300,
-  },
   space: {
     paddingTop: '10.25%',
   },
@@ -41,15 +34,15 @@ const useStyles = makeStyles({
 
 
 /* function to display the list of projects */
-function MediaCard({project}) {
+function MediaCard({smp}) {
   const classes = useStyles();   
 
   return (
   <div className={classes.space}>    
     <Card className={classes.root}>
-      <Link to={`/proposal/${project.id}`} style={{ textDecoration: 'none' }}>
+      <Link to={`/smp/${smp.sig_id}/${smp.id}`} style={{ textDecoration: 'none' }}>
         <CardActionArea>
-          <h5 className="proposal_name">{project.name}</h5>
+          <h5 className="proposal_name">{smp.name}</h5>
           <div className="proposal_card">
             <Button href={`/1/`} className="proposal_button">Read More</Button>
           </div>
@@ -60,38 +53,20 @@ function MediaCard({project}) {
   );
 } 
 
-function MediaCard2({project}) {
-  const classes = useStyles();   
 
-  return (
-  <div className={classes.space}>    
-    <Card className={classes.root2}>
-      <Link to={`/proposal/${project.id}`} style={{ textDecoration: 'none' }}>
-        <CardActionArea>
-          <h5 className="proposal_name">{project.name}</h5>
-          <div className="proposal_card">
-            <Button href={`/1/`} className="proposal_button">Read More</Button>
-          </div>
-        </CardActionArea>
-      </Link>
-    </Card>
-  </div>
-  );
-} 
-
-class ProposedProjects extends Component {
+class SmpSig extends Component {
 
     state = { 
-      project_list : [], 
+      smp_list : [], 
       sig : [],
     }
 
 
   async componentDidMount() { 
-    try{
-      const response = await axios.get('http://127.0.0.1:8000/all_proposals/' + this.props.sigId) 
-      this.setState({ project_list : response.data.projects }); 
-      this.setState({ sig : response.data.sig }); 
+    try {
+      const res = await axios.get('http://127.0.0.1:8000/smp/' + this.props.sigId) 
+      this.setState({ smp_list : res.data.smps }); 
+      this.setState({ sig : res.data.sig }); 
       window.scrollTo(0, 0);
     }
     catch(error) {
@@ -102,18 +77,10 @@ class ProposedProjects extends Component {
 
     render () {   
 
-        const projects = this.state.project_list.map((project) => {
-          if(this.props.sigId === '4') {
-            return (
-                <div key={project.id} className="col-md-3" >
-                  <MediaCard2 project={project} />
-                </div>
-            );
-          }
-          else 
+        const smps = this.state.smp_list.map((smp) => {
             return(
-              <div key={project.id} className="col-md-3" >
-                  <MediaCard project={project} />
+              <div key={smp.id} className="col-md-3" >
+                  <MediaCard smp={smp} />
               </div>
           );
         });
@@ -124,7 +91,7 @@ class ProposedProjects extends Component {
           <div className="banner_background">
             <div className="banner">
               <header className="banner_text_area">
-                <h1 className="banner_text1">{this.state.sig.name} Project Proposals</h1>
+                <h1 className="banner_text1">{this.state.sig.name} SMPs</h1>
               </header>
             </div>
           </div>
@@ -134,13 +101,13 @@ class ProposedProjects extends Component {
             <div className="container">
               <div className="row"> 
                 <div className="col-12 col-md-12">
-                  <h3 className="heading"> PROJECTS <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3>
+                  <h3 className="heading"> SMPs <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3>
                   <hr className="hr"></hr>
-                  <h6 className="project_heading">List of project proposals by {this.state.sig.name} for the year 2020 - 2021.</h6>
+                  <h6 className="project_heading">List of SMPs by {this.state.sig.name}</h6>
                   </div>
                 </div>
                 <div className="row">
-                    {projects}  
+                    {smps}  
                 </div>
               </div>
             </div>
@@ -149,4 +116,4 @@ class ProposedProjects extends Component {
   }
 }
 
-export default ProposedProjects;
+export default SmpSig;

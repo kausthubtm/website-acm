@@ -11,10 +11,10 @@
 }
 
 .nav_link{
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
     text-decoration: none;
     padding-left: 25px !important;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
 }
 

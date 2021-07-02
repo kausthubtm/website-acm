@@ -5,20 +5,56 @@ import '../../Shared/CSS/yantras.css'
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import Announcements from '../shared/Announcements'
 
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 500,
+    borderRadius: 16,
+    transition: '0.2s',
+    '&:hover': {
+        transform: 'scale(1.1)',
+    },
+    boxShadow: 'rgb(0, 113, 161) 0px 1px 6px',
+  },
+  space: {
+    paddingTop: '10.25%',
+  },
+}); 
+
+function MediaCard({sig}) {
+  const classes = useStyles(); 
+
+  const link = 'https://nitk.acm.org/media/'  
+
+  return (
+  <div className={classes.space}>    
+    <Card className={classes.root}>
+      <CardActionArea>
+        <img src={link + sig.image} alt={sig.name} height="350" width="100%" crop="fill" />
+      </CardActionArea>
+    </Card>
+  </div>
+  );
+}
+
 class Yantra extends Component {
     constructor(props){
       super(props);
-      console.log(props);
       this.state = {sigo:{}, sig:{}, events:[], data:{}};
     }
 
-    componentDidMount(){
-      axios.get('http://127.0.0.1:8000/' + this.props.sigId) 
-      .then(res => {  
-        this.setState(res.data);
-        console.log(res.data);
-      }) 
-      window.scrollTo(0, 0);
+    async componentDidMount(){
+      try {
+        const res = await axios.get('http://127.0.0.1:8000/' + this.props.sigId + '/')   
+        this.setState(res.data); 
+        window.scrollTo(0, 0);
+      }
+      catch(error) {
+        console.log(error);
+      }
     }
 
     render(){
@@ -34,14 +70,15 @@ class Yantra extends Component {
             </div>
           </div>
 
-          <Announcements items={[{name:'Project Expo', description:'View the project expo !', link:'/expo/'+this.state.sig.id},
-                    {name:'Project Proposals', description:'View the project proposals !', link:'/all_proposals/' + this.state.sig.id},
+          <Announcements items={[{name:'Project Expo', description:'View the project expo !', link:'/expo'},
+                    {name:'Project Proposals', description:'View the project proposals !', link:'/all_proposals'},
                     ]}/>
 
           {/* sigs display area */}
           <div className="sig_space">
             <div className="container">
               <div className="row"> 
+                {/* <MediaCard sig={this.state.sig} /> */}
                 <div className="col-12 col-md-12">
                   <h3 className="heading">What is {this.state.sig.name}? <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
                   <hr className="hr"></hr>

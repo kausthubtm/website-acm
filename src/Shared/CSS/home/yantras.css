@@ -81,5 +81,7 @@
 .yantra_content {
     padding-top: 10px;
     color: white;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
 }

@@ -14,30 +14,6 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import { Table } from 'reactstrap';
 import { Hidden } from '@material-ui/core';
 
-import { SRLWrapper } from "simple-react-lightbox";
-
-import SimpleReactLightbox from 'simple-react-lightbox'
-
-const options = {
-  buttons: {
-    backgroundColor: 'rgba(30,30,36,0.8)',
-    iconColor: 'rgba(255, 255, 255, 0.8)',
-    iconPadding: '10px',
-    showAutoplayButton: false,
-    showCloseButton: true,
-    showDownloadButton: false,
-    showFullscreenButton: false,
-    showNextButton: false,
-    showPrevButton: false,
-    showThumbnailsButton: false,
-    size: '40px'
-  },
-  thumbnails: {
-    showThumbnails: false,
-  }
-}
-
-
 
 /* Styles for pictures */
 const useStyles = makeStyles({
@@ -56,22 +32,22 @@ const useStyles = makeStyles({
 
 
 /* function to display pictures */
-function MediaCard({pic}) {
-  const classes = useStyles();   
-  const link = 'https://nitk.acm.org/media/'
+// function MediaCard({pic}) {
+//   const classes = useStyles();   
+//   const link = 'https://nitk.acm.org/media/'
 
-  return (
-  <div className={classes.space}>    
-    <Card className={classes.root}>
-      <CardActionArea>
-        <SRLWrapper options={options}>
-          <img src={link + pic.picture} alt={pic.title} height="340" width="100%" crop="fill" />
-        </SRLWrapper>
-      </CardActionArea>
-    </Card>
-  </div>
-  );
-}
+//   return (
+//   <div className={classes.space}>    
+//     <Card className={classes.root}>
+//       <CardActionArea>
+//         <SRLWrapper options={options}>
+//           <img src={link + pic.picture} alt={pic.title} height="340" width="100%" crop="fill" />
+//         </SRLWrapper>
+//       </CardActionArea>
+//     </Card>
+//   </div>
+//   );
+// }
 
 
 /* function to check if the section is null or not */
@@ -112,7 +88,7 @@ function Check2({info, name}) {
 
 
 /* main class */
-class Details extends Component {
+class SmpDetails extends Component {
 
   state = { 
     details : [], 
@@ -121,10 +97,9 @@ class Details extends Component {
 
 
   async componentDidMount() { 
-    try{
-      const res = await axios.get('http://127.0.0.1:8000/project/' + this.props.projectId) 
-      this.setState({ details : res.data.project }); 
-      this.setState({ pics : res.data.pictures }); 
+    try {
+      const res = await axios.get('http://127.0.0.1:8000/smp/' + this.props.sigId + '/' + this.props.smpId)  
+      this.setState({ details : res.data.smp }); 
       window.scrollTo(0, 0);
     }
     catch(error) {
@@ -134,15 +109,32 @@ class Details extends Component {
 
   render () {
 
-    const pictures = this.state.pics.map((pic) => {
-        return (
-            <div key={pic.id} className="col-md-4">
-                <MediaCard pic={pic} />
-            </div>
-        );
-      }); 
+    // const pictures = this.state.pics.map((pic) => {
+    //     return (
+    //         <div key={pic.id} className="col-md-4">
+    //             <MediaCard pic={pic} />
+    //         </div>
+    //     );
+    //   }); 
 
-      const link = 'https://nitk.acm.org/media/'
+    //   const link = 'https://nitk.acm.org/media/'
+
+    const descriptions = this.state.details.smp_des.map((des) => {
+      return (
+        <div>
+          <h2 className="space">
+            <div className="details_heading">{des.sub_heading}</div>
+          </h2>
+          <hr></hr>
+          {/* <h6 className="project_text" >{`${info}`
+          .split('\n')
+          .map((paragraph, idx) =>
+            <Fragment key={idx}>
+              {paragraph}<br />
+            </Fragment>)}</h6> */}
+      </div>
+      )
+    })
   
     return(
       <div>
@@ -164,10 +156,10 @@ class Details extends Component {
           <div className="row">
             <div className="col-12 col-md-7">
               <Hidden xsDown>
-                <h2><img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Team <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/></h2>
+                <h2 className="details_heading">Details </h2>
               </Hidden>
               <Hidden smUp>
-                <h2 className="heading ">Team</h2>
+                <h2 className="details_heading">Details </h2>
               </Hidden>
               <hr></hr>
               <Table striped>
@@ -175,20 +167,20 @@ class Details extends Component {
                   <Check2 info={this.state.details.mentors} name='Mentors' />
                   <Check2 info={this.state.details.members} name='Members' />  
                   <tr>
-                    <th scope="row">Duration</th>
-                    <td>{this.state.details.duration_in_months} months</td>
+                    <th scope="row">Platform of tutoring</th>
+                    <td>{this.state.details.platform_of_tutoring}</td>
                   </tr>
                 </tbody>
                 </Table>
             </div>
-            <div className="col-12 col-md-1"></div>
-            <div className="col-12 col-md-4">
+            <div className="col-12 col-md-5"></div>
+            {/* <div className="col-12 col-md-4">
               <Card>
                 <CardActionArea>
                   <img src={link + this.state.details.display_picture} alt='ex' height="250" width="100%" crop="fill" />
                 </CardActionArea>
               </Card>
-            </div>
+            </div> */}
           </div> 
 
 
@@ -196,10 +188,10 @@ class Details extends Component {
           <div className="row">
             <div className="col-12 col-md-12">
               <h2 className="space">
-              <div className="details_heading">Description</div>
+              <div className="details_heading">Overview</div>
               </h2>
               <hr></hr>
-              <h6 className="project_text" >{this.state.details.introduction}</h6>
+              <h6 className="project_text" >{this.state.details.overview}</h6>
               <br></br><br></br>
             </div>
           </div> 
@@ -211,29 +203,9 @@ class Details extends Component {
           </h2>
           <hr></hr>
           <h6 className="project_text">{this.state.details.method}</h6>
+          {descriptions}
 
 
-          {/* Results section */}
-          <Check1 info={this.state.details.results} name='Results' />
-
-          {/* Obstacles section */}
-          <Check1 info={this.state.details.obstacles} name='Obstacles' />
-
-          {/* Conclusion section */}
-          <Check1 info={this.state.details.conclusion} name='Conclusion' />
-
-          {/* References section */}
-          <Check1 info={this.state.details.references} name='References' />
-
-          {/* Pictures section */}
-          <h2 className="space">
-          <div className="details_heading">Pictures</div>
-          </h2><hr></hr>
-          <div className="row">
-            <SimpleReactLightbox>
-                {pictures}
-            </SimpleReactLightbox>
-          </div>
         </div>
         <div className="space"></div>
       </div>
@@ -241,4 +213,4 @@ class Details extends Component {
   }
 }
 
-export default Details;
+export default SmpDetails;

@@ -21,12 +21,15 @@ class Home extends Component{
     } 
 
   
-    componentDidMount() { 
-        axios.get('http://127.0.0.1:8000/') 
-        .then(res => {  
+    async componentDidMount() { 
+        try{
+            const res = await axios.get('http://127.0.0.1:8000/') 
             this.setState({ sigs : res.data.sigo, events : res.data.events, people : res.data.special_people });  
-        }) 
-        window.scrollTo(0, 0);
+            window.scrollTo(0, 0);
+        }
+        catch(error) {
+            console.log(error);
+          }
     }
   
     render () {
@@ -42,7 +45,8 @@ class Home extends Component{
                     </div>
                 </div>
                   
-                  <Announcements items={[{name:'Project Expo', description:'View the project expo !', link:'/expo'},
+                  <Announcements items={[{name:'Summer Mentorship', description:'Register for courses now !', link:'/smp'},
+                    {name:'Project Expo', description:'View the project expo !', link:'/expo'},
                     {name:'Project Proposals', description:'View the project proposals !', link:'/proposal'},
                     ]}/>
                   <About /> 

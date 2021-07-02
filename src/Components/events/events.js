@@ -11,6 +11,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Chip from '@material-ui/core/Chip';
 
 import Fade from 'react-reveal/Fade';
+import Hidden from '@material-ui/core/Hidden';
 
 
 function Getchip ({id}) {
@@ -81,17 +82,16 @@ class Events extends Component{
       images : IMG_PATH,
     } 
   
-    componentDidMount() { 
-        axios.get('http://127.0.0.1:8000/') 
-        .then(res => {  
-            this.setState({events : res.data.events}); 
-        }) 
-        window.scrollTo(0, 0);
+    async componentDidMount() { 
+      const res = await axios.get('http://127.0.0.1:8000/') 
+      this.setState({events : res.data.events}); 
+      window.scrollTo(0, 0);
     }
   
     render () {
 
         var i = -1;
+        var j = -1;
         const events = this.state.events.map((event) => {
           i = i + 1; 
           if(i%2 === 0) {       
@@ -127,6 +127,24 @@ class Events extends Component{
               )
           }
         });
+
+        const events2 = this.state.events.map((event) => {
+          j = j + 1; 
+          return(
+            <Fade up>
+              <div className="row">
+                <Card className="root">
+                  <div className="row">
+                    <Image index={j} images={this.state.images} />
+                    <div className="col-md-1"></div>
+                    <Cards event={event} />
+                    <div className="col-md-1"></div>
+                  </div>
+                </Card>
+              </div>
+            </Fade>
+            )
+        })
   
       return(
         <div className="hello">
@@ -149,10 +167,15 @@ class Events extends Component{
                   <div className="row"> 
                     <div className="col-12 col-md-12">
                       <h3 className="events_heading">Events<br></br>
-                      <img src={"/uploads/sigs/underline.png"} alt='acm logo' height='25' width='350'/></h3>
+                      <img src={"/uploads/sigs/underline.png"} alt='acm logo' height='25' width='250'/></h3>
                     </div>
                   </div>
-                  {events}
+                  <Hidden smDown>
+                    {events}
+                  </Hidden>
+                  <Hidden mdUp>
+                      {events2}
+                  </Hidden>
                 </div>
               </div>
             </div>

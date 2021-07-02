@@ -49,24 +49,34 @@ class Projects extends Component {
     }
 
 
-  componentDidMount() { 
-      axios.get('http://127.0.0.1:8000/expo/' + this.props.sigId) 
-      .then(res => {  
-        this.setState({ project_list : res.data.projects }); 
-        this.setState({ sig : res.data.sig }); 
-      }) 
+  async componentDidMount() { 
+    try{
+      const res = await axios.get('http://127.0.0.1:8000/expo/' + this.props.sigId) 
+      this.setState({ project_list : res.data.projects }); 
+      this.setState({ sig : res.data.sig }); 
       window.scrollTo(0, 0);
+    }
+    catch(error) {
+      console.log(error);
+    }
   }
 
 
     render () {   
 
         const projects = this.state.project_list.map((project) => {
+          if(project.year == this.props.year) {
             return (
-              <div key={project.id} className="project_card">
-                <SimpleAccordion project={project}/>
+              <div className="col-12 col-md-4">
+                <div key={project.id} className="project_card">
+                  <SimpleAccordion project={project}/>
+                </div>
               </div>
             );
+          }
+          else {
+            return (<div></div>)
+          }
         });
 
     return(
@@ -88,11 +98,11 @@ class Projects extends Component {
                 <div className="col-12 col-md-12">
                   <h3 className="heading"> PROJECTS <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3>
                   <hr className="hr"></hr>
-                  <h6 className="project_heading">List of projects done under {this.state.sig.name} during the year 2019 - 2020.</h6>
+                  <h6 className="project_heading">List of projects done under {this.state.sig.name} during the year {this.props.year} - {parseInt(this.props.year )+ 1} </h6>
                   </div>
-                  <div className="project_cards_group">
-                      {projects}  
-                </div>
+                  {/* <div className="project_cards_group"> */}
+                      {projects}
+                {/* </div> */}
               </div>
             </div>
           </div>

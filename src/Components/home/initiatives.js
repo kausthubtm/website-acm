@@ -3,6 +3,7 @@ import '../../Shared/CSS/home2.css';
 import '../../Shared/CSS/home/about.css'
 
 import Fade from 'react-reveal/Fade';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 
 function Initiatives () {
@@ -13,11 +14,18 @@ function Initiatives () {
                             <div className="col-12 col-md-12">
                                 <h3 className="initiatives_heading">Initiatives<br></br>
                                 <img src={"/uploads/sigs/underline.png"} alt='acm logo' height='25' width='250'/></h3>
-                                <h6 className="initiatives">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor tristique nibh 
-                                faucibus porta. Cras dignissim enim eu orci pharetra, nec aliquam nisl tincidunt. Nullam commodo risus in varius 
-                                scelerisque. Nulla facilisi. Ut at euismod magna. Morbi a dui vitae arcu dapibus imperdiet. Etiam laoreet ut odio 
-                                eget efficitur. Nam in maximus odio. Donec non mauris non tortor viverra consectetur vitae non sem. In vehicula a 
-                                nibh id convallis. Curabitur vehicula porttitor commodo. Nulla vel congue nulla.</h6> 
+                                <h6 className="initiatives">A list of initiatives taken up by ACM-NITK <br />
+                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> Internships and cold mailing talk <br />
+                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> Perspectives (ACMW Webinar for School Kids) - Pedestal  <br />
+                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> ACM Distinguished Speakers Program - Dr. Ingmar Weber <br />
+                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> ACM Embibe - KEP series <br />
+                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> Resume KEP - Sanganitra <br />
+                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> Innovision - Cryptic, Hardwired, Jugaad, Strategy-B, Literati <br />
+                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> ACM FIG talk with freshers <br />
+                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> ACM Alumni Series - 4 Speakers <br />
+                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> ACMW Distinguished Speakers Program - Dr. Georgia Koutrika <br />
+                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> Summer Mentorship Program<br />
+                                </h6> 
                             </div>   
                         </div>
                     </div>

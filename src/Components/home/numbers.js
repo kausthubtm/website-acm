@@ -33,25 +33,25 @@ function Numbers () {
 
                             <div class="row">
 
-                                <div class="col-lg-3 p-5">
+                                <div class="col-lg-3 p-4">
                                 <FaceIcon style={{ fontSize: 80 }} className="icon"/>
                                 <h3>Strength</h3>
                                 <p class="pl-4 pr-4">Antivirus software scans every file which comes through the Internet to your computer.</p>
                                 </div>
 
-                                <div class="col-lg-3 p-5 ">
+                                <div class="col-lg-3 p-4 ">
                                 <EventIcon style={{ fontSize: 80 }} className="icon"/>
                                 <h3>Events</h3>
                                 <p class="pl-4 pr-4">High-quality firewalls act as buffers between you, your computer and outside intruders.</p>
                                 </div>
 
-                                <div class="col-lg-3 p-5">
+                                <div class="col-lg-3 p-4">
                                 <ExtensionIcon style={{ fontSize: 80 }} className="icon"/>
                                 <h3>Projects</h3>
                                 <p class="pl-4 pr-4">You should never share personal or financially sensitive information over the Internet.</p>
                                 </div>
 
-                                <div class="col-lg-3 p-5">
+                                <div class="col-lg-3 p-4">
                                 <GroupIcon style={{ fontSize: 80 }} className="icon"/>
                                 <h3>SIG's</h3>
                                 <p class="pl-4 pr-4">You should never share personal or financially sensitive information over the Internet.</p>

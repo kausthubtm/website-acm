@@ -94,7 +94,7 @@ export default function ScrollableTabsButtonForce() {
                 <Tab label="Vidyut" icon={<EmojiObjectsIcon/>} {...a11yProps(2)} className="yantra_link"/>
                 <Tab label="Kaaryavarta" icon={<MonetizationOnIcon />} {...a11yProps(3)} className="yantra_link"/>
                 <Tab label="Saahithya" icon={<MenuBookIcon />} {...a11yProps(4)} className="yantra_link"/>
-                <Tab label="Media and Publicity" icon={<CameraAltIcon />} {...a11yProps(5)} className="yantra_link"/>
+                <Tab label="Abhivyakta" icon={<CameraAltIcon />} {...a11yProps(5)} className="yantra_link"/>
                 </Tabs> 
             </AppBar>
             </Container>
@@ -112,11 +112,10 @@ export default function ScrollableTabsButtonForce() {
                         
                       <div className="col-md-6">
                         <h2 className="yantra_heading2">Sanganitra</h2>
-                          <p className="yantra_content">The computer science interest group is one of the broadest categories
-                            of work at NITK ACM with projects in widespread fields including but 
-                            not limited to Computer Vision, Software Development, Machine Learning 
-                            and Big Data. </p>
-                            <Button href={`/sigs/1/`} className="yantra_button">
+                          <p className="yantra_content">The computer science interest group is one of the broadest categories of work at NITK ACM
+                           with projects in widespread fields including but not limited to Computer Vision, Software Development, Machine Learning
+                            and Big Data. Here at Sanganitra, we aim to nurture the curiosity and interests of our members in various fields. </p>
+                            <Button href={`/sigs/1`} className="yantra_button">
                               Read More
                             </Button>
                       </div>
@@ -130,11 +129,11 @@ export default function ScrollableTabsButtonForce() {
                       <Fade left>
                         <div className="col-md-6">
                           <h2 className="yantra_heading2">Yantrika</h2>
-                            <p className="yantra_content">Yantrika is a special interest group of ACM-NITK student chapter dedicated to engineering applications in
-                          the field of Mechanical, Civil, Chemical and Material Science. The SIG serves as a platform for those interested
-                          in shaping their ideas to reality be it in the area of aerospace engineering, robotics, automobile engineering,
-                          bio-chemical engineering, structures and materials </p>
-                          <Button href={`/sigs/2/`} className="yantra_button">
+                            <p className="yantra_content">Yantrika is a special interest group of the ACM-NITK student chapter dedicated to engineering
+                             applications in the field of Mechanical, Civil, Chemical and Material Science. The SIG serves as a wonderful platform for 
+                             those interested in shaping their ideas to reality, be it in the area of aerospace engineering, robotics, automobile 
+                             engineering, bio-chemical engineering, structures or materials.</p>
+                          <Button href={`/sigs/2`} className="yantra_button">
                             Read More
                           </Button>
                         </div>
@@ -163,7 +162,7 @@ export default function ScrollableTabsButtonForce() {
                           <p className="yantra_content">Vidyut is a special interest group of ACM-NITK Student Chapter interested in the broad area of Electronics
                         Engineering.Dealing with Electrical and Electronics Engineering, the purview of Vidyut ranges from Robotics to
                         Power Electronics to Signal Processing to Machine Learning.</p>
-                        <Button href={`/sigs/3/`} className="yantra_button">
+                        <Button href={`/sigs/3`} className="yantra_button">
                           Read More
                         </Button>
                       </div>
@@ -177,11 +176,12 @@ export default function ScrollableTabsButtonForce() {
                       <Fade left>
                         <div className="col-md-6">
                           <h2 className="yantra_heading2">Kaaryavarta</h2>
-                            <p className="yantra_content">Kaaryavarta is a special interest group (SIG) of the ACM-NITK Student Chapter. Its members are people who are
-                          passionate about business, finance, and marketing. It has a collaboration with a few startups and regularly holds
-                          Knnew_owledge Exchange Programs (KEPs) for sharing of information between members. It also serves as a platform for taking 
-                          forth new business ideas and out of the box marketing strategies.</p>
-                          <Button href={`/sigs/4/`} className="yantra_button">
+                            <p className="yantra_content">Kaaryavarta is a special interest group (SIG) of the ACM-NITK Student Chapter. Its members are
+                             people who are passionate about business, economics, finance, and marketing. It has a collaboration with a few startups and 
+                             regularly holds Knowledge Exchange Programs (KEPs) for sharing of information between members. It also serves as a platform 
+                             for taking forth new business ideas and out of the box marketing strategies. The Kaaryavarta group is constantly buzzing with 
+                             activity and the exchange of ideas and teaches you something new every day. </p>
+                          <Button href={`/sigs/4`} className="yantra_button">
                             Read More
                           </Button>
                         </div>
@@ -200,18 +200,19 @@ export default function ScrollableTabsButtonForce() {
                     <div className="row">
                       <Fade left>
                         <div className="col-12 col-md-3">
-                          <img src={"/uploads/sigs/saahitya.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={link + "uploads/sigs/saahitya_MwVI1cp.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                       <div className="col-md-1"></div>
                       <Fade right>
                       <div className="col-md-6">
                         <h2 className="yantra_heading2">Saahitya</h2>
-                          <p className="yantra_content">Saahitya, the literary Special Interest Group (SIG) under ACM-NITK student chapter, has strived to provide a platform 
-                          for the literary-oriented and creative minds within the ACM student community and beyond, with the NITK institute. To this end,
-                          Saahithya also aims to acquaint students with the in’s and out’s of college life through Cache, and aims to grow on several 
-                          fronts through the subsequent years. </p>
-                          <Button href={`/sigs/5/`} className="yantra_button">
+                          <p className="yantra_content">Saahitya, the literary Special Interest Group (SIG) under ACM-NITK student chapter,
+                           has strived to provide a platform for the literary-oriented and creative minds within the ACM student community and beyond.
+                            To this end, Saahitya also aims to acquaint students with the in’s and out’s of college life through Cache, and aims
+                             to grow on several fronts through the subsequent years. This SIG organises some of the most creative and fun filled 
+                             events in the year, a welcome refresher in a technical environmen </p>
+                          <Button href={`/sigs/5`} className="yantra_button">
                             Read More
                           </Button>
                       </div>
@@ -224,11 +225,12 @@ export default function ScrollableTabsButtonForce() {
                     <div className="row">
                       <Fade left>
                         <div className="col-md-6">
-                          <h2 className="yantra_heading2">Media and Publicity</h2>
-                            <p className="yantra_content">True to the name, we're a group of media and publicity experts who work towards generating content relevant to the 
-                            objectives of the club, represent and reflect the club's activities through its various social media handles, and making
-                            sure we stay on top of publicity so as to reach out to the crowd for our various and varied events.</p>
-                            <Button href={`/sigs/6/`} className="yantra_button">
+                          <h2 className="yantra_heading2">Abhivyakta</h2>
+                            <p className="yantra_content">Abhivyakta is the Media and Publicity SIG of our student chapter and true to its name, the team 
+                            comprises experts who work tirelessly to generate eye catching content relevant to the objectives of the club, in addition to 
+                            representing and reflecting the club's activities through its various social media handles, and making sure we stay on top of 
+                            publicity so as to reach out to the crowd for our various and varied events. </p>
+                            <Button href={`/sigs/6`} className="yantra_button">
                               Read More
                             </Button>
                         </div>
@@ -236,7 +238,7 @@ export default function ScrollableTabsButtonForce() {
                       <div className="col-md-1"></div>
                       <Fade right>
                         <div className="col-12 col-md-3">
-                          <img src={"/uploads/sigs/saahitya.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={link + "uploads/sigs/media.jpeg"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                     </div>

@@ -21,12 +21,16 @@ class Footer extends Component {
         description :[],
         coordi : [], 
       } 
+
     
-    componentDidMount() { 
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=13.009231&lon=74.793667&appid=c01ee5e179895cfad1e85c0ce493adbb`) 
-        .then(res => {  
+    async componentDidMount() { 
+        try {
+            const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=13.009231&lon=74.793667&appid=c01ee5e179895cfad1e85c0ce493adbb`)   
             this.setState({ temp : res.data.main, description : res.data.weather[0].description, coordi : res.data.coord }); 
-        }) 
+        }
+        catch(error) {
+            console.log(error);
+        }
     }
 
     render() {
@@ -99,7 +103,7 @@ class Footer extends Component {
                                         <WbSunnyIcon  style={{ fontSize: 20 }} className="footer_first_icon" /> 
                                     </div>
                                     <div className="col-md-10">
-                                        <p>Feels like :  {this.state.temp.temp -273.15 }°C </p>
+                                        <p>Feels like :  {Math.round(this.state.temp.temp -273.15) }°C </p>
                                     </div>
                                     <div className="col-12 col-md-2">
                                         <CloudIcon style={{ fontSize: 20 }} className="footer_first_icon" /> 

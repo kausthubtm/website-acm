@@ -23,17 +23,18 @@
 #safety h3
 {
   font-size: 1.2rem;
-  font-family: 'Rajdhani', sans-serif;
   font-weight: 800;
   line-height: 1.6;
-  color: rgb(0, 0, 43);
+  color: rgb(0,31,56);
+  font-family: 'Rajdhani', sans-serif;
 }
 
 #safety p
 {
   font-size: 16px;
-  line-height: 1.2;
-  color: black;
+  line-height: 1.5;
+  color: rgb(0,0,20);
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 .icon{

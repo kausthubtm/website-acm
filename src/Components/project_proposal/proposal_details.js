@@ -2,7 +2,7 @@
 *  PROJECT DETAILS : Displays all the details of a project                  *
 *****************************************************************************/
 
-import React, {Component} from 'react';
+import React, {Component, Fragment } from 'react';
 import '../../Shared/CSS/project_details.css';
 import '../../Shared/CSS/main.css'
 import axios from 'axios'; 
@@ -22,7 +22,12 @@ function Check1({info, name}) {
           <div className="details_heading">{name}</div>
         </h2>
         <hr></hr>
-        <h6 className="project_text" >{info}</h6>
+        <h6 className="project_text" >{`${info}`
+        .split('\n')
+        .map((paragraph, idx) =>
+          <Fragment key={idx}>
+            {paragraph}<br />
+          </Fragment>)}</h6>
       </div>
     );
   }
@@ -54,12 +59,15 @@ class ProposalDetails extends Component {
   }
 
 
-  componentDidMount() { 
-    axios.get('http://127.0.0.1:8000/proposal/' + this.props.projectId) 
-    .then(res => {  
+  async componentDidMount() { 
+    try{
+      const res = await axios.get('http://127.0.0.1:8000/proposal/' + this.props.projectId) 
       this.setState({ details : res.data.project }); 
-    }) 
-    window.scrollTo(0, 0);
+      window.scrollTo(0, 0);
+    }
+    catch(error) {
+      console.log(error);
+    }
   }
 
   render () { 
