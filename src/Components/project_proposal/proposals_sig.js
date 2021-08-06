@@ -25,14 +25,14 @@ const useStyles = makeStyles({
     borderRadius: 16,
     transition: '0.2s',
     boxShadow: 'rgb(0, 113, 161) 0px 1px 6px',
-    height : 250,
+    height : 600,
   },
   root2: {
     maxWidth: 500,
     borderRadius: 16,
     transition: '0.2s',
     boxShadow: 'rgb(0, 113, 161) 0px 1px 6px',
-    height : 300,
+    height : 600,
   },
   space: {
     paddingTop: '10.25%',
@@ -49,6 +49,9 @@ function MediaCard({project}) {
     <Card className={classes.root}>
       <Link to={`/proposal/${project.id}`} style={{ textDecoration: 'none' }}>
         <CardActionArea>
+            <div className="proposal_img_box">
+              <img src='/uploads/sigs/logo.png' alt='ex' height="250" width="100%" crop="fill" className="proposal_project_card_img"/>
+            </div>
           <h5 className="proposal_name">{project.name}</h5>
           <div className="proposal_card">
             <Button href={`/1/`} className="proposal_button">Read More</Button>
@@ -68,6 +71,9 @@ function MediaCard2({project}) {
     <Card className={classes.root2}>
       <Link to={`/proposal/${project.id}`} style={{ textDecoration: 'none' }}>
         <CardActionArea>
+        <div className="img_box">
+              <img src='/uploads/sigs/logo.png' alt='ex' height="250" width="100%" crop="fill" className="project_card_img"/>
+            </div>
           <h5 className="proposal_name">{project.name}</h5>
           <div className="proposal_card">
             <Button href={`/1/`} className="proposal_button">Read More</Button>
@@ -124,7 +130,7 @@ class ProposedProjects extends Component {
           <div className="banner_background">
             <div className="banner">
               <header className="banner_text_area">
-                <h1 className="banner_text1">{this.state.sig.name} Project Proposals</h1>
+                <h1 className="banner_text_others">{this.state.sig.name} Project Proposals</h1>
               </header>
             </div>
           </div>

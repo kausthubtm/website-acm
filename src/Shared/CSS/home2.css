@@ -18,8 +18,11 @@
 
 .announce_card_heading {
     color: white;
-    font-family: 'Barlow', sans-serif;
+    /* font-family: 'Barlow', sans-serif;
+    font-family: Segoe UI,system-ui,-apple-system,sans-serif; */
+    font-family: "Poppins", Arial, sans-serif;
     font-size: 27px;
+    font-weight: 600;
     padding-bottom: 10px;
     border-bottom: 3px solid orange;
 }

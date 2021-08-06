@@ -6,7 +6,6 @@
 
 
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import '../../Shared/CSS/Expo_main.css';
 import '../../Shared/CSS/main.css';
 import Tab from './tabs';
@@ -48,13 +47,14 @@ class Expo_main extends Component{
         <div className="banner_background">
           <div className="banner">
             <header className="banner_text_area">
-              <h1 className="banner_text1">Project Expo</h1>
+              <h1 className="banner_text_others">Project Expo</h1>
             </header>
           </div>
         </div>
-        <Announcements items={[{name:'Summer Mentorship', description:'Register for courses now !', link:'/smp'},
-          {name:'Project Expo', description:'View the project expo !', link:'/expo'},
-          {name:'Project Proposals', description:'View the project proposals !', link:'/proposal'},
+        <Announcements items={[
+                    {name:'Project Proposal', description:'View Project Expo 2020 !', link:'/proposal'},
+                    {name:'Summer Mentorship', description:'Registrations are closed !', link:'/smp'},
+                    {name:'Project Expo', description:'View Project Expo 2020 !', link:'/expo'},
         ]}/>
 
         {/* sigs display area */}

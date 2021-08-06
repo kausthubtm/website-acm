@@ -1,5 +1,6 @@
 .sig_space{
-    margin-top:40px;
+    margin-top:100px;
+    margin-bottom: 100px;
 }
 
 .sig_description{
@@ -8,6 +9,32 @@
     font-size: 20px;
     font-family: "Poppins", Arial, sans-serif;
     line-height: 1.7;
-    font-weight: 300;
+    font-weight: 400;
     color: rgb(78, 78, 78);
+}
+
+.yantra_events_div {
+    height: auto;
+    overflow: scroll;
+}
+
+.carousel{
+    background-color: rgba(0, 0, 32, 1);
+    width: 100%;
+    color: white;
+    height: 350px;
+}
+
+.carousel2{
+    background-color: rgba(0, 0, 32, 1);
+    width: 100%;
+    color: white;
+}
+
+/* .carousel_indicators{
+    padding-top: 100px;
+} */
+
+.event_pic{
+    padding: 20px;
 }

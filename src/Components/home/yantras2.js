@@ -67,15 +67,13 @@ export default function ScrollableTabsButtonForce() {
 
   return (
     
-        <div className="home_space3">
-                  <div className="container">
-                    <div className="row">
+        <div className="latest">
+              <div className="row">
                       <div className="col-12 col-md-12">
-                          <h3 className="heading">Yantras <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3>
-                          <hr className="hr"></hr>
+                          <h3 className="yantra_heading">Yantras <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3>
+                          <hr></hr>
                       </div>
                     </div>
-                  </div>
             <div className="yantra_main">
             <div className="yantras">
             <Container>

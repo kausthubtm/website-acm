@@ -100,8 +100,8 @@ function Check2({info, name}) {
   if(info) {
     return(
       <tr>
-        <th scope="row">{name}</th>
-        <td>{info}</td>
+        <th scope="row" className="project_text_head">{name}</th>
+        <td className="project_text">{info}</td>
       </tr>
     );
   }
@@ -164,10 +164,10 @@ class Details extends Component {
           <div className="row">
             <div className="col-12 col-md-7">
               <Hidden xsDown>
-                <h2><img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Team <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/></h2>
+                <h2 className="details_heading"><img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Team <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/></h2>
               </Hidden>
               <Hidden smUp>
-                <h2 className="heading ">Team</h2>
+                <div className="details_heading">Team</div>
               </Hidden>
               <hr></hr>
               <Table striped>
@@ -175,8 +175,8 @@ class Details extends Component {
                   <Check2 info={this.state.details.mentors} name='Mentors' />
                   <Check2 info={this.state.details.members} name='Members' />  
                   <tr>
-                    <th scope="row">Duration</th>
-                    <td>{this.state.details.duration_in_months} months</td>
+                    <th scope="row" className="project_text_head">Duration</th>
+                    <td className="project_text">{this.state.details.duration_in_months} months</td>
                   </tr>
                 </tbody>
                 </Table>
@@ -185,7 +185,7 @@ class Details extends Component {
             <div className="col-12 col-md-4">
               <Card>
                 <CardActionArea>
-                  <img src={link + this.state.details.display_picture} alt='ex' height="250" width="100%" crop="fill" />
+                  <img src={link+this.state.details.display_picture}  alt='ex' height="250" width="100%" crop="fill" />
                 </CardActionArea>
               </Card>
             </div>
@@ -200,7 +200,7 @@ class Details extends Component {
               </h2>
               <hr></hr>
               <h6 className="project_text" >{this.state.details.introduction}</h6>
-              <br></br><br></br>
+              <br></br>
             </div>
           </div> 
 

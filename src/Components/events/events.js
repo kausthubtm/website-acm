@@ -41,6 +41,11 @@ function Getchip ({id}) {
           <Chip label="Saahitya" className="chip"/>
         )
     }
+    if(id===6){
+      return(
+        <Chip label="Abhivyakta" className="chip"/>
+      )
+  }
     else return(<div></div>)
 
     
@@ -152,13 +157,13 @@ class Events extends Component{
                 <div className="banner_background">
                     <div className="banner">
                         <header className="banner_text_area">
-                            <h1 className="banner_text1">Events</h1>
+                            <h1 className="banner_text_others">Events</h1>
                         </header>
                     </div>
                 </div>
   
-          <Announcements items={[{name:'Project Expo', description:'View the project expo !', link:'/expo'},
-                      {name:'Project Proposals', description:'View the project proposals !', link:'/proposal'},
+          <Announcements items={[{name:'Summer Mentorship', description:'Registrations are closed !', link:'/smp'},
+                    {name:'Project Expo', description:'View Project Expo 2020 !', link:'/expo'},
                       ]}/>
   
             <div className="events_space">

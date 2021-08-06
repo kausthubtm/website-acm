@@ -65,7 +65,7 @@ class Projects extends Component {
     render () {   
 
         const projects = this.state.project_list.map((project) => {
-          if(project.year == this.props.year) {
+          if(project.year === parseInt(this.props.year)) {
             return (
               <div className="col-12 col-md-4">
                 <div key={project.id} className="project_card">
@@ -96,9 +96,9 @@ class Projects extends Component {
             <div className="container">
               <div className="row"> 
                 <div className="col-12 col-md-12">
-                  <h3 className="heading"> PROJECTS <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3>
+                  <h3 className="heading"> Projects <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3>
                   <hr className="hr"></hr>
-                  <h6 className="project_heading">List of projects done under {this.state.sig.name} during the year {this.props.year} - {parseInt(this.props.year )+ 1} </h6>
+                  <br></br><br></br><h5 className="project_heading">List of projects done under {this.state.sig.name} during the year {this.props.year} - {parseInt(this.props.year )+ 1} </h5> <br></br><br></br>
                   </div>
                   {/* <div className="project_cards_group"> */}
                       {projects}

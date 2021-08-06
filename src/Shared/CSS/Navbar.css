@@ -15,10 +15,9 @@
     text-decoration: none;
     padding-left: 25px !important;
     font-size: 15px;
-    font-weight: bold;
 }
 
 .nav_link:hover {
-    color: rgb(0, 0, 43) !important;
+    color: rgb(3, 0, 43) !important;
     transition-duration: 0.8s;
 }

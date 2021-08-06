@@ -119,8 +119,7 @@ const Tab = (props) => {
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
             <Row>
-                <br></br>
-                PROJECT EXPO 2020 - 2021
+            <h4 className="expo_year">PROJECT EXPO 2021</h4>
             </Row>
           <Row>
             {sigs1}
@@ -129,7 +128,7 @@ const Tab = (props) => {
         <TabPane tabId="2">
             <Row>
             <br></br>
-            PROJECT EXPO 2019 - 2020
+            <h4 className="expo_year">PROJECT EXPO 2020</h4>
             </Row>
           <Row>
             {sigs2}

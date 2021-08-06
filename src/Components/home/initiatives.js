@@ -3,28 +3,19 @@ import '../../Shared/CSS/home2.css';
 import '../../Shared/CSS/home/about.css'
 
 import Fade from 'react-reveal/Fade';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+// import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 
 function Initiatives () {
     return(
                 <Fade up>
-                    <div className="home_space1">
+                    <div className="home_space7">
                         <div className="row">
                             <div className="col-12 col-md-12">
                                 <h3 className="initiatives_heading">Initiatives<br></br>
                                 <img src={"/uploads/sigs/underline.png"} alt='acm logo' height='25' width='250'/></h3>
-                                <h6 className="initiatives">A list of initiatives taken up by ACM-NITK <br />
-                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> Internships and cold mailing talk <br />
-                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> Perspectives (ACMW Webinar for School Kids) - Pedestal  <br />
-                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> ACM Distinguished Speakers Program - Dr. Ingmar Weber <br />
-                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> ACM Embibe - KEP series <br />
-                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> Resume KEP - Sanganitra <br />
-                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> Innovision - Cryptic, Hardwired, Jugaad, Strategy-B, Literati <br />
-                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> ACM FIG talk with freshers <br />
-                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> ACM Alumni Series - 4 Speakers <br />
-                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> ACMW Distinguished Speakers Program - Dr. Georgia Koutrika <br />
-                                <FiberManualRecordIcon style={{ fontSize: 10 }}/> Summer Mentorship Program<br />
+                                <h6 className="initiatives">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                                 </h6> 
                             </div>   
                         </div>

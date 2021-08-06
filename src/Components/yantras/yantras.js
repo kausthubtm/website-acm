@@ -4,41 +4,7 @@ import '../../Shared/CSS/main.css'
 import '../../Shared/CSS/yantras.css'
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import Announcements from '../shared/Announcements'
-
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 500,
-    borderRadius: 16,
-    transition: '0.2s',
-    '&:hover': {
-        transform: 'scale(1.1)',
-    },
-    boxShadow: 'rgb(0, 113, 161) 0px 1px 6px',
-  },
-  space: {
-    paddingTop: '10.25%',
-  },
-}); 
-
-function MediaCard({sig}) {
-  const classes = useStyles(); 
-
-  const link = 'https://nitk.acm.org/media/'  
-
-  return (
-  <div className={classes.space}>    
-    <Card className={classes.root}>
-      <CardActionArea>
-        <img src={link + sig.image} alt={sig.name} height="350" width="100%" crop="fill" />
-      </CardActionArea>
-    </Card>
-  </div>
-  );
-}
+import Events from './events'
 
 class Yantra extends Component {
     constructor(props){
@@ -58,20 +24,23 @@ class Yantra extends Component {
     }
 
     render(){
+
       return (
         <div>
           {/* banner area */}
           <div className="banner_background">
             <div className="banner">
               <header className="banner_text_area">
-                <h1 className="banner_text1">{this.state.sig.name}</h1>
+                <h1 className="banner_text_others">{this.state.sig.name}</h1>
                 <p className="banner_text2">{this.state.data.sub_head}</p>
               </header>
             </div>
           </div>
 
-          <Announcements items={[{name:'Project Expo', description:'View the project expo !', link:'/expo'},
-                    {name:'Project Proposals', description:'View the project proposals !', link:'/all_proposals'},
+          <Announcements items={[
+                    {name:'Project Proposal', description:'View Project Expo 2020 !', link:'/proposal'},
+                    {name:'Summer Mentorship', description:'Registrations are closed !', link:'/smp'},
+                    {name:'Project Expo', description:'View Project Expo 2020 !', link:'/expo'},
                     ]}/>
 
           {/* sigs display area */}
@@ -102,7 +71,7 @@ class Yantra extends Component {
                 <div className="col-12 col-md-12">
                   <h3 className="heading">Events<DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
                   <hr className="hr"></hr>
-                  <h6 className="sig_description">{this.state.data.description}</h6> 
+                  <Events events={this.state.events} image={this.state.sig.image}/>
                 </div>
               </div>
             </div>

@@ -9,11 +9,11 @@
 }
 
 .team_heading{
-    font-size: 35px;
-    font-weight: bolder;
     color: rgb(0, 0, 43);
+    /* font-family: 'Rajdhani', sans-serif; */
+    font: 35px  Segoe UI,system-ui,-apple-system,sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
     font-weight: bold;
-    font-family: 'Rajdhani', sans-serif;
     text-align: center;
 }
 
@@ -22,6 +22,8 @@
     text-align: center;
     margin-bottom: 50px;
     margin-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .img_overlay {

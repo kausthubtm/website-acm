@@ -25,6 +25,7 @@ import SmpSig from './smp/smp_sig';
 import Smp_main from './smp/smp_main';
 import SmpDetails from './smp/smp_details';
 
+import saahithyaMagazine from './flipbook/saahithyaMagazine';
 
 class Main extends Component {
 
@@ -92,6 +93,7 @@ class Main extends Component {
                           <Route exact path='/smp' component={Smp_main}/>
                           <Route exact path='/smp/:smpSigId' component={SelectedSmpSig}/>
                           <Route exact path='/smp/:smpSigId/:smpId' component={SelectedSmp}/>
+                          <Route exact path='/saahityaMagazine' component={saahithyaMagazine}/>
                       </Switch>
                       <Footer />
                     </div>

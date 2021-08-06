@@ -45,15 +45,16 @@ class Home extends Component{
                     </div>
                 </div>
                   
-                  <Announcements items={[{name:'Summer Mentorship', description:'Register for courses now !', link:'/smp'},
-                    {name:'Project Expo', description:'View the project expo !', link:'/expo'},
-                    {name:'Project Proposals', description:'View the project proposals !', link:'/proposal'},
+                  <Announcements items={[
+                    {name:'Project Proposal', description:'View Project Expo 2020 !', link:'/proposal'},
+                    {name:'Summer Mentorship', description:'Registrations are closed !', link:'/smp'},
+                    {name:'Project Expo', description:'View Project Expo 2020 !', link:'/expo'},
                     ]}/>
                   <About /> 
-                  <Numbers />
+                  <TabPanel />
                   <Initiatives /> 
                   {/*<Yantras />*/}
-                  <TabPanel />
+                  <Numbers />
                   <Latest />
                   <Team people={this.state.people} />
 

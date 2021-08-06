@@ -38,7 +38,7 @@ function HideAppBar () {
               <Nav.Link href="/expo" className="nav_link">PROJECT EXPO</Nav.Link>
               <Nav.Link href="https://nitk.acm.org/trails.html" className="nav_link">TRAILS</Nav.Link>
               <Nav.Link href="/events" className="nav_link">EVENTS</Nav.Link>
-              <Nav.Link href="/esp" className="nav_link">ESP</Nav.Link>
+              {/* <Nav.Link href="/esp" className="nav_link">ESP</Nav.Link> */}
               <Nav.Link href="https://nitk.acm.org/blog/" className="nav_link">BLOG</Nav.Link>
               <Nav.Link href="/contact" className="nav_link">CONTACT US</Nav.Link>
             </Nav>

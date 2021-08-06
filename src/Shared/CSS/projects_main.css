@@ -8,7 +8,7 @@
 }
 
 .project_space{
-    padding-top: 200px;
+    padding-top: 100px;
     padding-bottom: 200px;
 }
 
@@ -31,11 +31,13 @@
 
 .project_card_heading{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 30px;
+    font-size: 33px;
     padding-top: 10px;
     padding-bottom: 20px;
     color: rgb(49, 75, 104);
     font-family: 'Arvo', serif;
+    font-family: Segoe UI,system-ui,-apple-system,sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
 }
 
 .projects_card_content {
@@ -48,6 +50,8 @@
     height: 400px;
     font-size: 15px;
     font-family: 'Rajdhani', sans-serif;
+    font-family: Segoe UI,system-ui,-apple-system,sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
     overflow: hidden;
 }
 
@@ -56,6 +60,8 @@
     text-align: center;
     font-size: 22px;
     font-family: 'Rajdhani', sans-serif;
+    font-family: Segoe UI,system-ui,-apple-system,sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
 }
 
 .img_box {
@@ -76,6 +82,8 @@
     text-decoration: none;
     font-size: 17px;
     font-family: 'Rajdhani', sans-serif;
+    font-family: Segoe UI,system-ui,-apple-system,sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
 }
 .card_link:hover{
     text-decoration: none;

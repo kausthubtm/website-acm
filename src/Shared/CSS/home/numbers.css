@@ -1,12 +1,22 @@
 .home_space6{
+  margin-top: 175px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(240, 240, 240);
+  /* background-image: url(../../images/background2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: rgba(0, 0, 32, 1);
+}
+
+.numbers_card{
+  padding: 25px;
+  /* background-color: rgb(195, 210, 236) !important; */
 }
 
 #safety {
   text-align: center;
-  margin: 10% 0 ;
+  margin: 10% 0;
   font-family: 'Rajdhani', sans-serif;
 }
 
@@ -14,15 +24,17 @@
 {
     padding-left: 20px;
     font-size: 35px;
-    font-weight: bolder;
     color: rgb(2, 30, 53);
     font-weight: bold;
-    font-family: 'Rajdhani', sans-serif;
+    text-align: left;
+    font: 35px  Segoe UI,system-ui,-apple-system,sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
 }
 
 #safety h3
 {
-  font-size: 1.2rem;
+  font-size: 17;
   font-weight: 800;
   line-height: 1.6;
   color: rgb(0,31,56);
@@ -31,12 +43,13 @@
 
 #safety p
 {
-  font-size: 16px;
-  line-height: 1.5;
-  color: rgb(0,0,20);
-  font-family: "Poppins", Arial, sans-serif;
+  color: rgb(30, 30, 30);
+  text-align: left;
+  font: 400 17px/1.6  Segoe UI,system-ui,-apple-system,sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .icon{
+  margin-bottom: 12px;
   color: rgb(0, 31, 56);
 }

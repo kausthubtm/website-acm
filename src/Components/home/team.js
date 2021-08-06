@@ -2,7 +2,7 @@ import React from 'react';
 import '../../Shared/CSS/home2.css';
 import '../../Shared/CSS/home/team.css'
 
-import FacebookIcon from '@material-ui/icons/Facebook';
+import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 
@@ -11,12 +11,12 @@ function People ({person}) {
   const link = 'https://nitk.acm.org/staticfiles/';
 
     return(
-      <div className="col-12 col-md-3">
+      <div className="col-12 col-md-4">
         <div className="img_container">
           <img alt="..."  src= {link + person.image_path } className="img" width="200" height="200" ></img>
           <div className="img_overlay">
             <div className="img_links">
-              <a href={person.fb_link} className="img_icon"><FacebookIcon style={{ fontSize: 40 }} /></a>
+              <a href={person.fb_link} className="img_icon"><EmailIcon style={{ fontSize: 40 }} /></a>
               <a href={person.linkedin_link} className="img_icon"><LinkedInIcon style={{ fontSize: 40 }} /></a>
             </div>
           </div>

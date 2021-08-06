@@ -1,9 +1,13 @@
 .yantras {
     padding-top: 100px;
     margin-top: 10px;
+    /* background-image: url(../../images/background.png); */
     background-image: url(../../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgb(231, 236, 245);
 }
 
 
@@ -55,11 +59,24 @@
     background-color: white;
 }
 
+.yantra_heading {
+    border-left: 5px solid rgb(1, 112, 202);
+    margin-left: 20px;
+    padding-left: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(2, 30, 53);
+    font-weight: bold;
+    font-family: Segoe UI,system-ui,-apple-system,sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
 .yantra_heading2{
     font-size: 28px;
     margin-top: 20px;
     color: white;
     font-family: 'Rajdhani', sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -68,9 +85,10 @@
     margin-bottom: 20px;
     background-color: rgb(255, 255, 255);
     color:rgb(0, 0, 0);  
-    font-weight: bold; 
     border: 2px solid black;
     font-family: 'Rajdhani', sans-serif;
+    font-family: Segoe UI,system-ui,-apple-system,sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .yantra_button:hover {
@@ -82,6 +100,8 @@
     padding-top: 10px;
     color: white;
     font-family: "Poppins", Arial, sans-serif;
-    font-size: 15px;
+    font-family: Segoe UI,system-ui,-apple-system,sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
     line-height: 1.7;
 }

@@ -8,27 +8,9 @@ import '../../Shared/CSS/main.css'
 import axios from 'axios'; 
 
 /* imports for Card and Table */
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import { Table } from 'reactstrap';
 import { Hidden } from '@material-ui/core';
 
-
-/* Styles for pictures */
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 500,
-    transition: '0.2s',
-    '&:hover': {
-        transform: 'scale(1.05)',
-    },
-    border: '1px solid black'
-  },
-  space: {
-    paddingTop: '10.25%',
-  },
-}); 
 
 
 /* function to display pictures */
@@ -52,23 +34,25 @@ const useStyles = makeStyles({
 
 /* function to check if the section is null or not */
 function Check1({info, name}) {
-  if(info) {
-    return(
-      <div>
-        <h2 className="space">
-          <div className="details_heading">{name}</div>
-        </h2>
-        <hr></hr>
-        <h6 className="project_text" >{`${info}`
-        .split('\n')
-        .map((paragraph, idx) =>
-          <Fragment key={idx}>
-            {paragraph}<br />
-          </Fragment>)}</h6>
+  const result = info.map((des)=> {
+    if(des.sub_heading===name) {
+      return (
+        <div>
+          <li className="project_text" >{`${des.sub_des}`
+          .split('\n')
+          .map((paragraph, idx) =>
+            <Fragment key={idx}>
+              {paragraph}<br />
+            </Fragment>)}</li>
       </div>
-    );
-  }
-  else return (<div></div>)
+      )
+    }
+    else {
+      return (<div></div>)
+    }
+  })
+
+  return result;
 }
 
 /* function to check if the section is there or not in the team section */
@@ -76,8 +60,8 @@ function Check2({info, name}) {
   if(info) {
     return(
       <tr>
-        <th scope="row">{name}</th>
-        <td>{info}</td>
+        <th scope="row" className="project_text_head" >{name}</th>
+        <td className="project_text" >{info}</td>
       </tr>
     );
   }
@@ -91,15 +75,15 @@ function Check2({info, name}) {
 class SmpDetails extends Component {
 
   state = { 
-    details : [], 
-    pics : [],
+    smp : [], 
+    smp_des : [],
   }
 
 
   async componentDidMount() { 
     try {
       const res = await axios.get('http://127.0.0.1:8000/smp/' + this.props.sigId + '/' + this.props.smpId)  
-      this.setState({ details : res.data.smp }); 
+      this.setState({ smp : res.data.smp, smp_des : res.data.smp_des }); 
       window.scrollTo(0, 0);
     }
     catch(error) {
@@ -119,23 +103,6 @@ class SmpDetails extends Component {
 
     //   const link = 'https://nitk.acm.org/media/'
 
-    const descriptions = this.state.details.smp_des.map((des) => {
-      return (
-        <div>
-          <h2 className="space">
-            <div className="details_heading">{des.sub_heading}</div>
-          </h2>
-          <hr></hr>
-          {/* <h6 className="project_text" >{`${info}`
-          .split('\n')
-          .map((paragraph, idx) =>
-            <Fragment key={idx}>
-              {paragraph}<br />
-            </Fragment>)}</h6> */}
-      </div>
-      )
-    })
-  
     return(
       <div>
 
@@ -143,7 +110,7 @@ class SmpDetails extends Component {
         <div className="banner_background">
           <div className="banner">
             <header className="banner_text_area">
-              <h1 className="banner_text1">{this.state.details.name}</h1>
+              <h1 className="banner_text1">{this.state.smp.name}</h1>
             </header>
           </div>
         </div>
@@ -164,11 +131,11 @@ class SmpDetails extends Component {
               <hr></hr>
               <Table striped>
                 <tbody>
-                  <Check2 info={this.state.details.mentors} name='Mentors' />
-                  <Check2 info={this.state.details.members} name='Members' />  
+                  <Check2 info={this.state.smp.mentors} name='Mentors' />
+                  {/* <Check2 info={this.state.details.members} name='Members' />   */}
                   <tr>
-                    <th scope="row">Platform of tutoring</th>
-                    <td>{this.state.details.platform_of_tutoring}</td>
+                    <th className="project_text_head" scope="row">Platform of tutoring</th>
+                    <td className="project_text" >{this.state.smp.platform_of_tutoring}</td>
                   </tr>
                 </tbody>
                 </Table>
@@ -191,19 +158,63 @@ class SmpDetails extends Component {
               <div className="details_heading">Overview</div>
               </h2>
               <hr></hr>
-              <h6 className="project_text" >{this.state.details.overview}</h6>
-              <br></br><br></br>
+              <ul>
+                <li className="project_text" >{this.state.smp.overview}</li>
+              </ul>
+              <br></br>
             </div>
           </div> 
 
 
           {/* Method section */}
+
           <h2 className="space">
-          <div className="details_heading">Method</div>
+          <div className="details_heading">Exercise</div>
           </h2>
           <hr></hr>
-          <h6 className="project_text">{this.state.details.method}</h6>
-          {descriptions}
+          <ul>
+            <Check1 info={this.state.smp_des} name='Exercise' />
+          </ul>
+
+          <h2 className="space">
+          <div className="details_heading">Prerequisite</div>
+          </h2>
+          <hr></hr>
+          <ul>
+            <Check1 info={this.state.smp_des} name='Prerequisite' />
+          </ul>
+
+          <h2 className="space">
+          <div className="details_heading">Course-content</div>
+          </h2>
+          <hr></hr>
+          <ul>
+            <Check1 info={this.state.smp_des} name='Course-content' />
+          </ul>
+
+          <h2 className="space">
+          <div className="details_heading">Session 1</div>
+          </h2>
+          <hr></hr>
+          <ul>
+            <Check1 info={this.state.smp_des} name='Session 1' />
+          </ul>
+
+          <h2 className="space">
+          <div className="details_heading">Session 2</div>
+          </h2>
+          <hr></hr>
+          <ul>
+            <Check1 info={this.state.smp_des} name='Session 2' />
+          </ul>
+
+          <h2 className="space">
+          <div className="details_heading">Session 3</div>
+          </h2>
+          <hr></hr>
+          <ul>
+            <Check1 info={this.state.smp_des} name='Session 3' />
+          </ul>
 
 
         </div>
