@@ -13,6 +13,7 @@ import Hidden from '@material-ui/core/Hidden';
 
 function Image ({path}) {
   const link = 'https://nitk.acm.org/media/';
+  // console.log(path);
     return(
       <div className="col-md-4">
         <img src={link + path} alt="ACM logo" className="event_pic"/>
@@ -72,7 +73,7 @@ const Events = (props) => {
     <div>
 
         <div className="row">
-          <Image path={props.image}/>
+          <Image path={item.image}/>
           <Cards event={item}/>
         </div>
 
@@ -92,7 +93,7 @@ const Events = (props) => {
     <div>
 
         <div className="row">
-          <Image path={props.image}/>
+          <Image path={item.image}/>
           <Cards event={item}/>
         </div>
 

@@ -72,10 +72,11 @@ function Cards ({event}) {
   else return(<div></div>)
 }
 
-function Image ({index, images}) {
+function Image ({image}) {
+  const link = 'https://nitk.acm.org/media/';
   return(
     <div className="col-md-4">
-      <img src={images[index]} alt="ACM logo" className="event_pic"/>
+      <img src={link + image} alt="ACM logo" className="event_pic"/>
     </div>
   )
 }
@@ -108,7 +109,7 @@ class Events extends Component{
                     <div className="col-md-1"></div>
                     <Cards event={event} />
                     <div className="col-md-1"></div>
-                    <Image index={i} images={this.state.images} />
+                    <Image image={event.image} />
                   </div>
                 </Card>
               </div>
@@ -121,7 +122,7 @@ class Events extends Component{
                 <div className="row">
                   <Card className="root">
                     <div className="row">
-                      <Image index={i} images={this.state.images} />
+                      <Image image={event.image} />
                       <div className="col-md-1"></div>
                       <Cards event={event} />
                       <div className="col-md-1"></div>
@@ -140,7 +141,7 @@ class Events extends Component{
               <div className="row">
                 <Card className="root">
                   <div className="row">
-                    <Image index={j} images={this.state.images} />
+                    <Image image={event.image} />
                     <div className="col-md-1"></div>
                     <Cards event={event} />
                     <div className="col-md-1"></div>
@@ -162,7 +163,9 @@ class Events extends Component{
                     </div>
                 </div>
   
-          <Announcements items={[{name:'Summer Mentorship', description:'Registrations are closed !', link:'/smp'},
+          <Announcements items={[
+                    {name:'Project Proposal', description:'View Project Expo 2020 !', link:'/proposal'},
+                    {name:'Summer Mentorship', description:'Registrations are closed !', link:'/smp'},
                     {name:'Project Expo', description:'View Project Expo 2020 !', link:'/expo'},
                       ]}/>
   

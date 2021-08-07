@@ -51,6 +51,21 @@ function Check2({info, name}) {
 }
 
 
+function Check3({info}) {
+  if(info) {
+    return(
+      <tr>
+        <td className="project_text">{info.phase}</td>
+        <td className="project_text">{info.tasks}</td>
+        <td className="project_text">{info.start_date}</td>
+        <td className="project_text">{info.end_date}</td>
+      </tr>
+    );
+  }
+  else return (<div></div>)
+}
+
+
 
 
 /* main class */
@@ -58,14 +73,14 @@ class ProposalDetails extends Component {
 
   state = { 
     details : [], 
-    pics : [],
+    timeline : [],
   }
 
 
   async componentDidMount() { 
     try{
       const res = await axios.get('http://127.0.0.1:8000/proposal/' + this.props.projectId) 
-      this.setState({ details : res.data.project }); 
+      this.setState({ details : res.data.project , timeline : res.data.timelines}); 
       window.scrollTo(0, 0);
     }
     catch(error) {
@@ -74,6 +89,15 @@ class ProposalDetails extends Component {
   }
 
   render () { 
+
+    const timeline = this.state.timeline.map((phase) => {
+        return (
+              <Check3 info={phase} />
+        );
+      })
+
+    const link = 'https://nitk.acm.org/media/';
+
   
     return(
       <div>
@@ -116,7 +140,7 @@ class ProposalDetails extends Component {
             <div className="col-12 col-md-4">
               <Card>
                 <CardActionArea>
-                  <img src='/uploads/sigs/logo.png' alt='ex' height="250" width="100%" crop="fill" />
+                  <img src={link+this.state.details.image}  alt='ex' height="250" width="100%" crop="fill" />
                 </CardActionArea>
               </Card>
             </div>
@@ -131,7 +155,7 @@ class ProposalDetails extends Component {
               </h2>
               <hr></hr>
               <h6 className="project_text" >{this.state.details.introduction}</h6>
-              <br></br><br></br>
+              <br></br>
             </div>
           </div> 
 
@@ -143,17 +167,50 @@ class ProposalDetails extends Component {
           <hr></hr>
           <h6 className="project_text">{this.state.details.method}</h6>
 
+          {/* Existing work section */}
+          {/* <br></br>
+          <Check1 info={this.state.details.existing_work} name='Existing Work' /> */}
+
+          {/* learning outcomes */}
+          <br></br>
+          <Check1 info={this.state.details.learning_outcomes} name='Learning Outcomes' />
+
 
           {/* Results section */}
-          <Check1 info={this.state.details.results} name='Results' />
+          <br></br>
+          <Check1 info={this.state.details.results} name='Expected Results' />
+
+          <div className="row">
+            <div className="col-12 col-md-12">
+              <h2 className="space">
+              <div className="details_heading">Timeline</div>
+              </h2>
+              <hr></hr>
+              <h6 className="project_text" >
+                <Table striped>
+                  <tbody>
+                      <tr>
+                        <th>Phase</th>
+                        <th>Tasks</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                      </tr>
+                    {timeline}
+                    {/* <Check2 info={this.state.details.mentors} name='Mentors' />
+                    <Check2 info={this.state.details.members} name='Members' />   */}
+                  </tbody>
+                </Table>
+              </h6>
+              <br></br>
+            </div>
+          </div> 
 
           {/* Obstacles section */}
-          <Check1 info={this.state.details.obstacles} name='Obstacles' />
-
-          {/* Conclusion section */}
-          <Check1 info={this.state.details.conclusion} name='Conclusion' />
+          <br></br>
+          <Check1 info={this.state.details.application} name='Application' />
 
           {/* References section */}
+          <br></br>
           <Check1 info={this.state.details.references} name='References' />
           
         </div>

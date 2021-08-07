@@ -43,6 +43,7 @@ const useStyles = makeStyles({
 /* function to display the list of projects */
 function MediaCard({project}) {
   const classes = useStyles();   
+  const link = 'https://nitk.acm.org/media/';
 
   return (
   <div className={classes.space}>    
@@ -50,7 +51,7 @@ function MediaCard({project}) {
       <Link to={`/proposal/${project.id}`} style={{ textDecoration: 'none' }}>
         <CardActionArea>
             <div className="proposal_img_box">
-              <img src='/uploads/sigs/logo.png' alt='ex' height="250" width="100%" crop="fill" className="proposal_project_card_img"/>
+              <img src={link + project.image} alt='ex' height="250" width="100%" crop="fill" className="proposal_project_card_img"/>
             </div>
           <h5 className="proposal_name">{project.name}</h5>
           <div className="proposal_card">
@@ -64,7 +65,8 @@ function MediaCard({project}) {
 } 
 
 function MediaCard2({project}) {
-  const classes = useStyles();   
+  const classes = useStyles();  
+  const link = 'https://nitk.acm.org/media/'; 
 
   return (
   <div className={classes.space}>    
@@ -72,7 +74,7 @@ function MediaCard2({project}) {
       <Link to={`/proposal/${project.id}`} style={{ textDecoration: 'none' }}>
         <CardActionArea>
         <div className="img_box">
-              <img src='/uploads/sigs/logo.png' alt='ex' height="250" width="100%" crop="fill" className="project_card_img"/>
+              <img src={link + project.image} alt='ex' height="250" width="100%" crop="fill" className="project_card_img"/>
             </div>
           <h5 className="proposal_name">{project.name}</h5>
           <div className="proposal_card">

@@ -71,7 +71,7 @@ class Yantra extends Component {
                 <div className="col-12 col-md-12">
                   <h3 className="heading">Events<DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
                   <hr className="hr"></hr>
-                  <Events events={this.state.events} image={this.state.sig.image}/>
+                  <Events events={this.state.events}/>
                 </div>
               </div>
             </div>

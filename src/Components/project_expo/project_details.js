@@ -142,7 +142,7 @@ class Details extends Component {
         );
       }); 
 
-      const link = 'https://nitk.acm.org/media/'
+      const link = 'https://nitk.acm.org/media/';
   
     return(
       <div>

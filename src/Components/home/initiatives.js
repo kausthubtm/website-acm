@@ -12,10 +12,10 @@ function Initiatives () {
                     <div className="home_space7">
                         <div className="row">
                             <div className="col-12 col-md-12">
-                                <h3 className="initiatives_heading">Initiatives<br></br>
+                                <h3 className="initiatives_heading">ACM-W<br></br>
                                 <img src={"/uploads/sigs/underline.png"} alt='acm logo' height='25' width='250'/></h3>
                                 <h6 className="initiatives">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <p>ACM-W is an international organisation which supports and empowers women in all aspects of the computing field. Closer to home, ACM-W NITK is a thriving student chapter that was incepted in the summer of 2019. We at ACM-W, NITK chapter wish to inspire and nurture young minds to step up and make a mark in the universe of technology. Our aim is to promote learning and create a workspace where the ideas of young women can take shape and create the future. From providing a wide range of opportunities, to working in a large, supportive community to advance contributions by creative minds, ACM-W NITK aims to be a stepping stone for women to be celebrated, empower one another and create a difference.</p>
                                 </h6> 
                             </div>   
                         </div>

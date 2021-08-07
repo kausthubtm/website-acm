@@ -16,7 +16,7 @@ function People ({person}) {
           <img alt="..."  src= {link + person.image_path } className="img" width="200" height="200" ></img>
           <div className="img_overlay">
             <div className="img_links">
-              <a href={person.fb_link} className="img_icon"><EmailIcon style={{ fontSize: 40 }} /></a>
+              <a href={person.email_link} className="img_icon"><EmailIcon style={{ fontSize: 40 }} /></a>
               <a href={person.linkedin_link} className="img_icon"><LinkedInIcon style={{ fontSize: 40 }} /></a>
             </div>
           </div>
