@@ -28,7 +28,7 @@ function Latest () {
                                                 <CardText className="card_text">A standard programming language like Python or C++ is often characterized by a well-defined 
                                                 syntax, bug-free and fast nature, and ease in understanding the language. What if there exists a set of languages that 
                                                 challenge such norms of programming languages?…</CardText>
-                                                <Button className="card_button">Read More</Button>
+                                                <Button className="card_button" href="https://nitk.acm.org/blog/">Read More</Button>
                                                 </CardBody>
                                             </Card>
                                         </div>
@@ -40,7 +40,7 @@ function Latest () {
                                                 <CardTitle className="card_title">Pharmaceutical Development</CardTitle>
                                                 <CardSubtitle tag="h6" className="card_title2">POSTED ON APRIL 1, 2021</CardSubtitle>
                                                 <CardText className="card_text">One of the most important industries in the world that our lives have revolved around is healthcare. Without drugs and medicine, it is not possible to cure ailments no matter how well the doctors diagnose the patient. From ancient times a physician used herbs and bandages to cure injuries and diseases, which is all medicine in one form or the other. Today, the pharmaceutical industry is very big... </CardText>
-                                                <Button className="card_button">Read More</Button>
+                                                <Button className="card_button" href="https://nitk.acm.org/blog/">Read More</Button>
                                                 </CardBody>
                                             </Card>
                                         </div>
@@ -52,7 +52,7 @@ function Latest () {
                                                 <CardTitle className="card_title">DLSS: The Big leap in AI Rendering</CardTitle>
                                                 <CardSubtitle tag="h6" className="card_title2">POSTED ON MARCH 20, 2021</CardSubtitle>
                                                 <CardText className="card_text">In the present decade, games tend to offer a more realistic environment thus pushing corresponding computer hardware to its limits. Here comes DLSS to the rescue. Many people might have heard about Cyberpunk 2077 or Microsoft Flight Simulator is almost impossible to play without... </CardText>
-                                                <Button className="card_button">Read More</Button>
+                                                <Button className="card_button" href="https://nitk.acm.org/blog/">Read More</Button>
                                                 </CardBody>
                                             </Card>
                                         </div>

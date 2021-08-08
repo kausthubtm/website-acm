@@ -14,6 +14,7 @@ import Box from '@material-ui/core/Box';
 import CallMadeIcon from '@material-ui/icons/CallMade';
 
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
+import { Link } from 'react-router-dom';
 
 
   /* function to display the list of projects */
@@ -24,17 +25,17 @@ import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
     return (
       <Fade bottom>
         <Box boxShadow={5} bgcolor="background.paper" m={1} p={1} className="project_box">
-          <a href={`/project/${project.id}`} >
+          <Link to={`/project/${project.id}`} >
             <div className="img_box">
               <img src={link + project.display_picture} alt='ex' height="250" width="100%" crop="fill" className="project_card_img"/>
             </div>
-          </a>
+          </Link>
           <div className="projects_card_content">
             <div className="project_card_heading">{project.name}</div>
             <div className="project_card_description">{project.introduction}</div>
           </div>
           <div className="card_space"></div>
-            <a href={`/project/${project.id}`}  className="card_link"><CallMadeIcon /> Continue reading ...</a>
+            <Link to={`/project/${project.id}`}  className="card_link"><CallMadeIcon /> Continue reading ...</Link>
         </Box>
       </Fade>
     );

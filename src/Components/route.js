@@ -45,7 +45,7 @@ class Main extends Component {
 
           const SelectedYantra = ({match}) => {
             return(
-              <Yantra sigId = {match.params.sigId} />
+              <Yantra sigId = {match.params.sigId} key={Date.now()}/>
             );
           } 
 
@@ -74,33 +74,33 @@ class Main extends Component {
           }          
           
         return(
-            <>
-              <BrowserRouter>
-                  <Header/>
-                  <div className="hello">
-                    <div className="blah">
-                      <Switch>
-                          <Route exact path='/' component={Home} />
-                          <Route exact path="/sigs/:sigId" component={SelectedYantra} />
-                          <Route exact path='/expo' component={Expo_main}/>
-                          <Route exact path="/expo/:year/:sigId" component={SelectedSig} />
-                          <Route exact path="/project/:projectId" component={SelectedProject} />
-                          <Route exact path='/proposal' component={Proposal_main}/>
-                          <Route exact path='/all_proposals/:proposalSigId' component={SelectedProposalSig}/>
-                          <Route exact path='/proposal/:proposalProjectId' component={SelectedProposalProject}/>
-                          <Route exact path="/events" component={Events} />
-                          <Route exact path="/contact" component={Contact} />
-                          <Route exact path='/smp' component={Smp_main}/>
-                          <Route exact path='/smp/:smpSigId' component={SelectedSmpSig}/>
-                          <Route exact path='/smp/:smpSigId/:smpId' component={SelectedSmp}/>
-                          <Route exact path='/saahityaMagazine' component={saahithyaMagazine}/>
-                      </Switch>
-                      <Footer />
-                    </div>
-                  </div>
-                  
-              </BrowserRouter>  
-          </>
+          <>
+          <BrowserRouter basename="frontend/">
+              <Header/>
+              <div className="hello">
+                <div className="blah">
+                  <Switch>
+                      <Route exact path='/' component={Home} />
+                      <Route exact path="/sigs/:sigId" component={SelectedYantra} />
+                      <Route exact path='/expo' component={Expo_main}/>
+                      <Route exact path="/expo/:year/:sigId" component={SelectedSig} />
+                      <Route exact path="/project/:projectId" component={SelectedProject} />
+                      <Route exact path='/proposal' component={Proposal_main}/>
+                      <Route exact path='/all_proposals/:proposalSigId' component={SelectedProposalSig}/>
+                      <Route exact path='/proposal/:proposalProjectId' component={SelectedProposalProject}/>
+                      <Route exact path="/events" component={Events} />
+                      <Route exact path="/contact" component={Contact} />
+                      <Route exact path='/smp' component={Smp_main}/>
+                      <Route exact path='/smp/:smpSigId' component={SelectedSmpSig}/>
+                      <Route exact path='/smp/:smpSigId/:smpId' component={SelectedSmp}/>
+                      <Route exact path='/saahityaMagazine' component={saahithyaMagazine}/>
+                  </Switch>
+                  <Footer />
+                </div>
+              </div>
+              
+          </BrowserRouter>  
+      </>
         )
     }
 }
