@@ -18,6 +18,13 @@
     color : gray;
 }
 
+.nav_link2{
+    font-family: "Poppins", Arial, sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    color : gray;
+}
+
 .nav_dropdown_link{
     font-family: "Poppins", Arial, sans-serif;
     text-decoration: none;
@@ -26,6 +33,12 @@
 }
 
 .nav_link:hover {
+    color: rgb(3, 0, 43) !important;
+    text-decoration: none;
+    transition-duration: 0.8s;
+}
+
+.nav_link2:hover {
     color: rgb(3, 0, 43) !important;
     text-decoration: none;
     transition-duration: 0.8s;

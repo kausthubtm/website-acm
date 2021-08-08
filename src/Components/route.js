@@ -4,7 +4,7 @@
 
 
 import React, { Component } from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {HashRouter, Switch, Route} from 'react-router-dom';
 
 import Expo_main from './project_expo/Expo_main';
 import Projects from './project_expo/projects_main';
@@ -75,7 +75,7 @@ class Main extends Component {
           
         return(
           <>
-          <BrowserRouter basename="frontend/">
+          <HashRouter >
               <Header/>
               <div className="hello">
                 <div className="blah">
@@ -99,7 +99,7 @@ class Main extends Component {
                 </div>
               </div>
               
-          </BrowserRouter>  
+          </HashRouter>  
       </>
         )
     }

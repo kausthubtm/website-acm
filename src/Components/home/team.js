@@ -4,6 +4,7 @@ import '../../Shared/CSS/home/team.css'
 
 import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import imgURL from '../../uploads/sigs/underline.png'
 
 
 function People ({person}) {
@@ -48,7 +49,7 @@ function Team (props) {
                     <div className="row">
                         <div className="col-12 col-md-12">
                             <h3 className="team_heading">Our team<br></br>
-                            <img src={"/uploads/sigs/underline.png"} alt='acm logo' height='25' width='250'/></h3>
+                            <img src={imgURL} alt='acm logo' height='25' width='250'/></h3>
                         </div>
                     </div>
                 </div>

@@ -13,6 +13,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import CloudIcon from '@material-ui/icons/Cloud';
 
+import imgURL from '../uploads/sigs/acm-logo-wide.png'
+
 
 class Footer extends Component {
 
@@ -42,7 +44,7 @@ class Footer extends Component {
                 <div className="row">
 
                     <div className="col-12 col-md-4">
-                        <div className="footer_heading"> <img src="/uploads/sigs/acm-logo-wide.png" height="70" width="300" alt="ACM logo" className="footer_logo" /></div>
+                        <div className="footer_heading"> <img src={imgURL} height="70" width="300" alt="ACM logo" className="footer_logo" /></div>
                         <div className="footer_text">
                         We are a bunch of enthusiatic students who aim at uniting the computing fraternity at NITK
                         under one tag and allows the students to learn together and share their knowledge to cater the interests

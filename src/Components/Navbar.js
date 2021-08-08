@@ -7,6 +7,7 @@ import '../Shared/CSS/main.css'
 import { useLocation } from 'react-router-dom'
 import {Navbar, Nav, NavDropdown}  from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import imgURL from '../uploads/sigs/logo.png'
 
 let sigs = [
   {id: 1, name:'Sanganitra'},
@@ -24,13 +25,13 @@ function HideAppBar () {
     <div className="blah" style={{overflow:"visible"}}>
         <Navbar collapseOnSelect expand="lg" classname="navbar">
           <Navbar.Brand ><Link to="/">
-            <img src="/uploads/sigs/logo.png" height="60" width="60" alt="ACM logo"/>
+            <img src={imgURL} height="60" width="60" alt="ACM logo"/>
           </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav activeKey={useLocation().pathname} className="mr-auto">
-              <Nav.Link className="nav_link"><Link to="/" className="nav_link">HOME</Link></Nav.Link>
+              <Nav.Link className="nav_link"><Link to="/" className="nav_link2">HOME</Link></Nav.Link>
               <NavDropdown title="YANTRAS" id="collapsible-nav-dropdown" className="nav_link">
                 {
                   sigs.map(sig=>(

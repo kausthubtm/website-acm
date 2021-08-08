@@ -12,6 +12,7 @@ import Chip from '@material-ui/core/Chip';
 
 import Fade from 'react-reveal/Fade';
 import Hidden from '@material-ui/core/Hidden';
+import imgURL from '../../uploads/sigs/underline.png'
 
 
 function Getchip ({id}) {
@@ -176,7 +177,7 @@ class Events extends Component{
                   <div className="row"> 
                     <div className="col-12 col-md-12">
                       <h3 className="events_heading">Events<br></br>
-                      <img src={"/uploads/sigs/underline.png"} alt='acm logo' height='25' width='250'/></h3>
+                      <img src={imgURL} alt='acm logo' height='25' width='250'/></h3>
                     </div>
                   </div>
                   <Hidden smDown>

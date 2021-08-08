@@ -17,6 +17,7 @@ import { Hidden } from '@material-ui/core';
 import { SRLWrapper } from "simple-react-lightbox";
 
 import SimpleReactLightbox from 'simple-react-lightbox'
+import imgURL from '../../uploads/sigs/background.png'
 
 const options = {
   buttons: {
@@ -165,7 +166,7 @@ class Details extends Component {
           <div className="row">
             <div className="col-12 col-md-7">
               <Hidden xsDown>
-                <h2 className="details_heading"><img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Team <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/></h2>
+                <h2 className="details_heading"><img src={imgURL} alt='acm logo' height='40' width='100'/> Team <img src={imgURL} alt='acm logo' height='40' width='100'/></h2>
               </Hidden>
               <Hidden smUp>
                 <div className="details_heading">Team</div>

@@ -13,6 +13,7 @@ import { Hidden } from '@material-ui/core';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
+import imgURL from '../../uploads/sigs/background.png'
 
 
 
@@ -121,7 +122,7 @@ class ProposalDetails extends Component {
           <div className="row">
             <div className="col-12 col-md-7">
               <Hidden xsDown>
-                <h2 className="details_heading"><img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/> Team <img src="/uploads/sigs/background.png" alt='acm logo' height='40' width='100'/></h2>
+                <h2 className="details_heading"><img src={imgURL} alt='acm logo' height='40' width='100'/> Team <img src={imgURL} alt='acm logo' height='40' width='100'/></h2>
               </Hidden>
               <Hidden smUp>
                 <h2 className="heading">Team</h2>
