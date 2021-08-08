@@ -22,8 +22,9 @@ class Home extends Component{
 
   
     async componentDidMount() { 
+        const {REACT_APP_URL} = process.env;
         try{
-            const res = await axios.get('http://127.0.0.1:8000/') 
+            const res = await axios.get(`${REACT_APP_URL}`) 
             this.setState({ sigs : res.data.sigo, events : res.data.events, people : res.data.special_people });  
             window.scrollTo(0, 0);
         }

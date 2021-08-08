@@ -63,8 +63,9 @@ class Proposal_main extends Component{
   } 
 
   async componentDidMount() { 
+    const {REACT_APP_URL} = process.env;
     try {
-      const response = await axios.get('http://127.0.0.1:8000/proposal') 
+      const response = await axios.get(`${REACT_APP_URL}proposal`) 
       this.setState({ sigs : response.data.sigo });
       window.scrollTo(0, 0);
     }

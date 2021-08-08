@@ -25,8 +25,9 @@ class Expo_main extends Component{
   } 
 
   async componentDidMount() { 
+    const {REACT_APP_URL} = process.env;
     try{
-      const res = await axios.get('http://127.0.0.1:8000/expo') 
+      const res = await axios.get(`${REACT_APP_URL}expo`) 
       this.setState({ sigs : res.data.sigo }); 
       window.scrollTo(0, 0);
     }

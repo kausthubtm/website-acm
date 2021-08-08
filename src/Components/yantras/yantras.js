@@ -13,8 +13,10 @@ class Yantra extends Component {
     }
 
     async componentDidMount(){
+      const {REACT_APP_URL} = process.env;
       try {
-        const res = await axios.get('http://127.0.0.1:8000/' + this.props.sigId + '/')   
+        const res = await axios.get(`${REACT_APP_URL}${this.props.sigId}/`)   
+        console.log()
         this.setState(res.data); 
         window.scrollTo(0, 0);
       }

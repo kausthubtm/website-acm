@@ -89,7 +89,8 @@ class Events extends Component{
     } 
   
     async componentDidMount() { 
-      const res = await axios.get('http://127.0.0.1:8000/') 
+      const {REACT_APP_URL} = process.env;
+      const res = await axios.get(`${REACT_APP_URL}`) 
       this.setState({events : res.data.events}); 
       window.scrollTo(0, 0);
     }

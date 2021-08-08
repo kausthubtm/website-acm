@@ -96,8 +96,9 @@ class ProposedProjects extends Component {
 
 
   async componentDidMount() { 
+    const {REACT_APP_URL} = process.env;
     try{
-      const response = await axios.get('http://127.0.0.1:8000/all_proposals/' + this.props.sigId) 
+      const response = await axios.get(`${REACT_APP_URL}all_proposals/${this.props.sigId}`) 
       this.setState({ project_list : response.data.projects }); 
       this.setState({ sig : response.data.sig }); 
       window.scrollTo(0, 0);

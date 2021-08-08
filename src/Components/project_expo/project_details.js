@@ -121,8 +121,9 @@ class Details extends Component {
 
 
   async componentDidMount() { 
+    const {REACT_APP_URL} = process.env;
     try{
-      const res = await axios.get('http://127.0.0.1:8000/project/' + this.props.projectId) 
+      const res = await axios.get(`${REACT_APP_URL}project/${this.props.projectId}`) 
       this.setState({ details : res.data.project }); 
       this.setState({ pics : res.data.pictures }); 
       window.scrollTo(0, 0);

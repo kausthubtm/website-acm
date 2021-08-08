@@ -63,8 +63,9 @@ class SmpSig extends Component {
 
 
   async componentDidMount() { 
+    const {REACT_APP_URL} = process.env;
     try {
-      const res = await axios.get('http://127.0.0.1:8000/smp/' + this.props.sigId) 
+      const res = await axios.get(`${REACT_APP_URL}smp/${this.props.sigId}/`) 
       this.setState({ smp_list : res.data.smps }); 
       this.setState({ sig : res.data.sig }); 
       window.scrollTo(0, 0);

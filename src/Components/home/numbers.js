@@ -50,7 +50,7 @@ function Numbers () {
                                         <Paper className="numbers_card" elevation={5}>
                                             <EventIcon style={{ fontSize: 90 }} className="icon"/>
                                             <h3>Events</h3>
-                                            <p class="pl-4 pr-4">ACM NITK believes in adding value through the XY events they organise throughout the year. 
+                                            <p class="pl-4 pr-4">ACM NITK believes in adding value through the various events they organise throughout the year. 
                                             Whether it’s organising challenging events or conducting insightful workshops and talks with renowned experts or our 
                                             very own ACM alumni from all over the world, we work tirelessly to make a positive impact and help the club members 
                                             and the community at large. </p>

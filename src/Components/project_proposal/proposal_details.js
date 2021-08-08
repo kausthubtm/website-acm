@@ -78,8 +78,10 @@ class ProposalDetails extends Component {
 
 
   async componentDidMount() { 
+    const {REACT_APP_URL} = process.env;
     try{
-      const res = await axios.get('http://127.0.0.1:8000/proposal/' + this.props.projectId) 
+      const res = await axios.get(`${REACT_APP_URL}proposal/${this.props.projectId}`) 
+      console.log(`${REACT_APP_URL}/proposal/${this.props.projectId}`)
       this.setState({ details : res.data.project , timeline : res.data.timelines}); 
       window.scrollTo(0, 0);
     }
