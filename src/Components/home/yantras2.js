@@ -146,7 +146,7 @@ export default function ScrollableTabsButtonForce() {
                       <div className="col-md-1"></div>
                       <Fade right>
                         <div className="col-12 col-md-3">
-                          <img src={link +"uploads/sigs/yantrika.jpeg"} alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={link +"uploads/sigs/yantrika_1.png"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                     </div>
@@ -251,7 +251,7 @@ export default function ScrollableTabsButtonForce() {
                       <div className="col-md-1"></div>
                       <Fade right>
                         <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/media.jpeg"} alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={link + "uploads/sigs/abhivyakta.jpeg"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                     </div>
@@ -290,7 +290,7 @@ export default function ScrollableTabsButtonForce() {
                     <div className="row">
                       <Fade left>
                         <div className="col-12 col-md-3">
-                          <img src={link +"uploads/sigs/yantrika.jpeg"} alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={link +"uploads/sigs/yantrika_1.png"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                       <div className="col-md-1"></div>
@@ -395,7 +395,7 @@ export default function ScrollableTabsButtonForce() {
                     <div className="row">
                       <Fade left>
                         <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/media.jpeg"} alt='ex' crop="fill" className="yantra_img2"/>
+                          <img src={link + "uploads/sigs/abhivyakta.jpeg"} alt='ex' crop="fill" className="yantra_img2"/>
                         </div>
                       </Fade>
                       <div className="col-md-1"></div>

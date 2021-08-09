@@ -25,14 +25,14 @@ const useStyles = makeStyles({
     borderRadius: 16,
     transition: '0.2s',
     boxShadow: 'rgb(0, 113, 161) 0px 1px 6px',
-    height : 600,
+    height : 550,
   },
   root2: {
     maxWidth: 500,
     borderRadius: 16,
     transition: '0.2s',
     boxShadow: 'rgb(0, 113, 161) 0px 1px 6px',
-    height : 600,
+    height : 550,
   },
   space: {
     paddingTop: '10.25%',
