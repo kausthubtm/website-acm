@@ -10,6 +10,7 @@ import imgURL from '../../uploads/sigs/underline.png'
 function People ({person}) {
 
   const link = 'https://nitk.acm.org/staticfiles/';
+  const mail = 'mailto:'
 
     return(
       <div className="col-12 col-md-4">
@@ -17,7 +18,7 @@ function People ({person}) {
           <img alt="..."  src= {link + person.image_path } className="img" width="200" height="200" ></img>
           <div className="img_overlay">
             <div className="img_links">
-              <a href={person.email_link} className="img_icon"><EmailIcon style={{ fontSize: 40 }} /></a>
+              <a href={mail+person.email_link} className="img_icon"><EmailIcon style={{ fontSize: 40 }} /></a>
               <a href={person.linkedin_link} className="img_icon"><LinkedInIcon style={{ fontSize: 40 }} /></a>
             </div>
           </div>

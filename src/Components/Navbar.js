@@ -32,19 +32,19 @@ function HideAppBar () {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav activeKey={useLocation().pathname} className="mr-auto">
               <Nav.Link className="nav_link"><Link to="/" className="nav_link2">HOME</Link></Nav.Link>
-              <NavDropdown title="YANTRAS" id="collapsible-nav-dropdown" className="nav_link">
+              <NavDropdown title="YANTRAS" id="collapsible-nav-dropdown" className="nav_link3">
                 {
                   sigs.map(sig=>(
-                    <NavDropdown.Item ><Link to={`/sigs/${sig.id}`}>{sig.name.toUpperCase()}</Link></NavDropdown.Item>
+                    <NavDropdown.Item ><Link to={`/sigs/${sig.id}`} className="nav_dropdown_link">{sig.name.toUpperCase()}</Link></NavDropdown.Item>
                   ))
                 }
               </NavDropdown>
-              <Nav.Link ><Link to="/expo" className="nav_link">PROJECT EXPO</Link></Nav.Link>
-              <Nav.Link href="https://nitk.acm.org/trails.html" className="nav_link">TRAILS</Nav.Link>
-              <Nav.Link ><Link to="/events" className="nav_link">EVENTS</Link></Nav.Link>
+              <Nav.Link className="nav_link2"><Link to="/expo" className="nav_link">PROJECT EXPO</Link></Nav.Link>
+              <Nav.Link href="https://nitk.acm.org/trails.html" className="nav_link3">TRAILS</Nav.Link>
+              <Nav.Link className="nav_link2"><Link to="/events" className="nav_link">EVENTS</Link></Nav.Link>
               {/* <Nav.Link href="/esp" className="nav_link">ESP</Nav.Link> */}
-              <Nav.Link href="https://nitk.acm.org/blog/" className="nav_link">BLOG</Nav.Link>
-              <Nav.Link ><Link to="/contact" className="nav_link">CONTACT US</Link></Nav.Link>
+              <Nav.Link href="https://nitk.acm.org/blog/" className="nav_link3">BLOG</Nav.Link>
+              <Nav.Link className="nav_link2"><Link to="/contact" className="nav_link">CONTACT US</Link></Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

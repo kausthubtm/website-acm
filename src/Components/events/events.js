@@ -19,7 +19,7 @@ function Getchip ({id}) {
 
     if(id===1){
       return(  
-        <Chip label="Sangaitra" className="chip"/>
+        <Chip label="Sanganitra" className="chip"/>
       )
     }
     if(id===2){

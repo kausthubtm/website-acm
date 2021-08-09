@@ -70,10 +70,10 @@ class Footer extends Component {
                             <div className="footer_text">
                                 <div className="footer_link_space"><Link to="/" className="footer_link">Home</Link></div>
                                 <div className="footer_link_space"><Link to="/expo" className="footer_link">Project Expo</Link></div>
-                                <div className="footer_link_space">Trails</div>
+                                <div className="footer_link_space"><a href="https://nitk.acm.org/trails.html" className="footer_link">Trails</a></div>
                                 <div className="footer_link_space"><Link to="/events" className="footer_link">Events</Link></div>
                                 {/* <div className="footer_link_space"><Link to="/esp" className="footer_link">ESP</Link></div> */}
-                                <div className="footer_link_space">Blog</div>
+                                <div className="footer_link_space"><a href="https://nitk.acm.org/blog/" className="footer_link">Blog</a></div>
                                 <div className="footer_link_space"><Link to="/contact" className="footer_link">Contact</Link></div>
                         </div>
                     </div>
