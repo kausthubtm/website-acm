@@ -93,7 +93,7 @@ export default function ScrollableTabsButtonForce() {
                 <Tab label="Yantrika" icon={<SettingsIcon/>} {...a11yProps(1)} className="yantra_link"/>
                 <Tab label="Vidyut" icon={<EmojiObjectsIcon/>} {...a11yProps(2)} className="yantra_link"/>
                 <Tab label="Kaaryavarta" icon={<MonetizationOnIcon />} {...a11yProps(3)} className="yantra_link"/>
-                <Tab label="Saahithya" icon={<MenuBookIcon />} {...a11yProps(4)} className="yantra_link"/>
+                <Tab label="Saahitya" icon={<MenuBookIcon />} {...a11yProps(4)} className="yantra_link"/>
                 <Tab label="Abhivyakta" icon={<CameraAltIcon />} {...a11yProps(5)} className="yantra_link"/>
                 </Tabs> 
             </AppBar>
@@ -220,7 +220,7 @@ export default function ScrollableTabsButtonForce() {
                            has strived to provide a platform for the literary-oriented and creative minds within the ACM student community and beyond.
                             To this end, Saahitya also aims to acquaint students with the in’s and out’s of college life through Cache, and aims
                              to grow on several fronts through the subsequent years. This SIG organises some of the most creative and fun filled 
-                             events in the year, a welcome refresher in a technical environmen </p>
+                             events in the year, a welcome refresher in a technical environment </p>
                           <Button className="yantra_button">
                             <Link to={`/sigs/5`} classname="yantra_button_link">
                               Read More
@@ -379,7 +379,7 @@ export default function ScrollableTabsButtonForce() {
                            has strived to provide a platform for the literary-oriented and creative minds within the ACM student community and beyond.
                             To this end, Saahitya also aims to acquaint students with the in’s and out’s of college life through Cache, and aims
                              to grow on several fronts through the subsequent years. This SIG organises some of the most creative and fun filled 
-                             events in the year, a welcome refresher in a technical environmen </p>
+                             events in the year, a welcome refresher in a technical environment </p>
                              <Button className="yantra_button">
                             <Link to={`/sigs/5`} classname="yantra_button_link">
                               Read More
