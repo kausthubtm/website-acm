@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../../Shared/CSS/home2.css';
 import '../../Shared/CSS/main.css'
 import '../../Shared/CSS/flipbook.css'
+// import pdfURL from '../../Shared/magazineFinal.pdf'
 
 class saahithyaMagazine extends Component{
     
@@ -19,7 +20,10 @@ class saahithyaMagazine extends Component{
                     {name:'Project Proposals', description:'View the project proposals !', link:'/proposal'},
                     ]}/> */}
                 <div>
-                <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=tiqtywspma" width="100%" height="1000px" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe>
+                <iframe width="100%" height="1000px" src="https://online.fliphtml5.com/goklc/qiay/"  seamless="seamless" scrolling="no" frameborder="0" allowfullscreen="true" ></iframe>
+                {/* <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=tiqtywspma" width="100%" height="1000px" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe> */}
+                {/* <iframe src='https://simplebooklet.com/embed.php?wpKey=1xVRshrfvozHEzQ5AHN8bY&source=embed' allowfullscreen width='100%' height='1000px' scrolling='no'></iframe>
+                <iframe src={pdfURL} title="description" allowfullscreen="true" width="100%" height="1000px"></iframe> */}
                 </div>
 
             </div>
