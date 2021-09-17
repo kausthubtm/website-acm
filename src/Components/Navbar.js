@@ -39,6 +39,7 @@ function HideAppBar () {
                   ))
                 }
               </NavDropdown>
+              <Nav.Link className="nav_link2"><Link to="/recruitments" className="nav_link">RECRUITMENTS</Link></Nav.Link>
               <Nav.Link className="nav_link2"><Link to="/expo" className="nav_link">PROJECT EXPO</Link></Nav.Link>
               <Nav.Link href="https://nitk.acm.org/trails.html" className="nav_link3">TRAILS</Nav.Link>
               <Nav.Link className="nav_link2"><Link to="/events" className="nav_link">EVENTS</Link></Nav.Link>

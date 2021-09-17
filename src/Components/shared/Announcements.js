@@ -5,6 +5,7 @@ import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import { Link } from 'react-router-dom';
 
 import { Card, CardTitle, CardText, CardGroup, CardBody } from 'reactstrap';
+import { Badge } from 'reactstrap';
 import Hidden from '@material-ui/core/Hidden';
 
 function Announcements({items}) {
@@ -12,7 +13,17 @@ function Announcements({items}) {
   var lastitem = items[items.length - 1];
 
   const card = items.map((item) => {
-    if(item.name === lastitem.name) {
+    if(item.name === 'Recruitments 2021'){
+      return (
+        <Card className="announce_card">
+          <CardBody>
+          <Link to={item.link}><CardTitle className="announce_card_heading">{item.name}<DoubleArrowIcon style={{ fontSize: 20 }} className="heading_icon"/><Badge color="danger" pill className="chip">New !</Badge></CardTitle></Link>
+            <Link to={item.link}><CardText className="announce_card_text">{item.description}</CardText></Link>
+          </CardBody>
+        </Card>
+        );
+    }
+    else if(item.name === lastitem.name) {
       return (
         <Card className="announce_card2">
         <CardBody>

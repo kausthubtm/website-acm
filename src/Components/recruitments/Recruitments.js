@@ -18,7 +18,7 @@ import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 
 
 
-class Expo_main extends Component{
+class Recruitments extends Component{
 
   state = { 
     sigs : [], 
@@ -47,15 +47,15 @@ class Expo_main extends Component{
         {/* banner area */}
         <div className="banner_background">
           <div className="banner">
-            <header className="banner_text_area">
-              <h1 className="banner_text_others">Project Expo</h1>
+            <header className="banner_text_area" >
+              <h1 className="banner_text_others " style={{marginTop:'5%'}}>Recruitments 2021</h1>
             </header>
           </div>
         </div>
         <Announcements items={[
-                    {name:'Recruitments 2021', description:'Register Now !', link:'/recruitments'},
-                    {name:'Project Proposals', description:'View Project Proposals !', link:'/proposal'},
+                    {name:'Project Proposal', description:'View Project Proposals !', link:'/proposal'},
                     {name:'Saahitya Magazine', description:'View the Magazine !', link:'/saahityaMagazine'},
+                    {name:'Project Expo', description:'View Project Expo 2020 !', link:'/expo'},
         ]}/>
 
         {/* sigs display area */}
@@ -63,7 +63,7 @@ class Expo_main extends Component{
             <div className="container">
               <div className="row"> 
                 <div className="col-12 col-md-12">
-                  <h3 className="heading">PROJECT EXPO <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
+                  <h3 className="heading">Special Interest Groups <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
                   <hr className="hr"></hr>
                 </div>
               </div>
@@ -75,4 +75,4 @@ class Expo_main extends Component{
   }
 }
 
-export default Expo_main;
+export default Recruitments;
