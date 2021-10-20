@@ -208,11 +208,11 @@ class Details extends Component {
 
 
           {/* Method section */}
-          <h2 className="space">
+          {/* <h2 className="space">
           <div className="details_heading">Method</div>
           </h2>
-          <hr></hr>
-          <h6 className="project_text">{this.state.details.method}</h6>
+          <hr></hr> */}
+          <Check1 info={this.state.details.method} name='Method' />
 
 
           {/* Results section */}
