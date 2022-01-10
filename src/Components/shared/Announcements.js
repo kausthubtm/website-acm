@@ -13,7 +13,7 @@ function Announcements({items}) {
   var lastitem = items[items.length - 1];
 
   const card = items.map((item) => {
-    if(item.name === 'Recruitments 2021'){
+    if(item.name === 'Innovision 2022 '){
       return (
         <Card className="announce_card">
           <CardBody>

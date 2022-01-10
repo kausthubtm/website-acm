@@ -26,6 +26,7 @@ import Smp_main from './smp/smp_main';
 import SmpDetails from './smp/smp_details';
 import Recruitments from './recruitments/Recruitments'
 import saahithyaMagazine from './flipbook/saahithyaMagazine';
+import Innovision from './innovision/Innovision';
 
 class Main extends Component {
 
@@ -95,6 +96,7 @@ class Main extends Component {
                       <Route exact path='/smp/:smpSigId/:smpId' component={SelectedSmp}/>
                       <Route exact path='/saahityaMagazine' component={saahithyaMagazine}/>
                       <Route exact path='/recruitments' component={Recruitments}/>
+                      <Route exact path='/innovision' component={Innovision}/>
                   </Switch>
                   <Footer />
                 </div>
