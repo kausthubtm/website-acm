@@ -30,7 +30,7 @@ function MediaCard1({sig}) {
     const classes = useStyles(); 
 
     const link = 'https://nitk.acm.org/media/' ;
-    const year = 2020;
+    const year = 2021;
 
     return (
     <div className={classes.space}>    
@@ -49,7 +49,7 @@ function MediaCard2({sig}) {
     const classes = useStyles(); 
 
     const link = 'https://nitk.acm.org/media/' ;
-    const year = 2019;
+    const year = 2020;
 
     return (
     <div className={classes.space}>    
@@ -62,6 +62,25 @@ function MediaCard2({sig}) {
       </Card>
     </div>
     );
+}
+
+function MediaCard3({sig}) {
+  const classes = useStyles(); 
+
+  const link = 'https://nitk.acm.org/media/' ;
+  const year = 2019;
+
+  return (
+  <div className={classes.space}>    
+    <Card className={classes.root}>
+      <Link to={`/expo/${year}/${sig.id}`} style={{ textDecoration: 'none' }}>
+        <CardActionArea>
+          <img src={link + sig.image} alt={sig.name} height="250" width="100%" crop="fill" />
+        </CardActionArea>
+      </Link>
+    </Card>
+  </div>
+  );
 }
 
 
@@ -96,21 +115,40 @@ const Tab = (props) => {
     else return(<div></div>)
   });
 
+  const sigs3 = props.sigs.map((sig) => {
+    if(sig.image && sig.id < 5) {
+      return (
+          <div key={sig.id} className="col-md-3">
+              <MediaCard3 sig={sig} />
+          </div>
+      );
+    }
+    else return(<div></div>)
+  });
+
   return (
     <div> <br></br>
       <Nav tabs>
-        <NavItem>
+      <NavItem>
           <NavLink
             className={classnames({ active: activeTab === '1' })}
             onClick={() => { toggle('1'); }}
           >
-           <div className="tab_year"> EXPO - 2021 </div>
+           <div className="tab_year">EXPO - 2022 </div>
           </NavLink>
         </NavItem>
         <NavItem>
           <NavLink
             className={classnames({ active: activeTab === '2' })}
             onClick={() => { toggle('2'); }}
+          >
+           <div className="tab_year"> EXPO - 2021 </div>
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            className={classnames({ active: activeTab === '3' })}
+            onClick={() => { toggle('3'); }}
           >
            <div className="tab_year">EXPO - 2020 </div>
           </NavLink>
@@ -119,7 +157,7 @@ const Tab = (props) => {
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
             <Row>
-            <h4 className="expo_year">PROJECT EXPO 2021</h4>
+            <h4 className="expo_year">PROJECT EXPO 2022</h4>
             </Row>
           <Row>
             {sigs1}
@@ -127,11 +165,19 @@ const Tab = (props) => {
         </TabPane>
         <TabPane tabId="2">
             <Row>
+            <h4 className="expo_year">PROJECT EXPO 2021</h4>
+            </Row>
+          <Row>
+            {sigs2}
+          </Row>
+        </TabPane>
+        <TabPane tabId="3">
+            <Row>
             <br></br>
             <h4 className="expo_year">PROJECT EXPO 2020</h4>
             </Row>
           <Row>
-            {sigs2}
+            {sigs3}
           </Row>
         </TabPane>
       </TabContent>
