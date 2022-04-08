@@ -30,3 +30,8 @@
     line-height: 1.6;
     font-size: 18px;
 }
+
+.meet_link_button {
+    margin-top: 20px;
+    background-color: rgb(6, 6, 121);
+}

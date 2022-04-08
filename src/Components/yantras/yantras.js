@@ -40,9 +40,9 @@ class Yantra extends Component {
           </div>
 
           <Announcements items={[
+                    {name:'Project Expo 2022', description:'View Projects !', link:'/expo'},
                     {name:'Innovision 2022 ', description:'Register Now !', link:'/innovision'},
                     {name:'Project Proposals', description:'View Project Proposals !', link:'/proposal'},
-                    {name:'Saahitya Magazine', description:'View the Magazine !', link:'/saahityaMagazine'},
                     ]}/>
 
           {/* sigs display area */}
