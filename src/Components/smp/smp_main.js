@@ -105,7 +105,7 @@ class Smp_main extends Component{
             <div className="container">
               <div className="row"> 
                 <div className="col-12 col-md-12">
-                  <h3 className="heading">SMP 2021 <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
+                  <h3 className="heading">SMP 2022 <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
                   <hr className="hr"></hr>
                 </div>
               </div>
