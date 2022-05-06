@@ -41,11 +41,14 @@ function MediaCard({smp}) {
   <div className={classes.space}>    
     <Card className={classes.root}>
       <Link to={`/smp/${smp.sig_id}/${smp.id}`} style={{ textDecoration: 'none' }}>
-        <CardActionArea>
+        <CardActionArea style={{height:"100%"}}>
+          <div style={{display:'flex', height:'100%',flexDirection:'column', justifyContent:'space-between'}} >
           <h5 className="proposal_name">{smp.name}</h5>
-          <div className="proposal_card">
+          <div className="proposal_card" style={{marginBottom:'10%'}} >
             <Button href={`/1/`} className="proposal_button">Read More</Button>
           </div>
+          </div>
+          
         </CardActionArea>
       </Link>
     </Card>
