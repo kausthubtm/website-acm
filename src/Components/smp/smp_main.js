@@ -100,7 +100,7 @@ class Smp_main extends Component{
                 <h1 className="banner_text1">Summer Mentorship Program</h1>
               </header>
               <center style = {{marginTop:'50px'}} >
-              <Button variant="contained" color="primary" className="register-now-button" onClick={()=>{window.location.href = 'https://forms.gle/eb29jZZ2SveSCJva6'}} >Register Here !</Button>
+              <Button variant="contained" color="primary" className="register-now-button" onClick={()=>{window.location.href = 'https://forms.gle/TUKYZuE8xVR6wJju6'}} >Register Here !</Button>
                 
               </center>
             </div>
