@@ -16,7 +16,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 
+
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
+import { Button } from '@material-ui/core';
 
 /* styles for cards */
 const useStyles = makeStyles({
@@ -97,6 +99,10 @@ class Smp_main extends Component{
               <header className="banner_text_area">
                 <h1 className="banner_text1">Summer Mentorship Program</h1>
               </header>
+              <center style = {{marginTop:'50px'}} >
+              <Button variant="contained" color="primary" className="register-now-button" onClick={()=>{window.location.href = 'https://drive.google.com/drive/u/0/my-drive'}} >Register Now !</Button>
+                
+              </center>
             </div>
           </div>
 
