@@ -23,7 +23,7 @@ function HideAppBar () {
   return (
   <div className="hello">
     <div className="blah" style={{overflow:"visible"}}>
-        <Navbar collapseOnSelect expand="lg" classname="navbar">
+        <Navbar collapseOnSelect expand="lg" className="navbar">
           <Navbar.Brand ><Link to="/">
             <img src={imgURL} height="60" width="60" alt="ACM logo"/>
           </Link>

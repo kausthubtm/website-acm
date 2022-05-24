@@ -47,7 +47,7 @@ class Home extends Component{
                 </div>
                   
                   <Announcements items={[
-                    {name:'SMP 2022 ', description:'Register Now !', link:'/smp'},
+                    {name:'SMP 2022 ', description:'View Smps !', link:'/smp'},
                     {name:'Project Expo 2022', description:'View Projects !', link:'/expo'},
                     {name:'Project Proposals', description:'View Project Proposals !', link:'/proposal'},
                     ]}/>
