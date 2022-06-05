@@ -13,6 +13,7 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import { Table } from 'reactstrap';
 import { Hidden } from '@material-ui/core';
+import { Button } from 'reactstrap';
 
 import { SRLWrapper } from "simple-react-lightbox";
 
@@ -154,6 +155,10 @@ class Details extends Component {
           <div className="banner">
             <header className="banner_text_area">
               <h1 className="banner_text1">{this.state.details.name}</h1>
+              {/* <h1 className='banner_text2'>{this.state.details.meet_link}</h1> */}
+              <Button href={this.state.details.meet_link} className="meet_link_button">
+                Join Meet
+              </Button>
             </header>
           </div>
         </div>
@@ -175,7 +180,7 @@ class Details extends Component {
               <Table striped>
                 <tbody>
                   <Check2 info={this.state.details.mentors} name='Mentors' />
-                  <Check2 info={this.state.details.members} name='Members' />  
+                  <Check2 info={this.state.details.members} name='Members' />    
                   <tr>
                     <th scope="row" className="project_text_head">Duration</th>
                     <td className="project_text">{this.state.details.duration_in_months} months</td>
@@ -226,6 +231,7 @@ class Details extends Component {
 
           {/* References section */}
           <Check1 info={this.state.details.references} name='References' />
+
 
           {/* Pictures section */}
           <h2 className="space">

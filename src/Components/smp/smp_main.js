@@ -16,7 +16,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 
+
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
+import { Button } from '@material-ui/core';
 
 /* styles for cards */
 const useStyles = makeStyles({
@@ -97,6 +99,10 @@ class Smp_main extends Component{
               <header className="banner_text_area">
                 <h1 className="banner_text1">Summer Mentorship Program</h1>
               </header>
+              {/* <center style = {{marginTop:'50px'}} >
+              <Button variant="contained" color="primary" className="register-now-button" onClick={()=>{window.location.href = 'https://forms.gle/TUKYZuE8xVR6wJju6'}} >Register Here !</Button>
+                
+              </center> */}
             </div>
           </div>
 
@@ -105,7 +111,7 @@ class Smp_main extends Component{
             <div className="container">
               <div className="row"> 
                 <div className="col-12 col-md-12">
-                  <h3 className="heading">SMP 2021 <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
+                  <h3 className="heading">SMP 2022 <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
                   <hr className="hr"></hr>
                 </div>
               </div>
