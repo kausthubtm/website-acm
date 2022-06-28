@@ -49,7 +49,7 @@ function Team (props) {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-md-12">
-                            <h3 className="team_heading">Our team<br></br>
+                            <h3 className="team_heading">Our Team<br></br>
                             <img src={imgURL} alt='acm logo' height='25' width='250'/></h3>
                         </div>
                     </div>
