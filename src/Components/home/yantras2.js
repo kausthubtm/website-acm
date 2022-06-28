@@ -68,359 +68,358 @@ export default function ScrollableTabsButtonForce() {
   const link = 'https://nitk.acm.org/media/'
 
   return (
-    
-        <div className="latest">
-              <div className="row">
-                      <div className="col-12 col-md-12">
-                          <h3 className="yantra_heading">Yantras <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3>
-                          <hr></hr>
-                      </div>
-                    </div>
-            <div className="yantra_main">
-            <div className="yantras">
-            <Container>
+
+    <div className="latest">
+      <div className="row">
+        <div className="col-12 col-md-12">
+          <h3 className="yantra_heading">Yantras <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon" /></h3>
+          <hr></hr>
+        </div>
+      </div>
+      <div className="yantra_main">
+        <div className="yantras">
+          <Container>
             <AppBar position="static" className="yantra_container">
-                <Tabs
-                    value={value}
-                    onChange={handleChange}
-                    variant="scrollable"
-                    scrollButtons="on"
-                    indicatorColor={grey[900]}
-                    aria-label="scrollable force tabs example"
-                    className="yantras2"
-                >
-                <Tab label="Sanganitra" icon={<ComputerIcon />} {...a11yProps(0)} className="yantra_link"/> 
-                <Tab label="Yantrika" icon={<SettingsIcon/>} {...a11yProps(1)} className="yantra_link"/>
-                <Tab label="Vidyut" icon={<EmojiObjectsIcon/>} {...a11yProps(2)} className="yantra_link"/>
-                <Tab label="Kaaryavarta" icon={<MonetizationOnIcon />} {...a11yProps(3)} className="yantra_link"/>
-                <Tab label="Saahitya" icon={<MenuBookIcon />} {...a11yProps(4)} className="yantra_link"/>
-                <Tab label="Abhivyakta" icon={<CameraAltIcon />} {...a11yProps(5)} className="yantra_link"/>
-                </Tabs> 
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                variant="scrollable"
+                scrollButtons="on"
+                indicatorColor={grey[900]}
+                aria-label="scrollable force tabs example"
+                className="yantras2"
+              >
+                <Tab label="Sanganitra" icon={<ComputerIcon />} {...a11yProps(0)} className="yantra_link" />
+                <Tab label="Yantrika" icon={<SettingsIcon />} {...a11yProps(1)} className="yantra_link" />
+                <Tab label="Vidyut" icon={<EmojiObjectsIcon />} {...a11yProps(2)} className="yantra_link" />
+                <Tab label="Kaaryavarta" icon={<MonetizationOnIcon />} {...a11yProps(3)} className="yantra_link" />
+                <Tab label="Saahitya" icon={<MenuBookIcon />} {...a11yProps(4)} className="yantra_link" />
+                <Tab label="Abhivyakta" icon={<CameraAltIcon />} {...a11yProps(5)} className="yantra_link" />
+              </Tabs>
             </AppBar>
-            </Container>
-            <Container className="yantra_container">
+          </Container>
+          <Container className="yantra_container">
             <Hidden smDown>
-            <TabPanel value={value} index={0}>
-            <div className="yantra_card2-1">
-                    <div className="row">
-                      <Fade left>
-                        <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/sanga.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
-                        </div>
-                      </Fade>
-                      <div className="col-md-1"></div>
-                      <Fade right>
-                        
+              <TabPanel value={value} index={0}>
+                <div className="yantra_card2-1">
+                  <div className="row">
+                    <Fade left>
+                      <div className="col-12 col-md-3">
+                        <img src={link + "uploads/sigs/sanga.jpg"} alt='ex' crop="fill" className="yantra_img2" />
+                      </div>
+                    </Fade>
+                    <div className="col-md-1"></div>
+                    <Fade right>
+
                       <div className="col-md-6">
                         <h2 className="yantra_heading2">Sanganitra</h2>
-                          <p className="yantra_content">The computer science interest group is one of the broadest categories of work at NITK ACM
-                           with projects in widespread fields including but not limited to Computer Vision, Software Development, Machine Learning
-                            and Big Data. Here at Sanganitra, we aim to nurture the curiosity and interests of our members in various fields. </p>
-                            <Button className="yantra_button">
-                            <Link to={`/sigs/1`} classname="yantra_button_link">
-                              Read More
-                            </Link>
-                          </Button>
+                        <p className="yantra_content">The computer science interest group is one of the broadest categories of work at NITK ACM
+                          with projects in widespread fields including but not limited to Computer Vision, Software Development, Machine Learning
+                          and Big Data. Here at Sanganitra, we aim to nurture the curiosity and interests of our members in various fields. </p>
+                        <Button className="yantra_button">
+                          <Link to={`/sigs/1`} classname="yantra_button_link">
+                            Read More
+                          </Link>
+                        </Button>
                       </div>
-                      </Fade>
-                    </div>
-                    </div>
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-            <div className="yantra_card2-2">
-                    <div className="row">
-                      <Fade left>
-                        <div className="col-md-6">
-                          <h2 className="yantra_heading2">Yantrika</h2>
-                            <p className="yantra_content">Yantrika is a special interest group of the ACM-NITK student chapter dedicated to engineering
-                             applications in the field of Mechanical, Civil, Chemical and Material Science. The SIG serves as a wonderful platform for 
-                             those interested in shaping their ideas to reality, be it in the area of aerospace engineering, robotics, automobile 
-                             engineering, bio-chemical engineering, structures or materials.</p>
-                             <Button className="yantra_button">
-                            <Link to={`/sigs/2`} classname="yantra_button_link">
-                              Read More
-                            </Link>
-                          </Button>
-                        </div>
-                      </Fade>
-                      <div className="col-md-1"></div>
-                      <Fade right>
-                        <div className="col-12 col-md-3">
-                          <img src={link +"uploads/sigs/yantrika_1.png"} alt='ex' crop="fill" className="yantra_img2"/>
-                        </div>
-                      </Fade>
-                    </div>
-                    </div>
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-            <div className="yantra_card2-1">
-                    <div className="row">
-                      <Fade left>
-                        <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/vidyut.png"} alt='ex' crop="fill" className="yantra_img2"/>
-                        </div>
-                      </Fade>
-                      <div className="col-md-1"></div>
-                      <Fade right>
+                    </Fade>
+                  </div>
+                </div>
+              </TabPanel>
+              <TabPanel value={value} index={1}>
+                <div className="yantra_card2-2">
+                  <div className="row">
+                    <Fade left>
+                      <div className="col-12 col-md-3">
+                        <img src={link + "uploads/sigs/yantrika_1.png"} alt='ex' crop="fill" className="yantra_img2" />
+                      </div>
+                    </Fade>
+                    <div className="col-md-1"></div>
+                    <Fade right>
+                      <div className="col-md-6">
+                        <h2 className="yantra_heading2">Yantrika</h2>
+                        <p className="yantra_content">Yantrika is a special interest group of the ACM-NITK student chapter dedicated to engineering
+                          applications in the field of Mechanical, Civil, Chemical and Material Science. The SIG serves as a wonderful platform for
+                          those interested in shaping their ideas to reality, be it in the area of aerospace engineering, robotics, automobile
+                          engineering, bio-chemical engineering, structures or materials.</p>
+                        <Button className="yantra_button">
+                          <Link to={`/sigs/2`} classname="yantra_button_link">
+                            Read More
+                          </Link>
+                        </Button>
+                      </div>
+                    </Fade>
+                  </div>
+                </div>
+              </TabPanel>
+              <TabPanel value={value} index={2}>
+                <div className="yantra_card2-1">
+                  <div className="row">
+                    <Fade left>
+                      <div className="col-12 col-md-3">
+                        <img src={link + "uploads/sigs/vidyut.png"} alt='ex' crop="fill" className="yantra_img2" />
+                      </div>
+                    </Fade>
+                    <div className="col-md-1"></div>
+                    <Fade right>
                       <div className="col-md-6">
                         <h2 className="yantra_heading2">Vidyut</h2>
-                          <p className="yantra_content">Vidyut is a special interest group of ACM-NITK Student Chapter interested in the broad area of Electronics
-                        Engineering.Dealing with Electrical and Electronics Engineering, the purview of Vidyut ranges from Robotics to
-                        Power Electronics to Signal Processing to Machine Learning.</p>
+                        <p className="yantra_content">Vidyut is a special interest group of ACM-NITK Student Chapter interested in the broad area of Electronics
+                          Engineering.Dealing with Electrical and Electronics Engineering, the purview of Vidyut ranges from Robotics to
+                          Power Electronics to Signal Processing to Machine Learning.</p>
                         <Button className="yantra_button">
-                            <Link to={`/sigs/3`} classname="yantra_button_link">
-                              Read More
-                            </Link>
-                          </Button>
+                          <Link to={`/sigs/3`} classname="yantra_button_link">
+                            Read More
+                          </Link>
+                        </Button>
                       </div>
-                      </Fade>
-                    </div>
-                    </div>
-            </TabPanel>
-            <TabPanel value={value} index={3}>
-            <div className="yantra_card2-2">
-                    <div className="row">
-                      <Fade left>
-                        <div className="col-md-6">
-                          <h2 className="yantra_heading2">Kaaryavarta</h2>
-                            <p className="yantra_content">Kaaryavarta is a special interest group (SIG) of the ACM-NITK Student Chapter. Its members are
-                             people who are passionate about business, economics, finance, and marketing. It has a collaboration with a few startups and 
-                             regularly holds Knowledge Exchange Programs (KEPs) for sharing of information between members. It also serves as a platform 
-                             for taking forth new business ideas and out of the box marketing strategies. The Kaaryavarta group is constantly buzzing with 
-                             activity and the exchange of ideas and teaches you something new every day. </p>
-                             <Button className="yantra_button">
-                            <Link to={`/sigs/4`} classname="yantra_button_link">
-                              Read More
-                            </Link>
-                          </Button>
-                        </div>
-                      </Fade>
-                      <div className="col-md-1"></div>
-                      <Fade right>
-                        <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/karya.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
-                        </div>
-                      </Fade>
-                    </div>
-                    </div>
-            </TabPanel>
-            <TabPanel value={value} index={4}>
-            <div className="yantra_card2-1">
-                    <div className="row">
-                      <Fade left>
-                        <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/saahitya_MwVI1cp.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
-                        </div>
-                      </Fade>
-                      <div className="col-md-1"></div>
-                      <Fade right>
+                    </Fade>
+                  </div>
+                </div>
+              </TabPanel>
+              <TabPanel value={value} index={3}>
+                <div className="yantra_card2-2">
+                  <div className="row">
+                    <Fade left>
+                      <div className="col-12 col-md-3">
+                        <img src={link + "uploads/sigs/karya.jpg"} alt='ex' crop="fill" className="yantra_img2" />
+                      </div>
+                    </Fade>
+                    <div className="col-md-1"></div>
+                    <Fade right>
+                      <div className="col-md-6">
+                        <h2 className="yantra_heading2">Kaaryavarta</h2>
+                        <p className="yantra_content">Kaaryavarta is a special interest group (SIG) of the ACM-NITK Student Chapter. Its members are
+                          people who are passionate about business, economics, finance, and marketing. It has a collaboration with a few startups and
+                          regularly holds Knowledge Exchange Programs (KEPs) for sharing of information between members. It also serves as a platform
+                          for taking forth new business ideas and out of the box marketing strategies. The Kaaryavarta group is constantly buzzing with
+                          activity and the exchange of ideas and teaches you something new every day. </p>
+                        <Button className="yantra_button">
+                          <Link to={`/sigs/4`} classname="yantra_button_link">
+                            Read More
+                          </Link>
+                        </Button>
+                      </div>
+                    </Fade>
+                  </div>
+                </div>
+              </TabPanel>
+              <TabPanel value={value} index={4}>
+                <div className="yantra_card2-1">
+                  <div className="row">
+                    <Fade left>
+                      <div className="col-12 col-md-3">
+                        <img src={link + "uploads/sigs/saahitya_MwVI1cp.jpg"} alt='ex' crop="fill" className="yantra_img2" />
+                      </div>
+                    </Fade>
+                    <div className="col-md-1"></div>
+                    <Fade right>
                       <div className="col-md-6">
                         <h2 className="yantra_heading2">Saahitya</h2>
-                          <p className="yantra_content">Saahitya, the literary Special Interest Group (SIG) under ACM-NITK student chapter,
-                           has strived to provide a platform for the literary-oriented and creative minds within the ACM student community and beyond.
-                            To this end, Saahitya also aims to acquaint students with the in’s and out’s of college life through Cache, and aims
-                             to grow on several fronts through the subsequent years. This SIG organises some of the most creative and fun filled 
-                             events in the year, a welcome refresher in a technical environment </p>
-                          <Button className="yantra_button">
-                            <Link to={`/sigs/5`} classname="yantra_button_link">
-                              Read More
-                            </Link>
-                          </Button>
+                        <p className="yantra_content">Saahitya, the literary Special Interest Group (SIG) under ACM-NITK student chapter,
+                          has strived to provide a platform for the literary-oriented and creative minds within the ACM student community and beyond.
+                          To this end, Saahitya also aims to acquaint students with the in’s and out’s of college life through Cache, and aims
+                          to grow on several fronts through the subsequent years. This SIG organises some of the most creative and fun filled
+                          events in the year, a welcome refresher in a technical environment </p>
+                        <Button className="yantra_button">
+                          <Link to={`/sigs/5`} classname="yantra_button_link">
+                            Read More
+                          </Link>
+                        </Button>
                       </div>
-                      </Fade>
-                    </div>
-                    </div>
-            </TabPanel>
-            <TabPanel value={value} index={5}>
-            <div className="yantra_card2-2">
-                    <div className="row">
-                      <Fade left>
-                        <div className="col-md-6">
-                          <h2 className="yantra_heading2">Abhivyakta</h2>
-                            <p className="yantra_content">Abhivyakta is the Media and Publicity SIG of our student chapter and true to its name, the team 
-                            comprises experts who work tirelessly to generate eye catching content relevant to the objectives of the club, in addition to 
-                            representing and reflecting the club's activities through its various social media handles, and making sure we stay on top of 
-                            publicity so as to reach out to the crowd for our various and varied events. </p>
-                            <Button className="yantra_button">
-                            <Link to={`/sigs/6`} classname="yantra_button_link">
-                              Read More
-                            </Link>
-                          </Button>
-                        </div>
-                      </Fade>
-                      <div className="col-md-1"></div>
-                      <Fade right>
-                        <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/abhivyakta.jpeg"} alt='ex' crop="fill" className="yantra_img2"/>
-                        </div>
-                      </Fade>
-                    </div>
-                    </div>
-            </TabPanel>
+                    </Fade>
+                  </div>
+                </div>
+              </TabPanel>
+              <TabPanel value={value} index={5}>
+                <div className="yantra_card2-2">
+                  <div className="row">
+                    <Fade left>
+                      <div className="col-12 col-md-3">
+                        <img src={link + "uploads/sigs/abhivyakta.jpeg"} alt='ex' crop="fill" className="yantra_img2" />
+                      </div>
+                    </Fade>         
+                    <div className="col-md-1"></div>
+                    <Fade right>
+                      <div className="col-md-6">
+                        <h2 className="yantra_heading2">Abhivyakta</h2>
+                        <p className="yantra_content">Abhivyakta is the Media and Publicity SIG of our student chapter and true to its name, the team
+                          comprises experts who work tirelessly to generate eye catching content relevant to the objectives of the club, in addition to
+                          representing and reflecting the club's activities through its various social media handles, and making sure we stay on top of
+                          publicity so as to reach out to the crowd for our various and varied events. </p>
+                        <Button className="yantra_button">
+                          <Link to={`/sigs/6`} classname="yantra_button_link">
+                            Read More
+                          </Link>
+                        </Button>
+                      </div>
+                    </Fade>
+                  </div>
+                </div>
+              </TabPanel>
             </Hidden>
             <Hidden mdUp>
-            <TabPanel value={value} index={0}>
-            <div className="yantra_card2-1">
-                    <div className="row">
-                      <Fade left>
-                        <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/sanga.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
-                        </div>
-                      </Fade>
-                      <div className="col-md-1"></div>
-                      <Fade right>
-                        
+              <TabPanel value={value} index={0}>
+                <div className="yantra_card2-1">
+                  <div className="row">
+                    <Fade left>
+                      <div className="col-12 col-md-3">
+                        <img src={link + "uploads/sigs/sanga.jpg"} alt='ex' crop="fill" className="yantra_img2" />
+                      </div>
+                    </Fade>
+                    <div className="col-md-1"></div>
+                    <Fade right>
                       <div className="col-md-6">
                         <h2 className="yantra_heading2">Sanganitra</h2>
-                          <p className="yantra_content">The computer science interest group is one of the broadest categories of work at NITK ACM
-                           with projects in widespread fields including but not limited to Computer Vision, Software Development, Machine Learning
-                            and Big Data. Here at Sanganitra, we aim to nurture the curiosity and interests of our members in various fields. </p>
-                            <Button className="yantra_button">
-                            <Link to={`/sigs/1`} classname="yantra_button_link">
-                              Read More
-                            </Link>
-                          </Button>
+                        <p className="yantra_content">The computer science interest group is one of the broadest categories of work at NITK ACM
+                          with projects in widespread fields including but not limited to Computer Vision, Software Development, Machine Learning
+                          and Big Data. Here at Sanganitra, we aim to nurture the curiosity and interests of our members in various fields. </p>
+                        <Button className="yantra_button">
+                          <Link to={`/sigs/1`} classname="yantra_button_link">
+                            Read More
+                          </Link>
+                        </Button>
                       </div>
-                      </Fade>
-                    </div>
-                    </div>
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-            <div className="yantra_card2-2">
-                    <div className="row">
-                      <Fade left>
-                        <div className="col-12 col-md-3">
-                          <img src={link +"uploads/sigs/yantrika_1.png"} alt='ex' crop="fill" className="yantra_img2"/>
-                        </div>
-                      </Fade>
-                      <div className="col-md-1"></div>
-                      <Fade right>
-                        <div className="col-md-6">
-                          <h2 className="yantra_heading2">Yantrika</h2>
-                            <p className="yantra_content">Yantrika is a special interest group of the ACM-NITK student chapter dedicated to engineering
-                             applications in the field of Mechanical, Civil, Chemical and Material Science. The SIG serves as a wonderful platform for 
-                             those interested in shaping their ideas to reality, be it in the area of aerospace engineering, robotics, automobile 
-                             engineering, bio-chemical engineering, structures or materials.</p>
-                             <Button className="yantra_button">
-                            <Link to={`/sigs/2`} classname="yantra_button_link">
-                              Read More
-                            </Link>
-                          </Button>
-                        </div>
-                      </Fade>
-                    </div>
-                    </div>
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-            <div className="yantra_card2-1">
-                    <div className="row">
-                      <Fade left>
-                        <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/vidyut.png"} alt='ex' crop="fill" className="yantra_img2"/>
-                        </div>
-                      </Fade>
-                      <div className="col-md-1"></div>
-                      <Fade right>
+                    </Fade>
+                  </div>
+                </div>
+              </TabPanel>
+              <TabPanel value={value} index={1}>
+                <div className="yantra_card2-2">
+                  <div className="row">
+                    <Fade left>
+                      <div className="col-12 col-md-3">
+                        <img src={link + "uploads/sigs/yantrika_1.png"} alt='ex' crop="fill" className="yantra_img2" />
+                      </div>
+                    </Fade>
+                    <div className="col-md-1"></div>
+                    <Fade right>
+                      <div className="col-md-6">
+                        <h2 className="yantra_heading2">Yantrika</h2>
+                        <p className="yantra_content">Yantrika is a special interest group of the ACM-NITK student chapter dedicated to engineering
+                          applications in the field of Mechanical, Civil, Chemical and Material Science. The SIG serves as a wonderful platform for
+                          those interested in shaping their ideas to reality, be it in the area of aerospace engineering, robotics, automobile
+                          engineering, bio-chemical engineering, structures or materials.</p>
+                        <Button className="yantra_button">
+                          <Link to={`/sigs/2`} classname="yantra_button_link">
+                            Read More
+                          </Link>
+                        </Button>
+                      </div>
+                    </Fade>
+                  </div>
+                </div>
+              </TabPanel>
+              <TabPanel value={value} index={2}>
+                <div className="yantra_card2-1">
+                  <div className="row">
+                    <Fade left>
+                      <div className="col-12 col-md-3">
+                        <img src={link + "uploads/sigs/vidyut.png"} alt='ex' crop="fill" className="yantra_img2" />
+                      </div>
+                    </Fade>
+                    <div className="col-md-1"></div>
+                    <Fade right>
                       <div className="col-md-6">
                         <h2 className="yantra_heading2">Vidyut</h2>
-                          <p className="yantra_content">Vidyut is a special interest group of ACM-NITK Student Chapter interested in the broad area of Electronics
-                        Engineering.Dealing with Electrical and Electronics Engineering, the purview of Vidyut ranges from Robotics to
-                        Power Electronics to Signal Processing to Machine Learning.</p>
+                        <p className="yantra_content">Vidyut is a special interest group of ACM-NITK Student Chapter interested in the broad area of Electronics
+                          Engineering.Dealing with Electrical and Electronics Engineering, the purview of Vidyut ranges from Robotics to
+                          Power Electronics to Signal Processing to Machine Learning.</p>
                         <Button className="yantra_button">
-                            <Link to={`/sigs/3`} classname="yantra_button_link">
-                              Read More
-                            </Link>
-                          </Button>
+                          <Link to={`/sigs/3`} classname="yantra_button_link">
+                            Read More
+                          </Link>
+                        </Button>
                       </div>
-                      </Fade>
-                    </div>
-                    </div>
-            </TabPanel>
-            <TabPanel value={value} index={3}>
-            <div className="yantra_card2-2">
-                    <div className="row">
-                      <Fade left>
-                        <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/karya.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
-                        </div>
-                      </Fade>
-                      <div className="col-md-1"></div>
-                      <Fade right>
+                    </Fade>
+                  </div>
+                </div>
+              </TabPanel>
+              <TabPanel value={value} index={3}>
+                <div className="yantra_card2-2">
+                  <div className="row">
+                    <Fade left>
+                      <div className="col-12 col-md-3">
+                        <img src={link + "uploads/sigs/karya.jpg"} alt='ex' crop="fill" className="yantra_img2" />
+                      </div>
+                    </Fade>
+                    <div className="col-md-1"></div>
+                    <Fade right>
                       <div className="col-md-6">
-                          <h2 className="yantra_heading2">Kaaryavarta</h2>
-                            <p className="yantra_content">Kaaryavarta is a special interest group (SIG) of the ACM-NITK Student Chapter. Its members are
-                             people who are passionate about business, economics, finance, and marketing. It has a collaboration with a few startups and 
-                             regularly holds Knowledge Exchange Programs (KEPs) for sharing of information between members. It also serves as a platform 
-                             for taking forth new business ideas and out of the box marketing strategies. The Kaaryavarta group is constantly buzzing with 
-                             activity and the exchange of ideas and teaches you something new every day. </p>
-                             <Button className="yantra_button">
-                            <Link to={`/sigs/4`} classname="yantra_button_link">
-                              Read More
-                            </Link>
-                          </Button>
-                        </div>
-                      </Fade>
-                    </div>
-                    </div>
-            </TabPanel>
-            <TabPanel value={value} index={4}>
-            <div className="yantra_card2-1">
-                    <div className="row">
-                      <Fade left>
-                        <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/saahitya_MwVI1cp.jpg"} alt='ex' crop="fill" className="yantra_img2"/>
-                        </div>
-                      </Fade>
-                      <div className="col-md-1"></div>
-                      <Fade right>
+                        <h2 className="yantra_heading2">Kaaryavarta</h2>
+                        <p className="yantra_content">Kaaryavarta is a special interest group (SIG) of the ACM-NITK Student Chapter. Its members are
+                          people who are passionate about business, economics, finance, and marketing. It has a collaboration with a few startups and
+                          regularly holds Knowledge Exchange Programs (KEPs) for sharing of information between members. It also serves as a platform
+                          for taking forth new business ideas and out of the box marketing strategies. The Kaaryavarta group is constantly buzzing with
+                          activity and the exchange of ideas and teaches you something new every day. </p>
+                        <Button className="yantra_button">
+                          <Link to={`/sigs/4`} classname="yantra_button_link">
+                            Read More
+                          </Link>
+                        </Button>
+                      </div>
+                    </Fade>
+                  </div>
+                </div>
+              </TabPanel>
+              <TabPanel value={value} index={4}>
+                <div className="yantra_card2-1">
+                  <div className="row">
+                    <Fade left>
+                      <div className="col-12 col-md-3">
+                        <img src={link + "uploads/sigs/saahitya_MwVI1cp.jpg"} alt='ex' crop="fill" className="yantra_img2" />
+                      </div>
+                    </Fade>
+                    <div className="col-md-1"></div>
+                    <Fade right>
                       <div className="col-md-6">
                         <h2 className="yantra_heading2">Saahitya</h2>
-                          <p className="yantra_content">Saahitya, the literary Special Interest Group (SIG) under ACM-NITK student chapter,
-                           has strived to provide a platform for the literary-oriented and creative minds within the ACM student community and beyond.
-                            To this end, Saahitya also aims to acquaint students with the in’s and out’s of college life through Cache, and aims
-                             to grow on several fronts through the subsequent years. This SIG organises some of the most creative and fun filled 
-                             events in the year, a welcome refresher in a technical environment </p>
-                             <Button className="yantra_button">
-                            <Link to={`/sigs/5`} classname="yantra_button_link">
-                              Read More
-                            </Link>
-                          </Button>
+                        <p className="yantra_content">Saahitya, the literary Special Interest Group (SIG) under ACM-NITK student chapter,
+                          has strived to provide a platform for the literary-oriented and creative minds within the ACM student community and beyond.
+                          To this end, Saahitya also aims to acquaint students with the in’s and out’s of college life through Cache, and aims
+                          to grow on several fronts through the subsequent years. This SIG organises some of the most creative and fun filled
+                          events in the year, a welcome refresher in a technical environment </p>
+                        <Button className="yantra_button">
+                          <Link to={`/sigs/5`} classname="yantra_button_link">
+                            Read More
+                          </Link>
+                        </Button>
                       </div>
-                      </Fade>
-                    </div>
-                    </div>
-            </TabPanel>
-            <TabPanel value={value} index={5}>
-            <div className="yantra_card2-2">
-                    <div className="row">
-                      <Fade left>
-                        <div className="col-12 col-md-3">
-                          <img src={link + "uploads/sigs/abhivyakta.jpeg"} alt='ex' crop="fill" className="yantra_img2"/>
-                        </div>
-                      </Fade>
-                      <div className="col-md-1"></div>
-                      <Fade right>
-                        <div className="col-md-6">
-                          <h2 className="yantra_heading2">Abhivyakta</h2>
-                            <p className="yantra_content">Abhivyakta is the Media and Publicity SIG of our student chapter and true to its name, the team 
-                            comprises experts who work tirelessly to generate eye catching content relevant to the objectives of the club, in addition to 
-                            representing and reflecting the club's activities through its various social media handles, and making sure we stay on top of 
-                            publicity so as to reach out to the crowd for our various and varied events. </p>
-                            <Button className="yantra_button">
-                            <Link to={`/sigs/6`} classname="yantra_button_link">
-                              Read More
-                            </Link>
-                          </Button>
-                        </div>
-                      </Fade>
-                    </div>
-                    </div>
-            </TabPanel>
+                    </Fade>
+                  </div>
+                </div>
+              </TabPanel>
+              <TabPanel value={value} index={5}>
+                <div className="yantra_card2-2">
+                  <div className="row">
+                    <Fade left>
+                      <div className="col-12 col-md-3">
+                        <img src={link + "uploads/sigs/abhivyakta.jpeg"} alt='ex' crop="fill" className="yantra_img2" />
+                      </div>
+                    </Fade>
+                    <div className="col-md-1"></div>
+                    <Fade right>
+                      <div className="col-md-6">
+                        <h2 className="yantra_heading2">Abhivyakta</h2>
+                        <p className="yantra_content">Abhivyakta is the Media and Publicity SIG of our student chapter and true to its name, the team
+                          comprises experts who work tirelessly to generate eye catching content relevant to the objectives of the club, in addition to
+                          representing and reflecting the club's activities through its various social media handles, and making sure we stay on top of
+                          publicity so as to reach out to the crowd for our various and varied events. </p>
+                        <Button className="yantra_button">
+                          <Link to={`/sigs/6`} classname="yantra_button_link">
+                            Read More
+                          </Link>
+                        </Button>
+                      </div>
+                    </Fade>
+                  </div>
+                </div>
+              </TabPanel>
             </Hidden>
-        </Container>
-        
-    </div>
-    </div>
+          </Container>
+
+        </div>
+      </div>
     </div>
   );
 }
