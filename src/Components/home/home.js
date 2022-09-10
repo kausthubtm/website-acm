@@ -47,9 +47,9 @@ class Home extends Component{
                 </div>
                   
                   <Announcements items={[
+                    {name:'Saahitya Magazine 2022', description:'View Saahitya Magazine !', link:'https://nitk.acm.org/flipbook/magazine.html'},
                     {name:'SMP 2022 ', description:'View SMPs !', link:'/smp'},
                     {name:'Project Expo 2022', description:'View Projects !', link:'/expo'},
-                    {name:'Project Proposals', description:'View Project Proposals !', link:'/proposal'},
                     ]}/>
                   <About /> 
                   <TabPanel />
