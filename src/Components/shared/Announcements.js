@@ -13,7 +13,7 @@ function Announcements({items}) {
   var lastitem = items[items.length - 1];
 
   const card = items.map((item) => {
-    if(item.name === 'SMP 2022 '){
+    if(item.name === 'View Saahitya Magazine !'){
       return (
         <Card className="announce_card">
           <CardBody>
