@@ -20,7 +20,7 @@ class saahithyaMagazine extends Component{
                     {name:'Project Proposals', description:'View the project proposals !', link:'/proposal'},
                     ]}/> */}
                 <div>
-                <iframe width="100%" height="1000px" src="https://nitk.acm.org/flipbook/magazine.html"  seamless="seamless" scrolling="no" frameborder="0" allowfullscreen="true" ></iframe>
+                <iframe width="100%" height="1000px" src="https://ripples.amoghumesh.repl.co/"  seamless="seamless" scrolling="no" frameborder="0" allowfullscreen="true" ></iframe>
                 {/* <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=tiqtywspma" width="100%" height="1000px" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen></iframe> */}
                 {/* <iframe src='https://simplebooklet.com/embed.php?wpKey=1xVRshrfvozHEzQ5AHN8bY&source=embed' allowfullscreen width='100%' height='1000px' scrolling='no'></iframe>
                 <iframe src={pdfURL} title="description" allowfullscreen="true" width="100%" height="1000px"></iframe> */}
