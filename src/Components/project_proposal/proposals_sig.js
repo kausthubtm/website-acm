@@ -145,7 +145,7 @@ class ProposedProjects extends Component {
                 <div className="col-12 col-md-12">
                   <h3 className="heading"> PROJECTS <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3>
                   <hr className="hr"></hr>
-                  <h6 className="project_heading">List of project proposals by {this.state.sig.name} for the year 2021.</h6>
+                  <h6 className="project_heading">List of project proposals by {this.state.sig.name} for the year 2022.</h6>
                   </div>
                 </div>
                 <div className="row">
