@@ -183,7 +183,7 @@ class ProposalDetails extends Component {
           <br></br>
           <Check1 info={this.state.details.results} name='Expected Results' />
 
-          <div className="row">
+          {/* <div className="row">
             <div className="col-12 col-md-12">
               <h2 className="space">
               <div className="details_heading">Timeline</div>
@@ -206,7 +206,7 @@ class ProposalDetails extends Component {
               </h6>
               <br></br>
             </div>
-          </div> 
+          </div> */}
 
           {/* Obstacles section */}
           <br></br>
