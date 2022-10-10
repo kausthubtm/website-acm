@@ -47,8 +47,8 @@ class Home extends Component{
                 </div>
                   
                   <Announcements items={[
-                    {name:'Saahitya Magazine 2022', description:'View Saahitya Magazine !', link:'/saahityaMagazine'},
-                    {name:'SMP 2022 ', description:'View SMPs !', link:'/smp'},
+                    {name:'Recruitments 2022', description:'Apply for Recruitment !', link:'/recruitments'},
+                    {name:'Project Proposals 2022 ', description:'View Project proposals !', link:'/proposal'},
                     {name:'Project Expo 2022', description:'View Projects !', link:'/expo'},
                     ]}/>
                   <About /> 

@@ -21,7 +21,7 @@ import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 class Recruitments extends Component{
 
   state = { 
-    sigs : [], 
+    sigs : ["Sanganitra", "Yantrika", 'Vidyut', 'Kaaryavarta', 'Saahitya', 'Abhivyakta'], 
   } 
 
   async componentDidMount() { 
@@ -48,7 +48,7 @@ class Recruitments extends Component{
         <div className="banner_background">
           <div className="banner">
             <header className="banner_text_area" >
-              <h1 className="banner_text_others " style={{marginTop:'5%'}}>Recruitments 2021</h1>
+              <h1 className="banner_text_others " style={{marginTop:'5%'}}>Recruitments 2022</h1>
             </header>
           </div>
         </div>
