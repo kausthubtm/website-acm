@@ -197,11 +197,11 @@ class ProposalDetails extends Component {
                         <th>Tasks</th>
                         <th>Start Date</th>
                         <th>End Date</th>
-                      </tr>
-                    {timeline}
+        </tr> */}
+        {/*            {timeline} */}
                     {/* <Check2 info={this.state.details.mentors} name='Mentors' />
                     <Check2 info={this.state.details.members} name='Members' />   */}
-                  </tbody>
+                 {/*</div>} </tbody>
                 </Table>
               </h6>
               <br></br>
