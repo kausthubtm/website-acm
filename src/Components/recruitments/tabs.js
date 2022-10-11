@@ -75,7 +75,7 @@ const Tab = (props) => {
   const toggle = tab => {
     if (activeTab !== tab) setActiveTab(tab);
   }
-  const form_links = ['https://docs.google.com/forms/d/e/1FAIpQLSfHh_H2rHym8t1-hmg5kAfr_6SWNVqealofuQs0MWMDqNBKhw/viewform','https://docs.google.com/forms/d/e/1FAIpQLSckKmutJdeYuXSkuKoMlJaY7DnM8o76wkklkl6CnO5pTqElFw/viewform' ,'https://docs.google.com/forms/d/e/1FAIpQLSfwGVsRGxz6v0XYrQH1OIIkHwxvtXKxQ_te0GdQQCwiwx12CQ/viewform' , 'https://docs.google.com/forms/d/e/1FAIpQLSf3BrCqN705eIzB6Of_bMWRC_f5TrmdQo06ke_GoIXH_Ofvag/viewform?usp=sf_link','https://docs.google.com/forms/d/e/1FAIpQLSdcK7NO-QYn-DDyuP4IyEpjocKuTJ6lggkmtcRFlx5j_YBoyg/viewform','https://docs.google.com/forms/d/e/1FAIpQLSfPt6MV5yO9MHkcI2Igo9wz80Z4Ny44EvrggDAg_I_DmCUf0Q/viewform']
+  const form_links = ['https://forms.gle/1K18cQFjqi3SibFm7', 'https://forms.gle/iZFgaFSfK7g9gUEY6', 'https://forms.gle/P6jjzq64dtvjR7pj7', 'https://forms.gle/3KQLrcXgNDxQZc4c9', 'https://forms.gle/CyHjr2xiByEZN4dV9', 'https://forms.gle/gvcQaM42atcoqYPa6']
   const form_redirect = (id) =>{
     console.log(id)
     window.location.href=form_links[(id-1)]
