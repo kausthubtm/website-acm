@@ -48,7 +48,7 @@ class Innovision extends Component{
         <div className="banner_background">
           <div className="banner">
             <header className="banner_text_area" >
-              <h1 className="banner_text_others " style={{marginTop:'5%'}}>Innovision 2022</h1>
+              <h1 className="banner_text_others " style={{marginTop:'5%'}}>Innovision 2023</h1>
             </header>
           </div>
         </div>

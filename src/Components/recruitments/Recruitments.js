@@ -48,14 +48,14 @@ class Recruitments extends Component{
         <div className="banner_background">
           <div className="banner">
             <header className="banner_text_area" >
-              <h1 className="banner_text_others " style={{marginTop:'5%'}}>Recruitments 2022</h1>
+              <h1 className="banner_text_others " style={{marginTop:'5%'}}>Recruitments 2023</h1>
             </header>
           </div>
         </div>
         <Announcements items={[
                     {name:'Project Proposal', description:'View Project Proposals !', link:'/proposal'},
                     {name:'Saahitya Magazine', description:'View the Magazine !', link:'/saahityaMagazine'},
-                    {name:'Project Expo', description:'View Project Expo 2020 !', link:'/expo'},
+                    {name:'Project Expo', description:'View Project Expo 2023 !', link:'/expo'},
         ]}/>
 
         {/* sigs display area */}

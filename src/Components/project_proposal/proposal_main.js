@@ -105,7 +105,7 @@ class Proposal_main extends Component{
             <div className="container">
               <div className="row"> 
                 <div className="col-12 col-md-12">
-                  <h3 className="heading">PROJECT PROPOSAL 2022 <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
+                  <h3 className="heading">PROJECT PROPOSAL 2023 <DoubleArrowIcon style={{ fontSize: 30 }} className="heading_icon"/></h3> 
                   <hr className="hr"></hr>
                 </div>
               </div>

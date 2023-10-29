@@ -68,7 +68,7 @@ const useStyles = makeStyles({
 
 const Tab = (props) => {
   const link = 'https://nitk.acm.org/media/';
-  const year = 2020;
+  const year = 2023;
 
   const classes = useStyles();
   const [activeTab, setActiveTab] = useState('1');

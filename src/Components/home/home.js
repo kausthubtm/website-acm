@@ -47,9 +47,9 @@ class Home extends Component{
                 </div>
                   
                   <Announcements items={[
-                    {name:'Recruitments 2022', description:'Apply for Recruitment!', link:'/recruitments'},
-                    {name:'Project Proposals 2022 ', description:'View Project Proposals!', link:'/proposal'},
-                    {name:'Project Expo 2022', description:'View previous year projects!', link:'/expo'},
+                    {name:'Recruitments 2023', description:'Apply for Recruitment!', link:'/recruitments'},
+                    {name:'Project Proposals 2023 ', description:'View Project Proposals!', link:'/proposal'},
+                    {name:'Project Expo 2023', description:'View previous year projects!', link:'/expo'},
                     ]}/>
                   <About /> 
                   <TabPanel />

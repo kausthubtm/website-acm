@@ -105,7 +105,7 @@ function MediaCard4({ sig }) {
   const classes = useStyles();
 
   const link = "https://nitk.acm.org/media/";
-  const year = 2022;
+  const year = 2023;
 
   return (
     <div className={classes.space}>
