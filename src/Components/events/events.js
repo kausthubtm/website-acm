@@ -166,8 +166,8 @@ class Events extends Component{
                 </div>
   
                 <Announcements items={[
-                    {name:'Project Expo 2022', description:'View Projects !', link:'/expo'},
-                    {name:'Innovision 2022 ', description:'Register Now !', link:'/innovision'},
+                    {name:'Project Expo 2023', description:'View Projects !', link:'/expo'},
+                    {name:'Innovision 2023 ', description:'Register Now !', link:'/innovision'},
                     {name:'Project Proposals', description:'View Project Proposals !', link:'/proposal'},
                     ]}/>
   

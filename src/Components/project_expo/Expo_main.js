@@ -53,7 +53,7 @@ class Expo_main extends Component{
           </div>
         </div>
         <Announcements items={[
-                    {name:'Innovision 2022 ', description:'Register Now !', link:'/innovision'},
+                    {name:'Innovision 2023 ', description:'Register Now !', link:'/innovision'},
                     {name:'Project Proposals', description:'View Project Proposals !', link:'/proposal'},
                     {name:'Saahitya Magazine', description:'View the Magazine !', link:'/saahityaMagazine'},
         ]}/>

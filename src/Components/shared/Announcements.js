@@ -13,11 +13,12 @@ function Announcements({items}) {
   var lastitem = items[items.length - 1];
 
   const card = items.map((item) => {
-    if(item.name === 'Recruitments 2022'){
+    if(item.name === 'Recruitments 2023'){
       return (
         <Card className="announce_card">
           <CardBody>
-          <Link to={item.link}><CardTitle className="announce_card_heading">{item.name}<DoubleArrowIcon style={{ fontSize: 20 }} className="heading_icon"/><Badge color="danger" pill className="chip">New !</Badge></CardTitle></Link>
+            {/* <Link to={item.link}><CardTitle className="announce_card_heading">{item.name}<DoubleArrowIcon style={{ fontSize: 20 }} className="heading_icon"/><Badge color="danger" pill className="chip">New !</Badge></CardTitle></Link> */}
+            <Link to={item.link}><CardTitle className="announce_card_heading">{item.name}<DoubleArrowIcon style={{ fontSize: 20 }} className="heading_icon"/></CardTitle></Link>
             <Link to={item.link}><CardText className="announce_card_text">{item.description}</CardText></Link>
           </CardBody>
         </Card>
